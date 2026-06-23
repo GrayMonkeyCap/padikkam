@@ -1,0 +1,122 @@
+[
+  {
+    "id": "d-greet",
+    "scenario": "Bumping into a neighbour",
+    "setup": "You meet your Malayali neighbour on the way out. Keep it warm and short.",
+    "lines": [
+      { "speaker": "Neighbour", "roman": "namaskaaram! sukhamaano?", "deva": "नमस्कारम्! सुखमाणो?", "english": "Hello! Are you well?", "hindi": "नमस्ते! कैसे हो?" },
+      { "speaker": "You", "roman": "namaskaaram, sukhamaanu. ningalkko?", "deva": "नमस्कारम्, सुखमाण्. निङ्ङळ्क्को?", "english": "Hello, I'm well. And you?", "hindi": "नमस्ते, मैं ठीक हूँ। और आप?" },
+      { "speaker": "Neighbour", "roman": "sukhamaanu, nandi.", "deva": "सुखमाण्, नन्दि.", "english": "I'm well, thanks.", "hindi": "ठीक हूँ, धन्यवाद।" },
+      { "speaker": "You", "roman": "sari, pinne kaanaam!", "deva": "शरि, पिन्ने काणाम्!", "english": "Okay, see you later!", "hindi": "ठीक है, फिर मिलते हैं!" }
+    ]
+  },
+  {
+    "id": "d-intro",
+    "scenario": "Meeting someone new",
+    "setup": "Someone strikes up a conversation. Introduce yourself.",
+    "lines": [
+      { "speaker": "Stranger", "roman": "ningalude per entaanu?", "deva": "निङ्ङळुटे पेर् एन्ताण्?", "english": "What is your name?", "hindi": "आपका नाम क्या है?" },
+      { "speaker": "You", "roman": "ente per ___ aanu. ningalude?", "deva": "एन्टे पेर् ___ आण्. निङ्ङळुटे?", "english": "My name is ___. And yours?", "hindi": "मेरा नाम ___ है। आपका?" },
+      { "speaker": "Stranger", "roman": "njaan Ravi. ningal evideninnu varunnu?", "deva": "ञान् रवि. निङ्ङळ् एविटेनिन्नु वरुन्नु?", "english": "I'm Ravi. Where are you from?", "hindi": "मैं रवि। आप कहाँ से हैं?" },
+      { "speaker": "You", "roman": "njaan Delhi-yil ninnu varunnu. enikku santhosham.", "deva": "ञान् डेल्ही-यिल् निन्नु वरुन्नु. एनिक्कु सन्तोषम्.", "english": "I'm from Delhi. Pleased to meet you.", "hindi": "मैं दिल्ली से हूँ। आपसे मिलकर खुशी हुई।" }
+    ]
+  },
+  {
+    "id": "d-teashop",
+    "scenario": "Ordering at a tea shop",
+    "setup": "You stop at a roadside tea shop. Order and check the price.",
+    "lines": [
+      { "speaker": "You", "roman": "oru chaaya tharaamo?", "deva": "ओरु चाय तरामो?", "english": "Can I get one tea?", "hindi": "एक चाय मिलेगी?" },
+      { "speaker": "Shopkeeper", "roman": "athe, ippol tharaam.", "deva": "अते, इप्पोळ् तराम्.", "english": "Yes, I'll give it now.", "hindi": "हाँ, अभी देता हूँ।" },
+      { "speaker": "You", "roman": "ithu ethra?", "deva": "इतु एत्र?", "english": "How much is this?", "hindi": "यह कितने का है?" },
+      { "speaker": "Shopkeeper", "roman": "pathu roopa.", "deva": "पतु रूप.", "english": "Ten rupees.", "hindi": "दस रुपये।" },
+      { "speaker": "You", "roman": "sari, nandi!", "deva": "शरि, नन्दि!", "english": "Okay, thanks!", "hindi": "ठीक है, धन्यवाद!" }
+    ]
+  },
+  {
+    "id": "d-restaurant",
+    "scenario": "Ordering lunch at a restaurant",
+    "setup": "You're at a small Kerala restaurant. Order a meal.",
+    "lines": [
+      { "speaker": "Waiter", "roman": "entha venam?", "deva": "एन्ता वेणम्?", "english": "What do you want?", "hindi": "क्या चाहिए?" },
+      { "speaker": "You", "roman": "choru-m saambar-um venam.", "deva": "चोरुम् साम्बारुम् वेणम्.", "english": "I'd like rice and sambar.", "hindi": "चावल और सांभर चाहिए।" },
+      { "speaker": "Waiter", "roman": "meen-curry venamoo?", "deva": "मीन्-करि वेणमो?", "english": "Want fish curry?", "hindi": "मछली करी चाहिए?" },
+      { "speaker": "You", "roman": "venda, vegetarian bakshanam mathi.", "deva": "वेण्ट, वेजिटेरियन् भक्षणम् मति.", "english": "No, veg food is enough.", "hindi": "नहीं, शाकाहारी खाना काफ़ी है।" },
+      { "speaker": "Waiter", "roman": "sari.", "deva": "शरि.", "english": "Okay.", "hindi": "ठीक है।" },
+      { "speaker": "You", "roman": "valare rasam undu! bill tharaamo?", "deva": "वळरे रसम् उण्टु! बिल् तरामो?", "english": "Very tasty! Can I get the bill?", "hindi": "बहुत स्वादिष्ट! बिल दे दीजिए?" }
+    ]
+  },
+  {
+    "id": "d-directions",
+    "scenario": "Asking for directions",
+    "setup": "You need to find the bus stop. Ask a passerby.",
+    "lines": [
+      { "speaker": "You", "roman": "kshamikkuka, bus stop evideyaanu?", "deva": "क्षमिक्कुक, बस् स्टॉप् एविटेयाण्?", "english": "Excuse me, where is the bus stop?", "hindi": "माफ़ कीजिए, बस स्टॉप कहाँ है?" },
+      { "speaker": "Local", "roman": "nere pokuka, pinne valathottu thiriyuka.", "deva": "नेरे पोकुक, पिन्ने वलत्तोट्टु तिरियुक.", "english": "Go straight, then turn right.", "hindi": "सीधे जाइए, फिर दाएँ मुड़िए।" },
+      { "speaker": "You", "roman": "ethra dooram undu?", "deva": "एत्र दूरम् उण्टु?", "english": "How far is it?", "hindi": "कितनी दूर है?" },
+      { "speaker": "Local", "roman": "anchu minute nadannaal mathi.", "deva": "अञ्चु मिनिट् नटन्नाल् मति.", "english": "Just a five-minute walk.", "hindi": "बस पाँच मिनट पैदल।" },
+      { "speaker": "You", "roman": "nandi!", "deva": "नन्दि!", "english": "Thanks!", "hindi": "धन्यवाद!" }
+    ]
+  },
+  {
+    "id": "d-auto",
+    "scenario": "Taking an auto-rickshaw",
+    "setup": "You need to get to the railway station by auto.",
+    "lines": [
+      { "speaker": "You", "roman": "chettan, railway station-il pokaanam.", "deva": "चेट्टन्, रेल्वे स्टेशन्-इल् पोकाणम्.", "english": "Brother, I need to go to the railway station.", "hindi": "भैया, रेलवे स्टेशन जाना है।" },
+      { "speaker": "Driver", "roman": "nooru roopa aakum.", "deva": "नूरु रूप आकुम्.", "english": "It'll be a hundred rupees.", "hindi": "सौ रुपये लगेंगे।" },
+      { "speaker": "You", "roman": "valare kooduthalaanu! ezhupathukku pokaamoo?", "deva": "वळरे कूटुतलाण्! एऴुपतुक्कु पोकामो?", "english": "That's too much! Can we go for seventy?", "hindi": "बहुत ज़्यादा है! सत्तर में चलोगे?" },
+      { "speaker": "Driver", "roman": "sari, pokaam.", "deva": "शरि, पोकाम्.", "english": "Okay, let's go.", "hindi": "ठीक है, चलो।" },
+      { "speaker": "You", "roman": "ivide nilkkuka. nandi!", "deva": "इविटे निल्क्कुक. नन्दि!", "english": "Stop here. Thanks!", "hindi": "यहाँ रुकिए। धन्यवाद!" }
+    ]
+  },
+  {
+    "id": "d-shop",
+    "scenario": "Buying at a market",
+    "setup": "You're shopping for something at a local market.",
+    "lines": [
+      { "speaker": "You", "roman": "ithu ethra?", "deva": "इतु एत्र?", "english": "How much is this?", "hindi": "यह कितने का है?" },
+      { "speaker": "Seller", "roman": "irunoorupathu roopa.", "deva": "इरुनूरुपतु रूप.", "english": "Two hundred and fifty rupees.", "hindi": "ढाई सौ रुपये।" },
+      { "speaker": "You", "roman": "kuravu cheyyaamo?", "deva": "कुरवु चेय्यामो?", "english": "Can you reduce the price?", "hindi": "कम कर सकते हैं?" },
+      { "speaker": "Seller", "roman": "irunnooru mathi.", "deva": "इरुन्नूरु मति.", "english": "Two hundred is fine.", "hindi": "दो सौ ठीक है।" },
+      { "speaker": "You", "roman": "sari, enikku ithu venam. card edukkaamo?", "deva": "शरि, एनिक्कु इतु वेणम्. कार्ड् एटुक्कामो?", "english": "Okay, I want this. Do you take card?", "hindi": "ठीक है, मुझे यह चाहिए। कार्ड चलेगा?" }
+    ]
+  },
+  {
+    "id": "d-family",
+    "scenario": "Talking about family",
+    "setup": "A colleague asks about your family over tea.",
+    "lines": [
+      { "speaker": "Colleague", "roman": "ningalude kutumbam evideyaanu?", "deva": "निङ्ङळुटे कुटुम्बम् एविटेयाण्?", "english": "Where is your family?", "hindi": "आपका परिवार कहाँ है?" },
+      { "speaker": "You", "roman": "ente amma-yum achan-um Delhi-yil aanu.", "deva": "एन्टे अम्मयुम् अच्छनुम् डेल्हियिल् आण्.", "english": "My mother and father are in Delhi.", "hindi": "मेरी माँ और पिताजी दिल्ली में हैं।" },
+      { "speaker": "Colleague", "roman": "ningalkku chettan-maaroo chechi-maaroo undo?", "deva": "निङ्ङळ्क्कु चेट्टन्मारो चेच्चिमारो उण्टो?", "english": "Do you have brothers or sisters?", "hindi": "आपके भाई-बहन हैं?" },
+      { "speaker": "You", "roman": "athe, oru chechi undu. aval Bangalore-il aanu.", "deva": "अते, ओरु चेच्चि उण्टु. अवळ् बैंगलोर्-इल् आण्.", "english": "Yes, one elder sister. She's in Bangalore.", "hindi": "हाँ, एक दीदी है। वह बैंगलोर में है।" }
+    ]
+  },
+  {
+    "id": "d-pharmacy",
+    "scenario": "At the pharmacy",
+    "setup": "You're not feeling well and visit a pharmacy.",
+    "lines": [
+      { "speaker": "Pharmacist", "roman": "entha venam?", "deva": "एन्ता वेणम्?", "english": "What do you need?", "hindi": "क्या चाहिए?" },
+      { "speaker": "You", "roman": "enikku sugham illa. thalaveedana undu.", "deva": "एनिक्कु सुगम् इल्ल. तलवेदन उण्टु.", "english": "I'm not well. I have a headache.", "hindi": "मेरी तबीयत ठीक नहीं। सिरदर्द है।" },
+      { "speaker": "Pharmacist", "roman": "pani undo?", "deva": "पणि उण्टो?", "english": "Do you have a fever?", "hindi": "बुखार है?" },
+      { "speaker": "You", "roman": "athe, konjam pani undu.", "deva": "अते, कोञ्चम् पणि उण्टु.", "english": "Yes, a slight fever.", "hindi": "हाँ, थोड़ा बुखार है।" },
+      { "speaker": "Pharmacist", "roman": "ee marunnu kazhikku.", "deva": "ई मरुन्नु कऴिक्कु.", "english": "Take this medicine.", "hindi": "यह दवाई खाइए।" },
+      { "speaker": "You", "roman": "nandi. ithu ethra?", "deva": "नन्दि. इतु एत्र?", "english": "Thanks. How much?", "hindi": "धन्यवाद। कितने?" }
+    ]
+  },
+  {
+    "id": "d-plans",
+    "scenario": "Making weekend plans",
+    "setup": "A friend calls to make plans.",
+    "lines": [
+      { "speaker": "Friend", "roman": "entha cheyyunnu?", "deva": "एन्ता चेय्युन्नु?", "english": "What are you doing?", "hindi": "क्या कर रहे हो?" },
+      { "speaker": "You", "roman": "onnumilla. entha plan?", "deva": "ओन्नुमिल्ल. एन्ता प्लान्?", "english": "Nothing. What's the plan?", "hindi": "कुछ नहीं। क्या प्लान है?" },
+      { "speaker": "Friend", "roman": "namukku naale beach-il pokaam, varoo?", "deva": "नमुक्कु नाळे बीच्-इल् पोकाम्, वरू?", "english": "Let's go to the beach tomorrow, coming?", "hindi": "कल बीच चलते हैं, चलोगे?" },
+      { "speaker": "You", "roman": "seriyaayi, njaan varaam! ethra mani-kku?", "deva": "शेरियायि, ञान् वराम्! एत्र मणिक्कु?", "english": "Sure, I'll come! What time?", "hindi": "ठीक है, मैं आता हूँ! कितने बजे?" },
+      { "speaker": "Friend", "roman": "raavile pathu mani-kku. njaan viliikkaam.", "deva": "रावले पतु मणिक्कु. ञान् विळिक्काम्.", "english": "At ten in the morning. I'll call you.", "hindi": "सुबह दस बजे। मैं कॉल करूँगा।" },
+      { "speaker": "You", "roman": "sari, pinne kaanaam!", "deva": "शरि, पिन्ने काणाम्!", "english": "Okay, see you later!", "hindi": "ठीक है, फिर मिलते हैं!" }
+    ]
+  }
+]

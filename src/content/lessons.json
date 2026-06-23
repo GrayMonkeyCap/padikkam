@@ -1,0 +1,192 @@
+[
+  {
+    "id": "l-hello",
+    "unit": "u-basics",
+    "order": 1,
+    "title": "Hello & Thanks",
+    "goal": "Greet anyone and thank them politely.",
+    "emoji": "👋",
+    "phraseIds": ["p-namaskaaram", "p-sukhamaano", "p-sukhamaanu", "p-nandi", "p-sari", "p-pinne-kaanam", "p-kshamikkuka", "p-onnumilla"],
+    "dialogueIds": ["d-greet"]
+  },
+  {
+    "id": "l-yesno",
+    "unit": "u-basics",
+    "order": 2,
+    "title": "Yes, No & Want",
+    "goal": "Say yes/no, ask for what you want, and decline politely.",
+    "emoji": "✅",
+    "phraseIds": ["p-athe", "p-alla", "p-illa", "p-venam", "p-venda", "p-mathi"],
+    "dialogueIds": []
+  },
+  {
+    "id": "l-clarify",
+    "unit": "u-basics",
+    "order": 3,
+    "title": "I Didn't Catch That",
+    "goal": "Survive any conversation by asking people to slow down.",
+    "emoji": "🐢",
+    "phraseIds": ["p-manassilayi", "p-manassilayilla", "p-pathukke", "p-ariyilla", "p-malayalam-ariyamo", "p-konjam"],
+    "dialogueIds": []
+  },
+  {
+    "id": "l-intro",
+    "unit": "u-meeting",
+    "order": 1,
+    "title": "What's Your Name?",
+    "goal": "Exchange names and where you're from.",
+    "emoji": "🙋",
+    "phraseIds": ["p-njan", "p-ningal", "p-per-chodyam", "p-ente-per", "p-evide-ninnu", "p-njan-ninnu", "p-santhosham"],
+    "dialogueIds": ["d-intro"]
+  },
+  {
+    "id": "l-about-you",
+    "unit": "u-meeting",
+    "order": 2,
+    "title": "Tell Me About Yourself",
+    "goal": "Talk about your job, age, and language skills.",
+    "emoji": "💬",
+    "phraseIds": ["p-vayasu", "p-joli", "p-avan", "p-aval", "p-nammaal", "p-valare-nannaayi"],
+    "dialogueIds": []
+  },
+  {
+    "id": "l-teashop",
+    "unit": "u-food",
+    "order": 1,
+    "title": "At the Tea Shop",
+    "goal": "Order tea, water, or coffee and pay.",
+    "emoji": "☕",
+    "phraseIds": ["p-chaaya", "p-kaapi", "p-vellam", "p-paal", "p-oru-chaaya", "p-bill"],
+    "dialogueIds": ["d-teashop"]
+  },
+  {
+    "id": "l-restaurant",
+    "unit": "u-food",
+    "order": 2,
+    "title": "Ordering Food",
+    "goal": "Order at a restaurant, say what you like, and handle spice levels.",
+    "emoji": "🍛",
+    "phraseIds": ["p-bakshanam", "p-choru", "p-sambar", "p-meen", "p-kozhi", "p-rasam-undu", "p-kaaram", "p-veg"],
+    "dialogueIds": ["d-restaurant"]
+  },
+  {
+    "id": "l-hunger",
+    "unit": "u-food",
+    "order": 3,
+    "title": "Hungry & Thirsty",
+    "goal": "Express hunger, thirst, and satisfaction.",
+    "emoji": "😋",
+    "phraseIds": ["p-vishakkunnu", "p-daaham", "p-mathi", "p-ishttam"],
+    "dialogueIds": []
+  },
+  {
+    "id": "l-directions",
+    "unit": "u-travel",
+    "order": 1,
+    "title": "Finding Your Way",
+    "goal": "Ask where something is and understand directions.",
+    "emoji": "🧭",
+    "phraseIds": ["p-evide", "p-nere", "p-valathottu", "p-idathottu", "p-ethra-dooram", "p-vazhi-thettu"],
+    "dialogueIds": ["d-directions"]
+  },
+  {
+    "id": "l-transport",
+    "unit": "u-travel",
+    "order": 2,
+    "title": "Autos & Buses",
+    "goal": "Take an auto-rickshaw and find a bus.",
+    "emoji": "🛺",
+    "phraseIds": ["p-auto-vilicho", "p-bus-stop", "p-railway", "p-evide-pokaanam", "p-ivide-nilkku", "p-pokaam", "p-vega"],
+    "dialogueIds": ["d-auto"]
+  },
+  {
+    "id": "l-numbers",
+    "unit": "u-shopping",
+    "order": 1,
+    "title": "Counting 1–10",
+    "goal": "Count from one to ten fluently.",
+    "emoji": "🔢",
+    "phraseIds": ["p-onnu", "p-randu", "p-moonu", "p-naalu", "p-anchu", "p-aaru", "p-ezhu", "p-ettu", "p-onpathu", "p-pathu"],
+    "dialogueIds": []
+  },
+  {
+    "id": "l-bignum",
+    "unit": "u-shopping",
+    "order": 2,
+    "title": "20, 100 & Prices",
+    "goal": "Handle bigger numbers and talk about prices.",
+    "emoji": "💰",
+    "phraseIds": ["p-irupathu", "p-noorru", "p-ethra", "p-kooduthal", "p-kuravu", "p-ithu-venam", "p-paisa", "p-card"],
+    "dialogueIds": ["d-shop"]
+  },
+  {
+    "id": "l-family",
+    "unit": "u-family",
+    "order": 1,
+    "title": "My Family",
+    "goal": "Talk about your parents, siblings, and home.",
+    "emoji": "👨‍👩‍👧",
+    "phraseIds": ["p-amma", "p-achan", "p-chechi", "p-chettan", "p-aniyan", "p-aniyathi", "p-kutumbam", "p-veedu"],
+    "dialogueIds": ["d-family"]
+  },
+  {
+    "id": "l-time",
+    "unit": "u-time",
+    "order": 1,
+    "title": "Today, Tomorrow & Now",
+    "goal": "Talk about when things happen.",
+    "emoji": "⏰",
+    "phraseIds": ["p-ippol", "p-pinne", "p-innu", "p-naale", "p-innale", "p-samayam"],
+    "dialogueIds": []
+  },
+  {
+    "id": "l-dayparts",
+    "unit": "u-time",
+    "order": 2,
+    "title": "Morning, Evening, Night",
+    "goal": "Talk about parts of the day and the weather.",
+    "emoji": "🌅",
+    "phraseIds": ["p-raavile", "p-vaikittu", "p-raathri", "p-mazha", "p-choodu", "p-thanuppu"],
+    "dialogueIds": []
+  },
+  {
+    "id": "l-feelings",
+    "unit": "u-feelings",
+    "order": 1,
+    "title": "How Do You Feel?",
+    "goal": "Express happiness, tiredness, sadness, and fear.",
+    "emoji": "💚",
+    "phraseIds": ["p-santhosham", "p-ksheenham", "p-dukham", "p-pedi", "p-ishttam"],
+    "dialogueIds": []
+  },
+  {
+    "id": "l-health",
+    "unit": "u-feelings",
+    "order": 2,
+    "title": "At the Pharmacy",
+    "goal": "Describe symptoms and ask for medicine.",
+    "emoji": "💊",
+    "phraseIds": ["p-sugham-illa", "p-thalavedana", "p-pani", "p-doctor", "p-marunu"],
+    "dialogueIds": ["d-pharmacy"]
+  },
+  {
+    "id": "l-plans",
+    "unit": "u-social",
+    "order": 1,
+    "title": "Making Plans",
+    "goal": "Invite someone, accept, and make plans to meet.",
+    "emoji": "📅",
+    "phraseIds": ["p-entha-cheyyunnu", "p-varoo", "p-seriyaayi", "p-vilichu", "p-message", "p-phone-number"],
+    "dialogueIds": ["d-plans"]
+  },
+  {
+    "id": "l-emergency",
+    "unit": "u-emergency",
+    "order": 1,
+    "title": "Help & Safety",
+    "goal": "Ask for help, find a hospital, and stay safe.",
+    "emoji": "🚨",
+    "phraseIds": ["p-sahaayam", "p-police", "p-hospital", "p-ambulance", "p-sookshikkuka"],
+    "dialogueIds": []
+  }
+]

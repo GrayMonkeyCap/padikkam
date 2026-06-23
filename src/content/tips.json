@@ -1,0 +1,196 @@
+{
+  "l-hello": {
+    "title": "The magic question ending: -aano?",
+    "intro": "Malayalam turns a statement into a yes/no question just by adding -aano? to the end. No word order changes — much simpler than English!",
+    "points": [
+      {
+        "heading": "Statement → Question",
+        "body": "‘sukhamaanu’ = (you) are well. Add the question ending and it becomes ‘sukhamaano?’ = are you well?",
+        "examples": [
+          { "roman": "sukhamaanu", "deva": "सुखमाण्", "english": "(I'm) well." },
+          { "roman": "sukhamaano?", "deva": "सुखमाणो?", "english": "Are you well?" }
+        ]
+      },
+      {
+        "heading": "Hindi shortcut",
+        "body": "Many words share roots with Hindi: ‘sukham’ = well-being (Hindi ‘sukh’), ‘nandi’ = thanks. Lean on what you already know."
+      }
+    ]
+  },
+  "l-yesno": {
+    "title": "Saying 'I want': enikku … venam",
+    "intro": "To say you want something, Malayalam puts YOU in the dative ('to me') and ends with 'venam' (is wanted) — exactly like Hindi 'mujhe … chahiye'.",
+    "points": [
+      {
+        "heading": "The pattern",
+        "body": "enikku (to me) + [thing] + venam (want). Drop 'venam' for 'venda' to say you DON'T want it.",
+        "examples": [
+          { "roman": "enikku chaaya venam", "deva": "एनिक्कु चाय वेणम्", "english": "I want tea." },
+          { "roman": "enikku ithu venda", "deva": "एनिक्कु इतु वेण्ट", "english": "I don't want this." }
+        ]
+      },
+      {
+        "heading": "Two ways to say 'no'",
+        "body": "‘alla’ = it is NOT (that). ‘illa’ = there isn't / doesn't exist. Use ‘illa’ for absence: ‘vellam illa’ = there's no water."
+      }
+    ]
+  },
+  "l-clarify": {
+    "title": "Adding -illa to mean 'not'",
+    "intro": "Stick -illa onto a verb to negate it. This single trick lets you flip any phrase you know into its negative.",
+    "points": [
+      {
+        "heading": "Flip it negative",
+        "body": "‘manassilaayi’ = (I) understood → ‘manassilaayilla’ = (I) didn't understand. ‘ariyaam’ = (I) know → ‘ariyilla’ = (I) don't know.",
+        "examples": [
+          { "roman": "manassilaayilla", "deva": "मनस्सिलायिल्ल", "english": "I didn't understand." },
+          { "roman": "enikku ariyilla", "deva": "एनिक्कु अरियिल्ल", "english": "I don't know." }
+        ]
+      }
+    ]
+  },
+  "l-intro": {
+    "title": "'My' and 'is': ente … aanu",
+    "intro": "Malayalam puts the verb at the END (Subject-Object-Verb). 'aanu' means 'is/am/are' and closes the sentence.",
+    "points": [
+      {
+        "heading": "Possessives",
+        "body": "‘ente’ = my, ‘ningalude’ = your. The owner comes first: ‘ente per’ = my name.",
+        "examples": [
+          { "roman": "ente per Ravi aanu", "deva": "एन्टे पेर् रवि आण्", "english": "My name is Ravi." },
+          { "roman": "ningalude per entaanu?", "deva": "निङ्ङळुटे पेर् एन्ताण्?", "english": "What is your name?" }
+        ]
+      },
+      {
+        "heading": "Verb goes last",
+        "body": "English: 'My name IS Ravi.' Malayalam: 'My name Ravi IS' — the 'aanu' (is) lands at the end. This SOV order is the #1 thing to get used to."
+      }
+    ]
+  },
+  "l-about-you": {
+    "title": "He, she, we",
+    "intro": "Malayalam pronouns are simple, but politeness matters. Use 'ningal' (polite you) with anyone you don't know well.",
+    "points": [
+      {
+        "heading": "The basics",
+        "body": "njaan = I, ningal = you (polite), avan = he, aval = she, nammal = we (including you).",
+        "examples": [
+          { "roman": "aval Bangalore-il aanu", "deva": "अवळ् बैंगलोर्-इल् आण्", "english": "She is in Bangalore." }
+        ]
+      }
+    ]
+  },
+  "l-restaurant": {
+    "title": "Polite requests: -aamo? and joining with -um",
+    "intro": "End a request with -aamo? to sound polite ('could you…?'), and link nouns with -um … -um ('both … and').",
+    "points": [
+      {
+        "heading": "Could you…?",
+        "body": "‘tharuka’ = give → ‘tharaamo?’ = could you give? Soft and polite, perfect for ordering.",
+        "examples": [
+          { "roman": "oru chaaya tharaamo?", "deva": "ओरु चाय तरामो?", "english": "Could I get one tea?" }
+        ]
+      },
+      {
+        "heading": "'And' = -um … -um",
+        "body": "Attach -um to each item: ‘choru-m saambaar-um’ = rice AND sambar.",
+        "examples": [
+          { "roman": "choru-m saambaar-um venam", "deva": "चोरुम् साम्बारुम् वेणम्", "english": "I want rice and sambar." }
+        ]
+      }
+    ]
+  },
+  "l-directions": {
+    "title": "Where is …? and giving directions",
+    "intro": "Ask the location of anything with '… evideyaanu?' — just put the place at the front.",
+    "points": [
+      {
+        "heading": "The all-purpose question",
+        "body": "[place] + evideyaanu? = where is [place]? Reuse it everywhere.",
+        "examples": [
+          { "roman": "bus stop evideyaanu?", "deva": "बस् स्टॉप् एविटेयाण्?", "english": "Where is the bus stop?" }
+        ]
+      },
+      {
+        "heading": "Commands end in -uka",
+        "body": "‘pokuka’ = go, ‘thiriyuka’ = turn. ‘nere pokuka’ = go straight."
+      }
+    ]
+  },
+  "l-numbers": {
+    "title": "Counting in Malayalam",
+    "intro": "The first ten numbers unlock prices, time, and quantities. A few sound close to other Indian languages.",
+    "points": [
+      {
+        "heading": "1 to 10",
+        "body": "onnu, randu, moonnu, naalu, anchu, aaru, ezhu, ettu, onpathu, pathu. Say them out loud — rhythm helps them stick."
+      }
+    ]
+  },
+  "l-bignum": {
+    "title": "Bigger numbers & bargaining",
+    "intro": "‘pathu’ (10), ‘irupathu’ (20), ‘nooru’ (100). Combine with the price question to shop confidently.",
+    "points": [
+      {
+        "heading": "How much?",
+        "body": "‘ithu ethra?’ = how much is this? If it's steep: ‘valare kooduthalaanu’ (too much) then ‘kuravu cheyyaamo?’ (reduce it?).",
+        "examples": [
+          { "roman": "kuravu cheyyaamo?", "deva": "कुरवु चेय्यामो?", "english": "Can you reduce the price?" }
+        ]
+      }
+    ]
+  },
+  "l-feelings": {
+    "title": "Feelings: enikku … aanu / undu",
+    "intro": "Feelings also use the dative 'enikku' (to me). Pair it with 'aanu' (is) or 'undu' (there is/have).",
+    "points": [
+      {
+        "heading": "The pattern",
+        "body": "enikku + [feeling] + aanu/undu. ‘enikku santhosham aanu’ = I'm happy. ‘enikku pedi undu’ = I'm scared.",
+        "examples": [
+          { "roman": "enikku santhosham", "deva": "एनिक्कु सन्तोषम्", "english": "I'm happy." },
+          { "roman": "enikku ksheenham undu", "deva": "एनिक्कु क्षीणम् उण्टु", "english": "I'm tired." }
+        ]
+      }
+    ]
+  },
+  "l-health": {
+    "title": "Describing symptoms",
+    "intro": "Same 'enikku … undu' pattern handles aches and illness — very useful at a pharmacy.",
+    "points": [
+      {
+        "heading": "I have a …",
+        "body": "enikku + [symptom] + undu. ‘enikku pani undu’ = I have a fever. ‘enikku thalaveedana undu’ = I have a headache.",
+        "examples": [
+          { "roman": "enikku pani undu", "deva": "एनिक्कु पणि उण्टु", "english": "I have a fever." }
+        ]
+      }
+    ]
+  },
+  "l-time": {
+    "title": "Talking about time",
+    "intro": "A handful of time words let you make plans: innu (today), naale (tomorrow), innale (yesterday), ippol (now).",
+    "points": [
+      {
+        "heading": "When?",
+        "body": "Drop these in front of any sentence. ‘naale pokaam’ = let's go tomorrow.",
+        "examples": [
+          { "roman": "samayam ethra aayi?", "deva": "समयम् एत्र आयि?", "english": "What time is it?" }
+        ]
+      }
+    ]
+  },
+  "l-plans": {
+    "title": "Let's…: namukku … pokaam",
+    "intro": "Suggest doing something together with 'namukku' (let's) + verb ending in -aam.",
+    "points": [
+      {
+        "heading": "Make a suggestion",
+        "body": "‘namukku pokaam’ = let's go. Add a place: ‘namukku beach-il pokaam’ = let's go to the beach.",
+        "examples": [
+          { "roman": "namukku naale pokaam, varoo?", "deva": "नमुक्कु नाळे पोकाम्, वरू?", "english": "Let's go tomorrow, coming?" }
+        ]
+      }
+    ]
+  }
+}
