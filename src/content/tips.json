@@ -7,8 +7,16 @@
         "heading": "Statement → Question",
         "body": "‘sukhamaanu’ = (you) are well. Add the question ending and it becomes ‘sukhamaano?’ = are you well?",
         "examples": [
-          { "roman": "sukhamaanu", "deva": "सुखमाण्", "english": "(I'm) well." },
-          { "roman": "sukhamaano?", "deva": "सुखमाणो?", "english": "Are you well?" }
+          {
+            "roman": "sukhamaanu",
+            "deva": "सुखमाण्",
+            "english": "(I'm) well."
+          },
+          {
+            "roman": "sukhamaano?",
+            "deva": "सुखमाणो?",
+            "english": "Are you well?"
+          }
         ]
       },
       {
@@ -25,8 +33,16 @@
         "heading": "The pattern",
         "body": "enikku (to me) + [thing] + venam (want). Drop 'venam' for 'venda' to say you DON'T want it.",
         "examples": [
-          { "roman": "enikku chaaya venam", "deva": "एनिक्कु चाय वेणम्", "english": "I want tea." },
-          { "roman": "enikku ithu venda", "deva": "एनिक्कु इतु वेण्ट", "english": "I don't want this." }
+          {
+            "roman": "enikku chaaya venam",
+            "deva": "एनिक्कु चाय वेणम्",
+            "english": "I want tea."
+          },
+          {
+            "roman": "enikku ithu venda",
+            "deva": "एनिक्कु इतु वेण्ट",
+            "english": "I don't want this."
+          }
         ]
       },
       {
@@ -43,8 +59,16 @@
         "heading": "Flip it negative",
         "body": "‘manassilaayi’ = (I) understood → ‘manassilaayilla’ = (I) didn't understand. ‘ariyaam’ = (I) know → ‘ariyilla’ = (I) don't know.",
         "examples": [
-          { "roman": "manassilaayilla", "deva": "मनस्सिलायिल्ल", "english": "I didn't understand." },
-          { "roman": "enikku ariyilla", "deva": "एनिक्कु अरियिल्ल", "english": "I don't know." }
+          {
+            "roman": "manassilaayilla",
+            "deva": "मनस्सिलायिल्ल",
+            "english": "I didn't understand."
+          },
+          {
+            "roman": "enikku ariyilla",
+            "deva": "एनिक्कु अरियिल्ल",
+            "english": "I don't know."
+          }
         ]
       }
     ]
@@ -57,8 +81,16 @@
         "heading": "Possessives",
         "body": "‘ente’ = my, ‘ningalude’ = your. The owner comes first: ‘ente per’ = my name.",
         "examples": [
-          { "roman": "ente per Ravi aanu", "deva": "एन्टे पेर् रवि आण्", "english": "My name is Ravi." },
-          { "roman": "ningalude per entaanu?", "deva": "निङ्ङळुटे पेर् एन्ताण्?", "english": "What is your name?" }
+          {
+            "roman": "ente per Ravi aanu",
+            "deva": "एन्टे पेर् रवि आण्",
+            "english": "My name is Ravi."
+          },
+          {
+            "roman": "ningalude per entaanu?",
+            "deva": "निङ्ङळुटे पेर् एन्ताण्?",
+            "english": "What is your name?"
+          }
         ]
       },
       {
@@ -75,7 +107,11 @@
         "heading": "The basics",
         "body": "njaan = I, ningal = you (polite), avan = he, aval = she, nammal = we (including you).",
         "examples": [
-          { "roman": "aval Bangalore-il aanu", "deva": "अवळ् बैंगलोर्-इल् आण्", "english": "She is in Bangalore." }
+          {
+            "roman": "aval Bangalore-il aanu",
+            "deva": "अवळ् बैंगलोर्-इल् आण्",
+            "english": "She is in Bangalore."
+          }
         ]
       }
     ]
@@ -88,14 +124,22 @@
         "heading": "Could you…?",
         "body": "‘tharuka’ = give → ‘tharaamo?’ = could you give? Soft and polite, perfect for ordering.",
         "examples": [
-          { "roman": "oru chaaya tharaamo?", "deva": "ओरु चाय तरामो?", "english": "Could I get one tea?" }
+          {
+            "roman": "oru chaaya tharaamo?",
+            "deva": "ओरु चाय तरामो?",
+            "english": "Could I get one tea?"
+          }
         ]
       },
       {
         "heading": "'And' = -um … -um",
         "body": "Attach -um to each item: ‘choru-m saambaar-um’ = rice AND sambar.",
         "examples": [
-          { "roman": "choru-m saambaar-um venam", "deva": "चोरुम् साम्बारुम् वेणम्", "english": "I want rice and sambar." }
+          {
+            "roman": "choru-m saambaar-um venam",
+            "deva": "चोरुम् साम्बारुम् वेणम्",
+            "english": "I want rice and sambar."
+          }
         ]
       }
     ]
@@ -108,7 +152,11 @@
         "heading": "The all-purpose question",
         "body": "[place] + evideyaanu? = where is [place]? Reuse it everywhere.",
         "examples": [
-          { "roman": "bus stop evideyaanu?", "deva": "बस् स्टॉप् एविटेयाण्?", "english": "Where is the bus stop?" }
+          {
+            "roman": "bus stop evideyaanu?",
+            "deva": "बस् स्टॉप् एविटेयाण्?",
+            "english": "Where is the bus stop?"
+          }
         ]
       },
       {
@@ -135,7 +183,11 @@
         "heading": "How much?",
         "body": "‘ithu ethra?’ = how much is this? If it's steep: ‘valare kooduthalaanu’ (too much) then ‘kuravu cheyyaamo?’ (reduce it?).",
         "examples": [
-          { "roman": "kuravu cheyyaamo?", "deva": "कुरवु चेय्यामो?", "english": "Can you reduce the price?" }
+          {
+            "roman": "kuravu cheyyaamo?",
+            "deva": "कुरवु चेय्यामो?",
+            "english": "Can you reduce the price?"
+          }
         ]
       }
     ]
@@ -148,8 +200,16 @@
         "heading": "The pattern",
         "body": "enikku + [feeling] + aanu/undu. ‘enikku santhosham aanu’ = I'm happy. ‘enikku pedi undu’ = I'm scared.",
         "examples": [
-          { "roman": "enikku santhosham", "deva": "एनिक्कु सन्तोषम्", "english": "I'm happy." },
-          { "roman": "enikku ksheenham undu", "deva": "एनिक्कु क्षीणम् उण्टु", "english": "I'm tired." }
+          {
+            "roman": "enikku santhosham",
+            "deva": "एनिक्कु सन्तोषम्",
+            "english": "I'm happy."
+          },
+          {
+            "roman": "enikku ksheenham undu",
+            "deva": "एनिक्कु क्षीणम् उण्टु",
+            "english": "I'm tired."
+          }
         ]
       }
     ]
@@ -162,7 +222,11 @@
         "heading": "I have a …",
         "body": "enikku + [symptom] + undu. ‘enikku pani undu’ = I have a fever. ‘enikku thalaveedana undu’ = I have a headache.",
         "examples": [
-          { "roman": "enikku pani undu", "deva": "एनिक्कु पणि उण्टु", "english": "I have a fever." }
+          {
+            "roman": "enikku pani undu",
+            "deva": "एनिक्कु पणि उण्टु",
+            "english": "I have a fever."
+          }
         ]
       }
     ]
@@ -175,7 +239,11 @@
         "heading": "When?",
         "body": "Drop these in front of any sentence. ‘naale pokaam’ = let's go tomorrow.",
         "examples": [
-          { "roman": "samayam ethra aayi?", "deva": "समयम् एत्र आयि?", "english": "What time is it?" }
+          {
+            "roman": "samayam ethra aayi?",
+            "deva": "समयम् एत्र आयि?",
+            "english": "What time is it?"
+          }
         ]
       }
     ]
@@ -188,8 +256,262 @@
         "heading": "Make a suggestion",
         "body": "‘namukku pokaam’ = let's go. Add a place: ‘namukku beach-il pokaam’ = let's go to the beach.",
         "examples": [
-          { "roman": "namukku naale pokaam, varoo?", "deva": "नमुक्कु नाळे पोकाम्, वरू?", "english": "Let's go tomorrow, coming?" }
+          {
+            "roman": "namukku naale pokaam, varoo?",
+            "deva": "नमुक्कु नाळे पोकाम्, वरू?",
+            "english": "Let's go tomorrow, coming?"
+          }
         ]
+      }
+    ]
+  },
+  "l-office-basics": {
+    "title": "Malayalam loves English words",
+    "intro": "At work, Malayalis mix in English constantly — 'meeting', 'mail', 'report', 'leave'. You already know half the vocabulary; just add a Malayalam tail.",
+    "points": [
+      {
+        "heading": "English word + Malayalam glue",
+        "body": "Take the English noun and attach a Malayalam ending: 'meeting undu' (there's a meeting), 'mail ayachu' (sent the mail).",
+        "examples": [
+          {
+            "roman": "meeting undu",
+            "deva": "मीटिङ्ग् उण्टु",
+            "english": "There is a meeting."
+          },
+          {
+            "roman": "mail ayachu",
+            "deva": "मेल् अयच्चु",
+            "english": "I sent the mail."
+          }
+        ]
+      },
+      {
+        "heading": "'kazhinjo?' = done?",
+        "body": "Stick 'kazhinjo?' after anything to ask if it's finished: 'work kazhinjo?' (work done?), 'kazhichu kazhinjo?' (done eating?)."
+      }
+    ]
+  },
+  "l-house-help": {
+    "title": "Gentle commands: end in -u / -oo",
+    "intro": "To ask someone to do something kindly, end the verb in a soft '-u' or '-oo'. It's a polite request, not a bark.",
+    "points": [
+      {
+        "heading": "Please do this",
+        "body": "vrithiyaakku (clean), kazhuku (wash), alakku (wash clothes), varoo (come). The '-u/-oo' softens it.",
+        "examples": [
+          {
+            "roman": "ivide vrithiyaakku",
+            "deva": "इविटे व्रुतियाक्कू",
+            "english": "Clean here."
+          },
+          {
+            "roman": "paatram kazhuku",
+            "deva": "पात्रम् कऴुकू",
+            "english": "Wash the dishes."
+          }
+        ]
+      },
+      {
+        "heading": "'mathi' = enough",
+        "body": "'mathi' / 'mathiyaayi' means 'enough / that's plenty' — the polite way to say stop."
+      }
+    ]
+  },
+  "l-repairs": {
+    "title": "Saying 'no X' with -illa",
+    "intro": "To say something is missing or not working, reach for 'illa' — the all-purpose 'not / none' word.",
+    "points": [
+      {
+        "heading": "No water, no power",
+        "body": "'vellam illa' (no water), 'current illa' (no power), 'pani cheyyunnilla' (not working). 'illa' shuts the sentence down.",
+        "examples": [
+          {
+            "roman": "current illa",
+            "deva": "करण्ट् इल्ल",
+            "english": "There's no power."
+          },
+          {
+            "roman": "pani cheyyunnilla",
+            "deva": "पणि चेय्युन्निल्ल",
+            "english": "It's not working."
+          }
+        ]
+      },
+      {
+        "heading": "'kedaayi poyi' = broke down",
+        "body": "For things that broke: 'AC kedaayi poyi', 'phone kedaayi poyi'. Then ask 'sheri aakkaamo?' (can you fix it?)."
+      }
+    ]
+  },
+  "l-transit-board": {
+    "title": "Asking 'does it…?' with -umo?",
+    "intro": "Take a future verb ('pokum' = will go) and add '-o' to turn it into a yes/no question: 'pokumo?' = does it go?",
+    "points": [
+      {
+        "heading": "Will it…? / Does it…?",
+        "body": "'ee bus … pokumo?' = does this bus go…? 'varumo?' = will it come? Just add '-o' to the '-um' future.",
+        "examples": [
+          {
+            "roman": "ee bus Ernakulam pokumo?",
+            "deva": "ई बस् एर्णाकुळम् पोकुमो?",
+            "english": "Does this bus go to Ernakulam?"
+          }
+        ]
+      },
+      {
+        "heading": "'ethu' = which",
+        "body": "'ethu bus?' (which bus?), 'ethu platform?' (which platform?). Point and ask."
+      }
+    ]
+  },
+  "l-think": {
+    "title": "I think / I don't think",
+    "intro": "Two everyday verbs carry your opinions: 'vicharikkuka' (to think) and 'thonnuka' (to feel / reckon).",
+    "points": [
+      {
+        "heading": "Stating a view",
+        "body": "Lead with 'njaan vicharikkunnu' (I think) or 'ente abhipraayathil' (in my opinion), then make your point.",
+        "examples": [
+          {
+            "roman": "njaan vicharikkunnu",
+            "deva": "ञान् विचारिक्कुन्नु",
+            "english": "I think (so)."
+          },
+          {
+            "roman": "ente abhipraayathil ithu nallathu",
+            "deva": "एन्टे अभिप्रायत्तिल् इतु नल्लतु",
+            "english": "In my opinion this is good."
+          }
+        ]
+      },
+      {
+        "heading": "Disagreeing softly",
+        "body": "'enikku thonnunnilla' (I don't think so), 'sheri alla' (not right). Gentle, never blunt."
+      }
+    ]
+  },
+  "l-compare": {
+    "title": "'kooduthal' = more / better",
+    "intro": "Malayalam makes comparatives the easy way: just put 'kooduthal' (more) in front. No special 'better' word to memorise.",
+    "points": [
+      {
+        "heading": "More = better",
+        "body": "'nallathu' (good) → 'kooduthal nallathu' (better). 'kooduthal ishtam' = like more.",
+        "examples": [
+          {
+            "roman": "athu kooduthal nallathu",
+            "deva": "अतु कूटुतल् नल्लतु",
+            "english": "That is better."
+          },
+          {
+            "roman": "enikku ithu kooduthal ishtam",
+            "deva": "एनिक्कु इतु कूटुतल् इष्टम्",
+            "english": "I like this more."
+          }
+        ]
+      },
+      {
+        "heading": "Handy verdicts",
+        "body": "'kuzhappam illa' (not bad / fine), 'mosham aanu' (it's bad), 'onnu pole' (the same)."
+      }
+    ]
+  },
+  "l-movies": {
+    "title": "Past vs now: kandu / kelkkunnu",
+    "intro": "Talking about entertainment is great tense practice: what you saw (past) versus what you're hearing right now.",
+    "points": [
+      {
+        "heading": "Saw it (past -u)",
+        "body": "'njaan cinema kandu' (I saw a movie), 'padam nannaayirunnu' (the movie was good). The '-u'/'-irunnu' marks the past.",
+        "examples": [
+          {
+            "roman": "njaan cinema kandu",
+            "deva": "ञान् सिनिमा कण्टु",
+            "english": "I saw a movie."
+          }
+        ]
+      },
+      {
+        "heading": "Watching now (-unnu)",
+        "body": "'njaan paattu kelkkunnu' (I'm listening to songs). Suggest a plan: 'namukku padam kaanaam' (let's watch a movie)."
+      }
+    ]
+  },
+  "l-tenses-past": {
+    "title": "The 'Innale' pattern — past = -i / -u",
+    "intro": "Talking about the past? Anchor the sentence with 'innale' (yesterday) and end the action in an '-i' or '-u' sound.",
+    "points": [
+      {
+        "heading": "Yesterday = -i / -u",
+        "body": "Most past verbs end in '-i' or '-u': poyi (went), kandu (saw), kazhichu (ate), vannu (came), paranju (said). Pair them with 'innale'.",
+        "examples": [
+          {
+            "roman": "innale njaan poyi",
+            "deva": "इन्नले ञान् पोयि",
+            "english": "Yesterday I went."
+          },
+          {
+            "roman": "innale njaan kazhichu",
+            "deva": "इन्नले ञान् कऴिच्चु",
+            "english": "Yesterday I ate."
+          }
+        ]
+      },
+      {
+        "heading": "Hindi parallel",
+        "body": "Like Hindi's 'gaya / khaaya', Malayalam marks the past by changing the verb's tail — no extra helper word needed."
+      }
+    ]
+  },
+  "l-tenses-future": {
+    "title": "The 'Naale' pattern — future = -um",
+    "intro": "Want to talk about the future? Just add an '-um' sound to the action and lead with 'naale' (tomorrow).",
+    "points": [
+      {
+        "heading": "Tomorrow = -um",
+        "body": "pokum (will go), kaanum (will see), kazhikkum (will eat), varum (will come), cheyyum (will do). One ending covers 'I / he / we will'.",
+        "examples": [
+          {
+            "roman": "naale njaan pokum",
+            "deva": "नाळे ञान् पोकुम्",
+            "english": "Tomorrow I will go."
+          },
+          {
+            "roman": "naale avan varum",
+            "deva": "नाळे अवन् वरुम्",
+            "english": "Tomorrow he will come."
+          }
+        ]
+      },
+      {
+        "heading": "Same verb, three tenses",
+        "body": "Watch one verb shift: cheythu (did) → cheyyum (will do) → cheyyunnu (doing). Learn the endings, not tables."
+      }
+    ]
+  },
+  "l-tenses-present": {
+    "title": "The 'Ippol' pattern — now = -unnu",
+    "intro": "For what's happening right now, end the action in '-unnu' and lead with 'ippol' (now).",
+    "points": [
+      {
+        "heading": "Now = -unnu",
+        "body": "pokunnu (going), kaanunnu (watching), kazhikkunnu (eating), varunnu (coming), cheyyunnu (doing). '-unnu' is the '-ing' of Malayalam.",
+        "examples": [
+          {
+            "roman": "ippol njaan varunnu",
+            "deva": "इप्पोळ् ञान् वरुन्नु",
+            "english": "I'm coming now."
+          },
+          {
+            "roman": "ippol enthu cheyyunnu?",
+            "deva": "इप्पोळ् एन्तु चेय्युन्नु?",
+            "english": "What are you doing now?"
+          }
+        ]
+      },
+      {
+        "heading": "The big three",
+        "body": "innale + -i/-u (past), ippol + -unnu (now), naale + -um (future). Three time words and three endings unlock every tense."
       }
     ]
   }

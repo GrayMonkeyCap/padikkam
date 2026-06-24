@@ -188,5 +188,135 @@
     "emoji": "🚨",
     "phraseIds": ["p-sahaayam", "p-police", "p-hospital", "p-ambulance", "p-sookshikkuka"],
     "dialogueIds": []
+  },
+  {
+    "id": "l-office-basics",
+    "unit": "u-work",
+    "order": 1,
+    "title": "Office Basics",
+    "goal": "Discuss meetings and tasks.",
+    "emoji": "🏢",
+    "phraseIds": ["p-meeting-undu", "p-work-kazhinjo", "p-njaan-cheyyam", "p-ippol-venam", "p-mail-ayachu", "p-sammatham"],
+    "dialogueIds": ["d-late-meeting"]
+  },
+  {
+    "id": "l-work-deadlines",
+    "unit": "u-work",
+    "order": 2,
+    "title": "Deadlines & Timelines",
+    "goal": "Handle deadlines and pending work.",
+    "emoji": "⏱️",
+    "phraseIds": ["p-naale-venam", "p-kazhinju", "p-baaki-undu", "p-samayam-illa", "p-leave-venam", "p-veendum-nokkam"],
+    "dialogueIds": ["d-deadline"]
+  },
+  {
+    "id": "l-house-help",
+    "unit": "u-household",
+    "order": 1,
+    "title": "House Help",
+    "goal": "Give friendly instructions for housework.",
+    "emoji": "🧹",
+    "phraseIds": ["p-ivide-vrithiyaakku", "p-thuni-alakku", "p-paatram-kazhuku", "p-naale-vaa", "p-mathiyaayi", "p-nannaayi-work"],
+    "dialogueIds": ["d-housecleaning"]
+  },
+  {
+    "id": "l-repairs",
+    "unit": "u-household",
+    "order": 2,
+    "title": "Repairs & Problems",
+    "goal": "Report what's broken and ask to fix it.",
+    "emoji": "🔧",
+    "phraseIds": ["p-kettu-poyi", "p-pani-cheyyunnilla", "p-sheri-aakku", "p-vellam-illa", "p-current-illa", "p-ethra-aakum"],
+    "dialogueIds": ["d-plumber"]
+  },
+  {
+    "id": "l-transit-board",
+    "unit": "u-transit",
+    "order": 1,
+    "title": "Boarding",
+    "goal": "Find and board the right bus or train.",
+    "emoji": "🚌",
+    "phraseIds": ["p-ee-bus-ernakulam", "p-ethu-bus", "p-ticket-tharoo", "p-ivide-nirthu", "p-ticket-ethra", "p-aduthe-stop"],
+    "dialogueIds": ["d-bus-stop"]
+  },
+  {
+    "id": "l-transit-time",
+    "unit": "u-transit",
+    "order": 2,
+    "title": "Timing & Delays",
+    "goal": "Ask when transport comes and handle delays.",
+    "emoji": "⏳",
+    "phraseIds": ["p-bus-vaikiyo", "p-eppol-varum", "p-aduthe-eppol", "p-platform-ethu", "p-train-vannu", "p-late-aanu"],
+    "dialogueIds": ["d-train-delay"]
+  },
+  {
+    "id": "l-think",
+    "unit": "u-opinions",
+    "order": 1,
+    "title": "I Think…",
+    "goal": "Share your view and disagree politely.",
+    "emoji": "🤔",
+    "phraseIds": ["p-njaan-vicharikkunnu", "p-ente-abhipraayam", "p-aakaam", "p-sheriyaanu", "p-enikku-thonnunnilla", "p-sheri-alla"],
+    "dialogueIds": ["d-agree-disagree"]
+  },
+  {
+    "id": "l-compare",
+    "unit": "u-opinions",
+    "order": 2,
+    "title": "Better or Worse",
+    "goal": "Compare options and give a verdict.",
+    "emoji": "⚖️",
+    "phraseIds": ["p-ithu-nallathu", "p-athu-kooduthal-nallathu", "p-enikku-ishtam-koodi", "p-kuzhappam-illa", "p-mosham", "p-onnu-pole"],
+    "dialogueIds": ["d-which-better"]
+  },
+  {
+    "id": "l-movies",
+    "unit": "u-entertainment",
+    "order": 1,
+    "title": "Movies & Music",
+    "goal": "Talk about films and songs.",
+    "emoji": "🎵",
+    "phraseIds": ["p-cinema-kandu", "p-padam-nannaayi", "p-paatt-kelkkunnu", "p-namukku-kaanaam", "p-rasakaram", "p-bore-aanu"],
+    "dialogueIds": ["d-movie-chat"]
+  },
+  {
+    "id": "l-hobbies",
+    "unit": "u-entertainment",
+    "order": 2,
+    "title": "Free Time",
+    "goal": "Say what you do for fun.",
+    "emoji": "⚽",
+    "phraseIds": ["p-ozhivu-samayam", "p-njaan-vaayikkunnu", "p-njaan-kalikkunnu", "p-nadakkaan-pokunnu", "p-ishtam-sangeetham", "p-namukku-kalikkaam"],
+    "dialogueIds": ["d-weekend"]
+  },
+  {
+    "id": "l-tenses-past",
+    "unit": "u-tenses-lite",
+    "order": 1,
+    "title": "Yesterday: -i / -u",
+    "goal": "Talk about the past with 'innale'.",
+    "emoji": "🕐",
+    "phraseIds": ["p-innale-poyi", "p-innale-kandu", "p-innale-kazhichu", "p-innale-vannu", "p-innale-paranju", "p-innale-cheythu"],
+    "dialogueIds": ["d-yesterday"]
+  },
+  {
+    "id": "l-tenses-future",
+    "unit": "u-tenses-lite",
+    "order": 2,
+    "title": "Tomorrow: -um",
+    "goal": "Talk about the future with 'naale'.",
+    "emoji": "🔮",
+    "phraseIds": ["p-naale-pokum", "p-naale-kaanum", "p-naale-kazhikkum", "p-naale-varum", "p-naale-cheyyum", "p-naale-cheyyum-q"],
+    "dialogueIds": ["d-tomorrow"]
+  },
+  {
+    "id": "l-tenses-present",
+    "unit": "u-tenses-lite",
+    "order": 3,
+    "title": "Now: -unnu",
+    "goal": "Talk about what's happening now with 'ippol'.",
+    "emoji": "🔄",
+    "phraseIds": ["p-ippol-pokunnu", "p-ippol-kaanunnu", "p-ippol-kazhikkunnu", "p-ippol-varunnu", "p-ippol-cheyyunnu", "p-ippol-cheyyunnu-q"],
+    "dialogueIds": []
   }
 ]

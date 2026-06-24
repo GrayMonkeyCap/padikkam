@@ -68,5 +68,47 @@
     "title": "Emergency & Essentials",
     "description": "Ask for urgent help, find a hospital, report a problem — the phrases you hope you won't need.",
     "emoji": "🚨"
+  },
+  {
+    "id": "u-work",
+    "order": 11,
+    "title": "At the Workplace",
+    "description": "Talk to colleagues, run meetings, and manage timelines.",
+    "emoji": "💼"
+  },
+  {
+    "id": "u-household",
+    "order": 12,
+    "title": "Around the House",
+    "description": "Direct house help and repairmen — clean here, this is broken, fix it.",
+    "emoji": "🏠"
+  },
+  {
+    "id": "u-transit",
+    "order": 13,
+    "title": "Trains & Buses",
+    "description": "Board the right bus or train, buy tickets, and handle delays.",
+    "emoji": "🚆"
+  },
+  {
+    "id": "u-opinions",
+    "order": 14,
+    "title": "Opinions & Preferences",
+    "description": "Say what you think, agree, disagree, and compare options.",
+    "emoji": "💭"
+  },
+  {
+    "id": "u-entertainment",
+    "order": 15,
+    "title": "Fun & Leisure",
+    "description": "Talk about movies, music, and what you do for fun.",
+    "emoji": "🎬"
+  },
+  {
+    "id": "u-tenses-lite",
+    "order": 16,
+    "title": "Past, Present & Future",
+    "description": "Talk about any time — yesterday, now, tomorrow — with three simple verb endings.",
+    "emoji": "⏳"
   }
 ]

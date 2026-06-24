@@ -9,7 +9,8 @@ meanings as bridges.
 
 ## Features
 
-- **Lesson path** — 10 units / 19 lessons that unlock as you go, from greetings to emergencies.
+- **Lesson path** — 16 units / 32 lessons that unlock as you go, from greetings and emergencies
+  to the workplace, household, transit, opinions, leisure, and an implicit past/present/future track.
 - **Grammar pattern tips** — a "guidebook" on each lesson teaches the *productive* patterns
   (`enikku … venam`, the `-aano?` question ending, `illa` vs `alla`) so you can build your own
   sentences, not just memorise phrases.

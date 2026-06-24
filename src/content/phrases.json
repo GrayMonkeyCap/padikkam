@@ -8,7 +8,9 @@
     "hindi": "नमस्ते",
     "pos": "greeting",
     "frequencyRank": 1,
-    "tags": ["greeting"],
+    "tags": [
+      "greeting"
+    ],
     "notes": "Works any time of day, like Hindi 'namaste'. Always polite."
   },
   {
@@ -21,7 +23,9 @@
     "literal": "well-is-it?",
     "pos": "question",
     "frequencyRank": 2,
-    "tags": ["greeting"],
+    "tags": [
+      "greeting"
+    ],
     "notes": "'sukham' = well-being (same root as Hindi 'sukh'). Add '-aano?' to make it a question."
   },
   {
@@ -34,7 +38,9 @@
     "literal": "well-is",
     "pos": "phrase",
     "frequencyRank": 3,
-    "tags": ["greeting"]
+    "tags": [
+      "greeting"
+    ]
   },
   {
     "id": "p-nandi",
@@ -45,7 +51,9 @@
     "hindi": "धन्यवाद",
     "pos": "phrase",
     "frequencyRank": 4,
-    "tags": ["courtesy"]
+    "tags": [
+      "courtesy"
+    ]
   },
   {
     "id": "p-sari",
@@ -56,7 +64,9 @@
     "hindi": "ठीक है",
     "pos": "phrase",
     "frequencyRank": 5,
-    "tags": ["courtesy"],
+    "tags": [
+      "courtesy"
+    ],
     "notes": "Super common filler — agree, accept, or just acknowledge."
   },
   {
@@ -68,7 +78,9 @@
     "hindi": "हाँ",
     "pos": "phrase",
     "frequencyRank": 6,
-    "tags": ["core"]
+    "tags": [
+      "core"
+    ]
   },
   {
     "id": "p-alla",
@@ -79,7 +91,9 @@
     "hindi": "नहीं (ऐसा नहीं)",
     "pos": "phrase",
     "frequencyRank": 7,
-    "tags": ["core"],
+    "tags": [
+      "core"
+    ],
     "notes": "Used to say something is NOT the case. For 'there isn't', use 'illa'."
   },
   {
@@ -91,7 +105,9 @@
     "hindi": "नहीं है",
     "pos": "phrase",
     "frequencyRank": 8,
-    "tags": ["core"],
+    "tags": [
+      "core"
+    ],
     "notes": "Means absence: 'no water' = 'vellam illa'."
   },
   {
@@ -103,7 +119,9 @@
     "hindi": "चाहिए",
     "pos": "verb",
     "frequencyRank": 9,
-    "tags": ["core"],
+    "tags": [
+      "core"
+    ],
     "notes": "Just like Hindi 'chahiye': 'chaaya venam' = 'tea, please / I want tea'."
   },
   {
@@ -115,7 +133,9 @@
     "hindi": "नहीं चाहिए",
     "pos": "verb",
     "frequencyRank": 10,
-    "tags": ["core"],
+    "tags": [
+      "core"
+    ],
     "notes": "Polite way to decline. Opposite of 'venam'."
   },
   {
@@ -127,7 +147,9 @@
     "hindi": "बस / काफ़ी है",
     "pos": "phrase",
     "frequencyRank": 11,
-    "tags": ["core"]
+    "tags": [
+      "core"
+    ]
   },
   {
     "id": "p-manassilayi",
@@ -138,7 +160,9 @@
     "hindi": "समझ गया / समझ गई",
     "pos": "phrase",
     "frequencyRank": 12,
-    "tags": ["clarify"],
+    "tags": [
+      "clarify"
+    ],
     "notes": "'manass' = mind (like Hindi 'man'). Literally 'it entered the mind'."
   },
   {
@@ -150,7 +174,9 @@
     "hindi": "समझ नहीं आया",
     "pos": "phrase",
     "frequencyRank": 13,
-    "tags": ["clarify"],
+    "tags": [
+      "clarify"
+    ],
     "notes": "Add '-illa' (not) to 'manassilaayi'. A lifesaver for beginners!"
   },
   {
@@ -163,7 +189,9 @@
     "literal": "slowly say-can?",
     "pos": "question",
     "frequencyRank": 14,
-    "tags": ["clarify"],
+    "tags": [
+      "clarify"
+    ],
     "notes": "Your most useful early phrase. 'pathukke' = slowly."
   },
   {
@@ -176,7 +204,9 @@
     "literal": "to-me know-not",
     "pos": "phrase",
     "frequencyRank": 15,
-    "tags": ["clarify"],
+    "tags": [
+      "clarify"
+    ],
     "notes": "'enikku' = to me. You'll reuse it constantly."
   },
   {
@@ -189,7 +219,9 @@
     "literal": "later see-will",
     "pos": "phrase",
     "frequencyRank": 16,
-    "tags": ["greeting"]
+    "tags": [
+      "greeting"
+    ]
   },
   {
     "id": "p-kshamikkuka",
@@ -200,7 +232,9 @@
     "hindi": "माफ़ कीजिए",
     "pos": "phrase",
     "frequencyRank": 17,
-    "tags": ["courtesy"]
+    "tags": [
+      "courtesy"
+    ]
   },
   {
     "id": "p-onnumilla",
@@ -211,7 +245,9 @@
     "hindi": "कोई बात नहीं",
     "pos": "phrase",
     "frequencyRank": 18,
-    "tags": ["courtesy"],
+    "tags": [
+      "courtesy"
+    ],
     "notes": "Reply to 'nandi' (thanks) — like Hindi 'koi baat nahi'."
   },
   {
@@ -223,7 +259,9 @@
     "hindi": "मैं",
     "pos": "pronoun",
     "frequencyRank": 19,
-    "tags": ["pronoun"],
+    "tags": [
+      "pronoun"
+    ],
     "notes": "The 'nj' is one soft sound — like the 'ny' in 'canyon'."
   },
   {
@@ -235,7 +273,9 @@
     "hindi": "आप",
     "pos": "pronoun",
     "frequencyRank": 20,
-    "tags": ["pronoun"],
+    "tags": [
+      "pronoun"
+    ],
     "notes": "Polite 'you', like Hindi 'aap'. Safe with anyone."
   },
   {
@@ -247,7 +287,9 @@
     "hindi": "वह (लड़का)",
     "pos": "pronoun",
     "frequencyRank": 21,
-    "tags": ["pronoun"]
+    "tags": [
+      "pronoun"
+    ]
   },
   {
     "id": "p-aval",
@@ -258,7 +300,9 @@
     "hindi": "वह (लड़की)",
     "pos": "pronoun",
     "frequencyRank": 22,
-    "tags": ["pronoun"]
+    "tags": [
+      "pronoun"
+    ]
   },
   {
     "id": "p-nammaal",
@@ -269,7 +313,9 @@
     "hindi": "हम (सब)",
     "pos": "pronoun",
     "frequencyRank": 23,
-    "tags": ["pronoun"],
+    "tags": [
+      "pronoun"
+    ],
     "notes": "Includes the listener, like Hindi 'hum sab'."
   },
   {
@@ -282,7 +328,9 @@
     "literal": "your name what-is?",
     "pos": "question",
     "frequencyRank": 24,
-    "tags": ["intro"]
+    "tags": [
+      "intro"
+    ]
   },
   {
     "id": "p-ente-per",
@@ -294,7 +342,9 @@
     "literal": "my name ___ is",
     "pos": "phrase",
     "frequencyRank": 25,
-    "tags": ["intro"]
+    "tags": [
+      "intro"
+    ]
   },
   {
     "id": "p-evide-ninnu",
@@ -306,7 +356,9 @@
     "literal": "you where-from coming?",
     "pos": "question",
     "frequencyRank": 26,
-    "tags": ["intro"]
+    "tags": [
+      "intro"
+    ]
   },
   {
     "id": "p-njan-ninnu",
@@ -318,7 +370,9 @@
     "literal": "I ___ from coming",
     "pos": "phrase",
     "frequencyRank": 27,
-    "tags": ["intro"]
+    "tags": [
+      "intro"
+    ]
   },
   {
     "id": "p-santhosham",
@@ -329,7 +383,10 @@
     "hindi": "मुझे खुशी है",
     "pos": "phrase",
     "frequencyRank": 28,
-    "tags": ["intro", "feelings"]
+    "tags": [
+      "intro",
+      "feelings"
+    ]
   },
   {
     "id": "p-vayasu",
@@ -341,7 +398,9 @@
     "literal": "to-you how-much age-became?",
     "pos": "question",
     "frequencyRank": 29,
-    "tags": ["intro"]
+    "tags": [
+      "intro"
+    ]
   },
   {
     "id": "p-joli",
@@ -353,7 +412,9 @@
     "literal": "your job what-is?",
     "pos": "question",
     "frequencyRank": 30,
-    "tags": ["intro"]
+    "tags": [
+      "intro"
+    ]
   },
   {
     "id": "p-malayalam-ariyamo",
@@ -364,18 +425,24 @@
     "hindi": "आपको मलयालम आती है?",
     "pos": "question",
     "frequencyRank": 31,
-    "tags": ["intro", "clarify"]
+    "tags": [
+      "intro",
+      "clarify"
+    ]
   },
   {
     "id": "p-konjam",
-    "roman": "konjam ariyaam",
-    "deva": "कोञ्चम् अरियाम्",
-    "script": "കൊഞ്ചം അറിയാം",
+    "roman": "kurachu ariyaam",
+    "deva": "कुरच्चु अरियाम्",
+    "script": "കുറച്ചു അറിയാം",
     "english": "I know a little",
     "hindi": "थोड़ा-थोड़ा आता है",
     "pos": "phrase",
     "frequencyRank": 32,
-    "tags": ["intro", "clarify"],
+    "tags": [
+      "intro",
+      "clarify"
+    ],
     "notes": "'konjam' = a little. Very useful humble reply!"
   },
   {
@@ -387,7 +454,9 @@
     "hindi": "चाय",
     "pos": "noun",
     "frequencyRank": 33,
-    "tags": ["food"],
+    "tags": [
+      "food"
+    ],
     "notes": "Same word as Hindi! Kerala runs on it."
   },
   {
@@ -399,7 +468,9 @@
     "hindi": "कॉफ़ी",
     "pos": "noun",
     "frequencyRank": 34,
-    "tags": ["food"]
+    "tags": [
+      "food"
+    ]
   },
   {
     "id": "p-vellam",
@@ -410,7 +481,9 @@
     "hindi": "पानी",
     "pos": "noun",
     "frequencyRank": 35,
-    "tags": ["food"]
+    "tags": [
+      "food"
+    ]
   },
   {
     "id": "p-bakshanam",
@@ -421,7 +494,9 @@
     "hindi": "खाना (भोजन)",
     "pos": "noun",
     "frequencyRank": 36,
-    "tags": ["food"]
+    "tags": [
+      "food"
+    ]
   },
   {
     "id": "p-choru",
@@ -432,7 +507,9 @@
     "hindi": "भात / चावल",
     "pos": "noun",
     "frequencyRank": 37,
-    "tags": ["food"],
+    "tags": [
+      "food"
+    ],
     "notes": "Staple food. 'choru venam' = I want rice."
   },
   {
@@ -444,7 +521,9 @@
     "hindi": "सांभर",
     "pos": "noun",
     "frequencyRank": 38,
-    "tags": ["food"]
+    "tags": [
+      "food"
+    ]
   },
   {
     "id": "p-meen",
@@ -455,7 +534,9 @@
     "hindi": "मछली",
     "pos": "noun",
     "frequencyRank": 39,
-    "tags": ["food"]
+    "tags": [
+      "food"
+    ]
   },
   {
     "id": "p-kozhi",
@@ -466,7 +547,9 @@
     "hindi": "मुर्ग़ा / चिकन",
     "pos": "noun",
     "frequencyRank": 40,
-    "tags": ["food"]
+    "tags": [
+      "food"
+    ]
   },
   {
     "id": "p-paal",
@@ -477,7 +560,9 @@
     "hindi": "दूध",
     "pos": "noun",
     "frequencyRank": 41,
-    "tags": ["food"]
+    "tags": [
+      "food"
+    ]
   },
   {
     "id": "p-vishakkunnu",
@@ -489,7 +574,9 @@
     "literal": "to-me hunger-happening",
     "pos": "phrase",
     "frequencyRank": 42,
-    "tags": ["food"]
+    "tags": [
+      "food"
+    ]
   },
   {
     "id": "p-daaham",
@@ -501,7 +588,9 @@
     "literal": "to-me thirst",
     "pos": "phrase",
     "frequencyRank": 43,
-    "tags": ["food"]
+    "tags": [
+      "food"
+    ]
   },
   {
     "id": "p-oru-chaaya",
@@ -513,7 +602,9 @@
     "literal": "one tea give-can?",
     "pos": "question",
     "frequencyRank": 44,
-    "tags": ["food"],
+    "tags": [
+      "food"
+    ],
     "notes": "'oru' = one (a/an). '-tharaamo?' = can you give? Polite ordering."
   },
   {
@@ -526,20 +617,24 @@
     "literal": "very taste is",
     "pos": "phrase",
     "frequencyRank": 45,
-    "tags": ["food"],
+    "tags": [
+      "food"
+    ],
     "notes": "Say this to make any cook happy."
   },
   {
     "id": "p-kaaram",
-    "roman": "kaaram kuravaakanamo?",
-    "deva": "कारम् कुरवाकणमो?",
-    "script": "കാരം കുറവാക്കണമോ?",
+    "roman": "erivu kuravaakanamo?",
+    "deva": "एरिव् कुरवाकणमो?",
+    "script": "എരിവ് കുറവാക്കണമോ?",
     "english": "Can you make it less spicy?",
     "hindi": "मिर्ची कम कर सकते हैं?",
     "literal": "spice reduce-should?",
     "pos": "question",
     "frequencyRank": 46,
-    "tags": ["food"]
+    "tags": [
+      "food"
+    ]
   },
   {
     "id": "p-bill",
@@ -550,7 +645,10 @@
     "hindi": "बिल दे दीजिए?",
     "pos": "question",
     "frequencyRank": 47,
-    "tags": ["food", "shop"]
+    "tags": [
+      "food",
+      "shop"
+    ]
   },
   {
     "id": "p-veg",
@@ -561,7 +659,9 @@
     "hindi": "शाकाहारी खाना है?",
     "pos": "question",
     "frequencyRank": 48,
-    "tags": ["food"]
+    "tags": [
+      "food"
+    ]
   },
   {
     "id": "p-evide",
@@ -573,7 +673,9 @@
     "literal": "___ where-is?",
     "pos": "question",
     "frequencyRank": 49,
-    "tags": ["directions"],
+    "tags": [
+      "directions"
+    ],
     "notes": "Put any place in front: 'bus stop evideyaanu?'"
   },
   {
@@ -585,7 +687,9 @@
     "hindi": "सीधे जाइए",
     "pos": "phrase",
     "frequencyRank": 50,
-    "tags": ["directions"]
+    "tags": [
+      "directions"
+    ]
   },
   {
     "id": "p-valathottu",
@@ -596,7 +700,9 @@
     "hindi": "दाईं ओर",
     "pos": "phrase",
     "frequencyRank": 51,
-    "tags": ["directions"]
+    "tags": [
+      "directions"
+    ]
   },
   {
     "id": "p-idathottu",
@@ -607,7 +713,9 @@
     "hindi": "बाईं ओर",
     "pos": "phrase",
     "frequencyRank": 52,
-    "tags": ["directions"]
+    "tags": [
+      "directions"
+    ]
   },
   {
     "id": "p-auto-vilicho",
@@ -618,7 +726,9 @@
     "hindi": "ऑटो बुलाया?",
     "pos": "question",
     "frequencyRank": 53,
-    "tags": ["travel"]
+    "tags": [
+      "travel"
+    ]
   },
   {
     "id": "p-bus-stop",
@@ -629,7 +739,9 @@
     "hindi": "बस स्टॉप कहाँ है?",
     "pos": "question",
     "frequencyRank": 54,
-    "tags": ["travel"]
+    "tags": [
+      "travel"
+    ]
   },
   {
     "id": "p-railway",
@@ -640,7 +752,9 @@
     "hindi": "रेलवे स्टेशन कहाँ है?",
     "pos": "question",
     "frequencyRank": 55,
-    "tags": ["travel"]
+    "tags": [
+      "travel"
+    ]
   },
   {
     "id": "p-ethra-dooram",
@@ -652,7 +766,9 @@
     "literal": "how-much distance is?",
     "pos": "question",
     "frequencyRank": 56,
-    "tags": ["travel"]
+    "tags": [
+      "travel"
+    ]
   },
   {
     "id": "p-evide-pokaanam",
@@ -664,7 +780,9 @@
     "literal": "___ to go-must",
     "pos": "phrase",
     "frequencyRank": 57,
-    "tags": ["travel"]
+    "tags": [
+      "travel"
+    ]
   },
   {
     "id": "p-ivide-nilkku",
@@ -675,7 +793,9 @@
     "hindi": "यहाँ रुकिए",
     "pos": "phrase",
     "frequencyRank": 58,
-    "tags": ["travel"],
+    "tags": [
+      "travel"
+    ],
     "notes": "Essential for autos and taxis."
   },
   {
@@ -688,7 +808,9 @@
     "literal": "to-us go-can",
     "pos": "phrase",
     "frequencyRank": 59,
-    "tags": ["travel"]
+    "tags": [
+      "travel"
+    ]
   },
   {
     "id": "p-vega",
@@ -699,7 +821,9 @@
     "hindi": "जल्दी चलिए",
     "pos": "phrase",
     "frequencyRank": 60,
-    "tags": ["travel"]
+    "tags": [
+      "travel"
+    ]
   },
   {
     "id": "p-onnu",
@@ -710,7 +834,9 @@
     "hindi": "एक",
     "pos": "number",
     "frequencyRank": 61,
-    "tags": ["numbers"]
+    "tags": [
+      "numbers"
+    ]
   },
   {
     "id": "p-randu",
@@ -721,7 +847,9 @@
     "hindi": "दो",
     "pos": "number",
     "frequencyRank": 62,
-    "tags": ["numbers"]
+    "tags": [
+      "numbers"
+    ]
   },
   {
     "id": "p-moonu",
@@ -732,7 +860,9 @@
     "hindi": "तीन",
     "pos": "number",
     "frequencyRank": 63,
-    "tags": ["numbers"]
+    "tags": [
+      "numbers"
+    ]
   },
   {
     "id": "p-naalu",
@@ -743,7 +873,9 @@
     "hindi": "चार",
     "pos": "number",
     "frequencyRank": 64,
-    "tags": ["numbers"]
+    "tags": [
+      "numbers"
+    ]
   },
   {
     "id": "p-anchu",
@@ -754,7 +886,9 @@
     "hindi": "पाँच",
     "pos": "number",
     "frequencyRank": 65,
-    "tags": ["numbers"]
+    "tags": [
+      "numbers"
+    ]
   },
   {
     "id": "p-aaru",
@@ -765,7 +899,9 @@
     "hindi": "छह",
     "pos": "number",
     "frequencyRank": 66,
-    "tags": ["numbers"]
+    "tags": [
+      "numbers"
+    ]
   },
   {
     "id": "p-ezhu",
@@ -776,7 +912,9 @@
     "hindi": "सात",
     "pos": "number",
     "frequencyRank": 67,
-    "tags": ["numbers"]
+    "tags": [
+      "numbers"
+    ]
   },
   {
     "id": "p-ettu",
@@ -787,7 +925,9 @@
     "hindi": "आठ",
     "pos": "number",
     "frequencyRank": 68,
-    "tags": ["numbers"]
+    "tags": [
+      "numbers"
+    ]
   },
   {
     "id": "p-onpathu",
@@ -798,7 +938,9 @@
     "hindi": "नौ",
     "pos": "number",
     "frequencyRank": 69,
-    "tags": ["numbers"]
+    "tags": [
+      "numbers"
+    ]
   },
   {
     "id": "p-pathu",
@@ -809,7 +951,9 @@
     "hindi": "दस",
     "pos": "number",
     "frequencyRank": 70,
-    "tags": ["numbers"]
+    "tags": [
+      "numbers"
+    ]
   },
   {
     "id": "p-irupathu",
@@ -820,7 +964,9 @@
     "hindi": "बीस",
     "pos": "number",
     "frequencyRank": 71,
-    "tags": ["numbers"]
+    "tags": [
+      "numbers"
+    ]
   },
   {
     "id": "p-noorru",
@@ -831,7 +977,9 @@
     "hindi": "सौ",
     "pos": "number",
     "frequencyRank": 72,
-    "tags": ["numbers"]
+    "tags": [
+      "numbers"
+    ]
   },
   {
     "id": "p-ethra",
@@ -843,7 +991,9 @@
     "literal": "this how-much?",
     "pos": "question",
     "frequencyRank": 73,
-    "tags": ["shop"],
+    "tags": [
+      "shop"
+    ],
     "notes": "'ithu' = this, 'ethra' = how much. The key shopping phrase."
   },
   {
@@ -856,7 +1006,9 @@
     "literal": "very more-is",
     "pos": "phrase",
     "frequencyRank": 74,
-    "tags": ["shop"]
+    "tags": [
+      "shop"
+    ]
   },
   {
     "id": "p-kuravu",
@@ -868,7 +1020,9 @@
     "literal": "reduction do-can?",
     "pos": "question",
     "frequencyRank": 75,
-    "tags": ["shop"]
+    "tags": [
+      "shop"
+    ]
   },
   {
     "id": "p-ithu-venam",
@@ -880,7 +1034,9 @@
     "literal": "to-me this want",
     "pos": "phrase",
     "frequencyRank": 76,
-    "tags": ["shop"]
+    "tags": [
+      "shop"
+    ]
   },
   {
     "id": "p-paisa",
@@ -891,7 +1047,9 @@
     "hindi": "पैसे हैं",
     "pos": "phrase",
     "frequencyRank": 77,
-    "tags": ["shop"]
+    "tags": [
+      "shop"
+    ]
   },
   {
     "id": "p-card",
@@ -902,7 +1060,9 @@
     "hindi": "कार्ड चलेगा?",
     "pos": "question",
     "frequencyRank": 78,
-    "tags": ["shop"]
+    "tags": [
+      "shop"
+    ]
   },
   {
     "id": "p-amma",
@@ -913,7 +1073,9 @@
     "hindi": "माँ (अम्मा)",
     "pos": "noun",
     "frequencyRank": 79,
-    "tags": ["family"],
+    "tags": [
+      "family"
+    ],
     "notes": "Same as Hindi 'amma'. Most universal word!"
   },
   {
@@ -925,7 +1087,9 @@
     "hindi": "पिताजी",
     "pos": "noun",
     "frequencyRank": 80,
-    "tags": ["family"]
+    "tags": [
+      "family"
+    ]
   },
   {
     "id": "p-chechi",
@@ -936,7 +1100,9 @@
     "hindi": "दीदी",
     "pos": "noun",
     "frequencyRank": 81,
-    "tags": ["family"],
+    "tags": [
+      "family"
+    ],
     "notes": "Also used to respectfully address any young woman, like Hindi 'didi'."
   },
   {
@@ -948,7 +1114,9 @@
     "hindi": "भैया",
     "pos": "noun",
     "frequencyRank": 82,
-    "tags": ["family"],
+    "tags": [
+      "family"
+    ],
     "notes": "Also used for any older man, like Hindi 'bhaiya'. Very common."
   },
   {
@@ -960,7 +1128,9 @@
     "hindi": "छोटा भाई",
     "pos": "noun",
     "frequencyRank": 83,
-    "tags": ["family"]
+    "tags": [
+      "family"
+    ]
   },
   {
     "id": "p-aniyathi",
@@ -971,7 +1141,9 @@
     "hindi": "छोटी बहन",
     "pos": "noun",
     "frequencyRank": 84,
-    "tags": ["family"]
+    "tags": [
+      "family"
+    ]
   },
   {
     "id": "p-kutumbam",
@@ -982,7 +1154,9 @@
     "hindi": "परिवार (कुटुम्ब)",
     "pos": "noun",
     "frequencyRank": 85,
-    "tags": ["family"],
+    "tags": [
+      "family"
+    ],
     "notes": "Same Sanskrit root as Hindi 'kutumb'."
   },
   {
@@ -994,7 +1168,9 @@
     "hindi": "घर",
     "pos": "noun",
     "frequencyRank": 86,
-    "tags": ["family"]
+    "tags": [
+      "family"
+    ]
   },
   {
     "id": "p-entha-cheyyunnu",
@@ -1006,7 +1182,9 @@
     "literal": "what doing?",
     "pos": "question",
     "frequencyRank": 87,
-    "tags": ["social"]
+    "tags": [
+      "social"
+    ]
   },
   {
     "id": "p-ippol",
@@ -1017,7 +1195,9 @@
     "hindi": "अभी",
     "pos": "phrase",
     "frequencyRank": 88,
-    "tags": ["time"]
+    "tags": [
+      "time"
+    ]
   },
   {
     "id": "p-pinne",
@@ -1028,7 +1208,9 @@
     "hindi": "बाद में / फिर",
     "pos": "phrase",
     "frequencyRank": 89,
-    "tags": ["time"]
+    "tags": [
+      "time"
+    ]
   },
   {
     "id": "p-innu",
@@ -1039,7 +1221,9 @@
     "hindi": "आज",
     "pos": "phrase",
     "frequencyRank": 90,
-    "tags": ["time"]
+    "tags": [
+      "time"
+    ]
   },
   {
     "id": "p-naale",
@@ -1050,7 +1234,9 @@
     "hindi": "कल (आने वाला)",
     "pos": "phrase",
     "frequencyRank": 91,
-    "tags": ["time"]
+    "tags": [
+      "time"
+    ]
   },
   {
     "id": "p-innale",
@@ -1061,7 +1247,9 @@
     "hindi": "कल (बीता हुआ)",
     "pos": "phrase",
     "frequencyRank": 92,
-    "tags": ["time"]
+    "tags": [
+      "time"
+    ]
   },
   {
     "id": "p-raavile",
@@ -1072,18 +1260,22 @@
     "hindi": "सुबह",
     "pos": "noun",
     "frequencyRank": 93,
-    "tags": ["time"]
+    "tags": [
+      "time"
+    ]
   },
   {
     "id": "p-vaikittu",
-    "roman": "vaikittuneram",
-    "deva": "वैकिट्टुनेरम्",
-    "script": "വൈകിട്ട്നേരം",
+    "roman": "vaikittu",
+    "deva": "वैकिट्टु",
+    "script": "വൈകിട്ട്",
     "english": "Evening",
     "hindi": "शाम",
     "pos": "noun",
     "frequencyRank": 94,
-    "tags": ["time"]
+    "tags": [
+      "time"
+    ]
   },
   {
     "id": "p-raathri",
@@ -1094,7 +1286,9 @@
     "hindi": "रात",
     "pos": "noun",
     "frequencyRank": 95,
-    "tags": ["time"],
+    "tags": [
+      "time"
+    ],
     "notes": "Same Sanskrit root as Hindi 'ratri'."
   },
   {
@@ -1107,7 +1301,9 @@
     "literal": "time how-much became?",
     "pos": "question",
     "frequencyRank": 96,
-    "tags": ["time"]
+    "tags": [
+      "time"
+    ]
   },
   {
     "id": "p-mazha",
@@ -1119,7 +1315,9 @@
     "literal": "rain falling",
     "pos": "phrase",
     "frequencyRank": 97,
-    "tags": ["weather"],
+    "tags": [
+      "weather"
+    ],
     "notes": "You'll say this a LOT in Kerala."
   },
   {
@@ -1131,7 +1329,9 @@
     "hindi": "बहुत गर्मी है",
     "pos": "phrase",
     "frequencyRank": 98,
-    "tags": ["weather"]
+    "tags": [
+      "weather"
+    ]
   },
   {
     "id": "p-thanuppu",
@@ -1142,7 +1342,9 @@
     "hindi": "ठंड है",
     "pos": "phrase",
     "frequencyRank": 99,
-    "tags": ["weather"]
+    "tags": [
+      "weather"
+    ]
   },
   {
     "id": "p-sugham-illa",
@@ -1154,11 +1356,13 @@
     "literal": "to-me wellness not",
     "pos": "phrase",
     "frequencyRank": 100,
-    "tags": ["health"]
+    "tags": [
+      "health"
+    ]
   },
   {
     "id": "p-thalavedana",
-    "roman": "enikku thalaveedana",
+    "roman": "enikku thalavedana",
     "deva": "एनिक्कु तलवेदन",
     "script": "എനിക്ക് തലവേദന",
     "english": "I have a headache",
@@ -1166,7 +1370,9 @@
     "literal": "to-me head-pain",
     "pos": "phrase",
     "frequencyRank": 101,
-    "tags": ["health"]
+    "tags": [
+      "health"
+    ]
   },
   {
     "id": "p-pani",
@@ -1177,7 +1383,9 @@
     "hindi": "मुझे बुखार है",
     "pos": "phrase",
     "frequencyRank": 102,
-    "tags": ["health"]
+    "tags": [
+      "health"
+    ]
   },
   {
     "id": "p-doctor",
@@ -1188,7 +1396,10 @@
     "hindi": "डॉक्टर कहाँ है?",
     "pos": "question",
     "frequencyRank": 103,
-    "tags": ["health", "emergency"]
+    "tags": [
+      "health",
+      "emergency"
+    ]
   },
   {
     "id": "p-marunu",
@@ -1199,7 +1410,9 @@
     "hindi": "मुझे दवाई चाहिए",
     "pos": "phrase",
     "frequencyRank": 104,
-    "tags": ["health"]
+    "tags": [
+      "health"
+    ]
   },
   {
     "id": "p-ksheenham",
@@ -1210,7 +1423,9 @@
     "hindi": "मैं बहुत थका हूँ",
     "pos": "phrase",
     "frequencyRank": 105,
-    "tags": ["feelings"]
+    "tags": [
+      "feelings"
+    ]
   },
   {
     "id": "p-dukham",
@@ -1221,7 +1436,9 @@
     "hindi": "मुझे दुख है",
     "pos": "phrase",
     "frequencyRank": 106,
-    "tags": ["feelings"],
+    "tags": [
+      "feelings"
+    ],
     "notes": "'dukham' — same Sanskrit root as Hindi 'dukh'."
   },
   {
@@ -1233,7 +1450,9 @@
     "hindi": "मुझे डर लग रहा है",
     "pos": "phrase",
     "frequencyRank": 107,
-    "tags": ["feelings"]
+    "tags": [
+      "feelings"
+    ]
   },
   {
     "id": "p-ishttam",
@@ -1245,7 +1464,9 @@
     "literal": "to-me ___ liking is",
     "pos": "phrase",
     "frequencyRank": 108,
-    "tags": ["feelings"],
+    "tags": [
+      "feelings"
+    ],
     "notes": "'ishttam' = liking, from Sanskrit. Fill in food, places, anything."
   },
   {
@@ -1257,7 +1478,9 @@
     "hindi": "आपका फ़ोन नंबर क्या है?",
     "pos": "question",
     "frequencyRank": 109,
-    "tags": ["social"]
+    "tags": [
+      "social"
+    ]
   },
   {
     "id": "p-vilichu",
@@ -1268,7 +1491,9 @@
     "hindi": "मैं बाद में कॉल करता हूँ",
     "pos": "phrase",
     "frequencyRank": 110,
-    "tags": ["social"]
+    "tags": [
+      "social"
+    ]
   },
   {
     "id": "p-message",
@@ -1279,7 +1504,9 @@
     "hindi": "मेसेज भेजा क्या?",
     "pos": "question",
     "frequencyRank": 111,
-    "tags": ["social"]
+    "tags": [
+      "social"
+    ]
   },
   {
     "id": "p-varoo",
@@ -1290,18 +1517,22 @@
     "hindi": "चलो ___ चलते हैं, चलोगे?",
     "pos": "question",
     "frequencyRank": 112,
-    "tags": ["social"]
+    "tags": [
+      "social"
+    ]
   },
   {
     "id": "p-seriyaayi",
-    "roman": "seriyaayi, njaan varaam",
-    "deva": "शेरियायि, ञान् वराम्",
-    "script": "ശരിയായി, ഞാൻ വരാം",
+    "roman": "sari, njaan varaam",
+    "deva": "शरि, ञान् वराम्",
+    "script": "ശരി, ഞാൻ വരാം",
     "english": "Sure, I'll come",
     "hindi": "ठीक है, मैं आता/आती हूँ",
     "pos": "phrase",
     "frequencyRank": 113,
-    "tags": ["social"]
+    "tags": [
+      "social"
+    ]
   },
   {
     "id": "p-sahaayam",
@@ -1312,7 +1543,9 @@
     "hindi": "मदद चाहिए!",
     "pos": "phrase",
     "frequencyRank": 114,
-    "tags": ["emergency"],
+    "tags": [
+      "emergency"
+    ],
     "notes": "'sahaayam' = help, same Sanskrit root as Hindi 'sahayta'."
   },
   {
@@ -1324,7 +1557,9 @@
     "hindi": "पुलिस को बुलाया?",
     "pos": "question",
     "frequencyRank": 115,
-    "tags": ["emergency"]
+    "tags": [
+      "emergency"
+    ]
   },
   {
     "id": "p-hospital",
@@ -1335,7 +1570,9 @@
     "hindi": "हॉस्पिटल कहाँ है?",
     "pos": "question",
     "frequencyRank": 116,
-    "tags": ["emergency"]
+    "tags": [
+      "emergency"
+    ]
   },
   {
     "id": "p-ambulance",
@@ -1346,7 +1583,9 @@
     "hindi": "एम्बुलेंस बुलाओ!",
     "pos": "phrase",
     "frequencyRank": 117,
-    "tags": ["emergency"]
+    "tags": [
+      "emergency"
+    ]
   },
   {
     "id": "p-vazhi-thettu",
@@ -1358,7 +1597,10 @@
     "literal": "to-me way lost-went",
     "pos": "phrase",
     "frequencyRank": 118,
-    "tags": ["emergency", "travel"]
+    "tags": [
+      "emergency",
+      "travel"
+    ]
   },
   {
     "id": "p-sookshikkuka",
@@ -1369,7 +1611,9 @@
     "hindi": "सावधान!",
     "pos": "phrase",
     "frequencyRank": 119,
-    "tags": ["emergency"]
+    "tags": [
+      "emergency"
+    ]
   },
   {
     "id": "p-valare-nannaayi",
@@ -1380,7 +1624,1119 @@
     "hindi": "बहुत अच्छा",
     "pos": "phrase",
     "frequencyRank": 120,
-    "tags": ["courtesy"],
+    "tags": [
+      "courtesy"
+    ],
     "notes": "'valare' = very, 'nannaayi' = well/good. Universal praise."
+  },
+  {
+    "id": "p-meeting-undu",
+    "roman": "meeting undu",
+    "deva": "मीटिङ्ग् उण्टु",
+    "script": "മീറ്റിംഗ് ഉണ്ട്",
+    "english": "There is a meeting",
+    "hindi": "मीटिंग है",
+    "pos": "phrase",
+    "frequencyRank": 121,
+    "tags": [
+      "work"
+    ],
+    "notes": "Malayalis use English words like 'meeting', 'office', 'work' natively. '...undu' = there is."
+  },
+  {
+    "id": "p-work-kazhinjo",
+    "roman": "work kazhinjo?",
+    "deva": "वर्क् कऴिञ्ञो?",
+    "script": "വർക്ക് കഴിഞ്ഞോ?",
+    "english": "Is the work done?",
+    "hindi": "काम हो गया?",
+    "pos": "question",
+    "frequencyRank": 122,
+    "tags": [
+      "work"
+    ],
+    "notes": "Tack 'kazhinjo?' onto anything to ask 'is it finished?'"
+  },
+  {
+    "id": "p-njaan-cheyyam",
+    "roman": "njaan cheyyaam",
+    "deva": "ञान् चेय्याम्",
+    "script": "ഞാൻ ചെയ്യാം",
+    "english": "I'll do it",
+    "hindi": "मैं कर दूँगा",
+    "pos": "phrase",
+    "frequencyRank": 123,
+    "tags": [
+      "work"
+    ],
+    "notes": "The '-aam' ending signals willingness — 'I'll take care of it'. Reassuring."
+  },
+  {
+    "id": "p-ippol-venam",
+    "roman": "ippol venam",
+    "deva": "इप्पोळ् वेणम्",
+    "script": "ഇപ്പോൾ വേണം",
+    "english": "(I) need it now",
+    "hindi": "अभी चाहिए",
+    "pos": "phrase",
+    "frequencyRank": 124,
+    "tags": [
+      "work"
+    ],
+    "notes": "'ippol' = now. Pair a time word with 'venam' to set urgency."
+  },
+  {
+    "id": "p-mail-ayachu",
+    "roman": "mail ayachu",
+    "deva": "मेल् अयच्चु",
+    "script": "മെയിൽ അയച്ചു",
+    "english": "(I) sent the mail",
+    "hindi": "मेल भेज दिया",
+    "pos": "phrase",
+    "frequencyRank": 125,
+    "tags": [
+      "work"
+    ],
+    "notes": "'ayachu' = sent. Past tense rides on the '-u' ending."
+  },
+  {
+    "id": "p-sammatham",
+    "roman": "sammatham",
+    "deva": "सम्मतम्",
+    "script": "സമ്മതം",
+    "english": "Agreed / OK",
+    "hindi": "सहमत / ठीक है",
+    "pos": "phrase",
+    "frequencyRank": 126,
+    "tags": [
+      "work"
+    ],
+    "notes": "Shares a root with Hindi 'sammati'. Use it to agree in a meeting."
+  },
+  {
+    "id": "p-naale-venam",
+    "roman": "naale venam",
+    "deva": "नाळे वेणम्",
+    "script": "നാളെ വേണം",
+    "english": "(I) need it by tomorrow",
+    "hindi": "कल तक चाहिए",
+    "pos": "phrase",
+    "frequencyRank": 127,
+    "tags": [
+      "work"
+    ],
+    "notes": "Time word + 'venam' sets a deadline. 'naale' = tomorrow."
+  },
+  {
+    "id": "p-kazhinju",
+    "roman": "kazhinju",
+    "deva": "कऴिञ्ञु",
+    "script": "കഴിഞ്ഞു",
+    "english": "(It's) done / finished",
+    "hindi": "हो गया",
+    "pos": "verb",
+    "frequencyRank": 128,
+    "tags": [
+      "work"
+    ],
+    "notes": "One of the most-used words in Malayalam: done / over / finished."
+  },
+  {
+    "id": "p-baaki-undu",
+    "roman": "baaki undu",
+    "deva": "बाकि उण्टु",
+    "script": "ബാക്കി ഉണ്ട്",
+    "english": "(Some is) pending / remaining",
+    "hindi": "बाकी है",
+    "pos": "phrase",
+    "frequencyRank": 129,
+    "tags": [
+      "work"
+    ],
+    "notes": "'baaki' = remainder, same as Hindi 'baaki'. '...undu' = there is."
+  },
+  {
+    "id": "p-samayam-illa",
+    "roman": "samayam illa",
+    "deva": "समयम् इल्ल",
+    "script": "സമയം ഇല്ല",
+    "english": "(There's) no time",
+    "hindi": "समय नहीं है",
+    "pos": "phrase",
+    "frequencyRank": 130,
+    "tags": [
+      "work"
+    ],
+    "notes": "'samayam' = time; '-illa' negates it. The all-purpose 'no X'."
+  },
+  {
+    "id": "p-leave-venam",
+    "roman": "leave venam",
+    "deva": "लीव् वेणम्",
+    "script": "ലീവ് വേണം",
+    "english": "(I) need leave / a day off",
+    "hindi": "छुट्टी चाहिए",
+    "pos": "phrase",
+    "frequencyRank": 131,
+    "tags": [
+      "work"
+    ],
+    "notes": "'leave' is used as-is in Kerala offices. Ask your boss this."
+  },
+  {
+    "id": "p-veendum-nokkam",
+    "roman": "veendum nokkaam",
+    "deva": "वीण्टुम् नोक्काम्",
+    "script": "വീണ്ടും നോക്കാം",
+    "english": "Let's look (at it) again",
+    "hindi": "फिर देखेंगे",
+    "pos": "phrase",
+    "frequencyRank": 132,
+    "tags": [
+      "work"
+    ],
+    "notes": "'veendum' = again, 'nokkaam' = let's look. Defer politely."
+  },
+  {
+    "id": "p-ivide-vrithiyaakku",
+    "roman": "ivide vrithiyaakku",
+    "deva": "इविटे व्रुतियाक्कू",
+    "script": "ഇവിടെ വൃത്തിയാക്കൂ",
+    "english": "Clean here",
+    "hindi": "यहाँ साफ़ करो",
+    "pos": "phrase",
+    "frequencyRank": 133,
+    "tags": [
+      "household"
+    ],
+    "notes": "'vrithi' = cleanliness, '-aakku' = make. The '-u' makes it a soft request."
+  },
+  {
+    "id": "p-thuni-alakku",
+    "roman": "thuni alakku",
+    "deva": "तुणि अलक्कू",
+    "script": "തുണി അലക്കൂ",
+    "english": "Wash the clothes",
+    "hindi": "कपड़े धोओ",
+    "pos": "phrase",
+    "frequencyRank": 134,
+    "tags": [
+      "household"
+    ],
+    "notes": "'thuni' = cloth/clothes, 'alakkuka' = to wash (clothes)."
+  },
+  {
+    "id": "p-paatram-kazhuku",
+    "roman": "paatram kazhuku",
+    "deva": "पात्रम् कऴुकू",
+    "script": "പാത്രം കഴുകൂ",
+    "english": "Wash the dishes",
+    "hindi": "बर्तन धोओ",
+    "pos": "phrase",
+    "frequencyRank": 135,
+    "tags": [
+      "household"
+    ],
+    "notes": "'paatram' = vessel (Hindi 'paatra'), 'kazhukuka' = to wash."
+  },
+  {
+    "id": "p-naale-vaa",
+    "roman": "naale vaa",
+    "deva": "नाळे वा",
+    "script": "നാളെ വാ",
+    "english": "Come tomorrow",
+    "hindi": "कल आओ",
+    "pos": "phrase",
+    "frequencyRank": 136,
+    "tags": [
+      "household"
+    ],
+    "notes": "'vaa' = come (casual); 'varoo' is the softer version."
+  },
+  {
+    "id": "p-mathiyaayi",
+    "roman": "mathiyaayi",
+    "deva": "मतियायि",
+    "script": "മതിയായി",
+    "english": "That's enough",
+    "hindi": "बस, काफ़ी है",
+    "pos": "phrase",
+    "frequencyRank": 137,
+    "tags": [
+      "household"
+    ],
+    "notes": "From 'mathi' (enough). Stop someone politely."
+  },
+  {
+    "id": "p-nannaayi-work",
+    "roman": "nannaayi",
+    "deva": "नन्नायि",
+    "script": "നന്നായി",
+    "english": "Well done",
+    "hindi": "अच्छा किया",
+    "pos": "phrase",
+    "frequencyRank": 138,
+    "tags": [
+      "household"
+    ],
+    "notes": "Praise for a job done well. 'nannaayi' = nicely / well."
+  },
+  {
+    "id": "p-kettu-poyi",
+    "roman": "kedaayi poyi",
+    "deva": "केडायि पोयि",
+    "script": "കേടായി പോയി",
+    "english": "(It) broke down",
+    "hindi": "ख़राब हो गया",
+    "pos": "phrase",
+    "frequencyRank": 139,
+    "tags": [
+      "household"
+    ],
+    "notes": "'AC kedaayi poyi' = the AC broke. Past tense ('poyi' = went)."
+  },
+  {
+    "id": "p-pani-cheyyunnilla",
+    "roman": "pani cheyyunnilla",
+    "deva": "पणि चेय्युन्निल्ल",
+    "script": "പണി ചെയ്യുന്നില്ല",
+    "english": "(It's) not working",
+    "hindi": "काम नहीं कर रहा",
+    "pos": "phrase",
+    "frequencyRank": 140,
+    "tags": [
+      "household"
+    ],
+    "notes": "'pani cheyyuka' = to function; '-unnilla' = isn't (doing)."
+  },
+  {
+    "id": "p-sheri-aakku",
+    "roman": "sheri aakku",
+    "deva": "शेरि आक्कू",
+    "script": "ശരിയാക്കൂ",
+    "english": "Fix it / Set it right",
+    "hindi": "ठीक कर दो",
+    "pos": "phrase",
+    "frequencyRank": 141,
+    "tags": [
+      "household"
+    ],
+    "notes": "'sheri/sari' = correct, '-aakku' = make. 'Make it right.'"
+  },
+  {
+    "id": "p-vellam-illa",
+    "roman": "vellam illa",
+    "deva": "वेळ्ळम् इल्ल",
+    "script": "വെള്ളം ഇല്ല",
+    "english": "(There's) no water",
+    "hindi": "पानी नहीं है",
+    "pos": "phrase",
+    "frequencyRank": 142,
+    "tags": [
+      "household"
+    ],
+    "notes": "Reuses 'vellam' (water) + '-illa'. Same trick everywhere."
+  },
+  {
+    "id": "p-current-illa",
+    "roman": "current illa",
+    "deva": "करण्ट् इल्ल",
+    "script": "കറന്റ് ഇല്ല",
+    "english": "(There's) no power",
+    "hindi": "बिजली नहीं है",
+    "pos": "phrase",
+    "frequencyRank": 143,
+    "tags": [
+      "household"
+    ],
+    "notes": "'current' = electricity in Kerala English. A power cut!"
+  },
+  {
+    "id": "p-ethra-aakum",
+    "roman": "ethra aakum?",
+    "deva": "एत्र आकुम्?",
+    "script": "എത്ര ആകും?",
+    "english": "How much will it cost?",
+    "hindi": "कितना लगेगा?",
+    "pos": "question",
+    "frequencyRank": 144,
+    "tags": [
+      "household"
+    ],
+    "notes": "'aakum' = will become/cost — the '-um' future. Ask for a quote."
+  },
+  {
+    "id": "p-ee-bus-ernakulam",
+    "roman": "ee bus Ernakulam pokumo?",
+    "deva": "ई बस् एर्णाकुळम् पोकुमो?",
+    "script": "ഈ ബസ് എറണാകുളം പോകുമോ?",
+    "english": "Does this bus go to Ernakulam?",
+    "hindi": "क्या यह बस एर्णाकुलम जाती है?",
+    "pos": "question",
+    "frequencyRank": 145,
+    "tags": [
+      "transit"
+    ],
+    "notes": "'ee' = this. Add '-o' to 'pokum' (will go) to make a yes/no question."
+  },
+  {
+    "id": "p-ethu-bus",
+    "roman": "ethu bus?",
+    "deva": "एतु बस्?",
+    "script": "ഏത് ബസ്?",
+    "english": "Which bus?",
+    "hindi": "कौन सी बस?",
+    "pos": "question",
+    "frequencyRank": 146,
+    "tags": [
+      "transit"
+    ],
+    "notes": "'ethu' = which. Point and ask."
+  },
+  {
+    "id": "p-ticket-tharoo",
+    "roman": "oru ticket tharoo",
+    "deva": "ओरु टिक्केट् तरू",
+    "script": "ഒരു ടിക്കറ്റ് തരൂ",
+    "english": "Give me one ticket",
+    "hindi": "एक टिकट दीजिए",
+    "pos": "phrase",
+    "frequencyRank": 147,
+    "tags": [
+      "transit"
+    ],
+    "notes": "'tharoo' = please give. The '-oo' makes it polite."
+  },
+  {
+    "id": "p-ivide-nirthu",
+    "roman": "ivide nirthu",
+    "deva": "इविटे निर्त्तू",
+    "script": "ഇവിടെ നിർത്തൂ",
+    "english": "Stop here",
+    "hindi": "यहाँ रोको",
+    "pos": "phrase",
+    "frequencyRank": 148,
+    "tags": [
+      "transit"
+    ],
+    "notes": "'nirthuka' = to stop. Tell the driver where to halt."
+  },
+  {
+    "id": "p-ticket-ethra",
+    "roman": "ticket ethra?",
+    "deva": "टिक्केट् एत्र?",
+    "script": "ടിക്കറ്റ് എത്ര?",
+    "english": "How much is the ticket?",
+    "hindi": "टिकट कितने का है?",
+    "pos": "question",
+    "frequencyRank": 149,
+    "tags": [
+      "transit"
+    ],
+    "notes": "Reuses 'ethra?' (how much). Works for any price."
+  },
+  {
+    "id": "p-aduthe-stop",
+    "roman": "adutha stop ethaanu?",
+    "deva": "अटुत्त स्टॉप् एताण्?",
+    "script": "അടുത്ത സ്റ്റോപ്പ് ഏതാണ്?",
+    "english": "Which is the next stop?",
+    "hindi": "अगला स्टॉप कौन सा है?",
+    "pos": "question",
+    "frequencyRank": 150,
+    "tags": [
+      "transit"
+    ],
+    "notes": "'adutha' = next. Handy on a long ride."
+  },
+  {
+    "id": "p-bus-vaikiyo",
+    "roman": "bus vaikiyo?",
+    "deva": "बस् वैकियो?",
+    "script": "ബസ് വൈകിയോ?",
+    "english": "Is the bus late?",
+    "hindi": "क्या बस लेट है?",
+    "pos": "question",
+    "frequencyRank": 151,
+    "tags": [
+      "transit"
+    ],
+    "notes": "'vaiki' = got late; '-yo?' makes it a question."
+  },
+  {
+    "id": "p-eppol-varum",
+    "roman": "eppol varum?",
+    "deva": "एप्पोळ् वरुम्?",
+    "script": "എപ്പോൾ വരും?",
+    "english": "When will it come?",
+    "hindi": "कब आएगी?",
+    "pos": "question",
+    "frequencyRank": 152,
+    "tags": [
+      "transit"
+    ],
+    "notes": "'eppol' = when, 'varum' = will come (the '-um' future)."
+  },
+  {
+    "id": "p-aduthe-eppol",
+    "roman": "aduthathu eppol?",
+    "deva": "अटुत्ततु एप्पोळ्?",
+    "script": "അടുത്തത് എപ്പോൾ?",
+    "english": "When is the next one?",
+    "hindi": "अगली कब है?",
+    "pos": "question",
+    "frequencyRank": 153,
+    "tags": [
+      "transit"
+    ],
+    "notes": "'aduthathu' = the next one."
+  },
+  {
+    "id": "p-platform-ethu",
+    "roman": "ethu platform?",
+    "deva": "एतु प्लाट्फॉम्?",
+    "script": "ഏത് പ്ലാറ്റ്ഫോം?",
+    "english": "Which platform?",
+    "hindi": "कौन सा प्लेटफ़ॉर्म?",
+    "pos": "question",
+    "frequencyRank": 154,
+    "tags": [
+      "transit"
+    ],
+    "notes": "For trains. 'ethu' = which."
+  },
+  {
+    "id": "p-train-vannu",
+    "roman": "train vannu",
+    "deva": "ट्रेन् वन्नु",
+    "script": "ട്രെയിൻ വന്നു",
+    "english": "The train has arrived",
+    "hindi": "ट्रेन आ गई",
+    "pos": "phrase",
+    "frequencyRank": 155,
+    "tags": [
+      "transit"
+    ],
+    "notes": "'vannu' = came/arrived. Past tense via '-u'."
+  },
+  {
+    "id": "p-late-aanu",
+    "roman": "late aanu",
+    "deva": "लेट् आण्",
+    "script": "ലേറ്റ് ആണ്",
+    "english": "(It) is late",
+    "hindi": "लेट है",
+    "pos": "phrase",
+    "frequencyRank": 156,
+    "tags": [
+      "transit"
+    ],
+    "notes": "'late' used as-is + 'aanu' (is)."
+  },
+  {
+    "id": "p-njaan-vicharikkunnu",
+    "roman": "njaan vicharikkunnu",
+    "deva": "ञान् विचारिक्कुन्नु",
+    "script": "ഞാൻ വിചാരിക്കുന്നു",
+    "english": "I think",
+    "hindi": "मुझे लगता है",
+    "pos": "phrase",
+    "frequencyRank": 157,
+    "tags": [
+      "opinion"
+    ],
+    "notes": "'vicharikkuka' = to think (Hindi 'vichaar'). '-unnu' = present."
+  },
+  {
+    "id": "p-ente-abhipraayam",
+    "roman": "ente abhipraayathil",
+    "deva": "एन्टे अभिप्रायत्तिल्",
+    "script": "എന്റെ അഭിപ്രായത്തിൽ",
+    "english": "In my opinion",
+    "hindi": "मेरी राय में",
+    "pos": "phrase",
+    "frequencyRank": 158,
+    "tags": [
+      "opinion"
+    ],
+    "notes": "'abhipraayam' = opinion — a shared Sanskrit root."
+  },
+  {
+    "id": "p-aakaam",
+    "roman": "aakaam",
+    "deva": "आकाम्",
+    "script": "ആകാം",
+    "english": "Maybe / Could be",
+    "hindi": "हो सकता है",
+    "pos": "phrase",
+    "frequencyRank": 159,
+    "tags": [
+      "opinion"
+    ],
+    "notes": "Non-committal. 'aakaam' = it may be / sure."
+  },
+  {
+    "id": "p-sheriyaanu",
+    "roman": "sheri aanu",
+    "deva": "शेरि आण्",
+    "script": "ശരിയാണ്",
+    "english": "(That's) correct / true",
+    "hindi": "सही है",
+    "pos": "phrase",
+    "frequencyRank": 160,
+    "tags": [
+      "opinion"
+    ],
+    "notes": "'sheri/sari' = right + 'aanu' (is). Agree with a point."
+  },
+  {
+    "id": "p-enikku-thonnunnilla",
+    "roman": "enikku thonnunnilla",
+    "deva": "एनिक्कु तोन्नुन्निल्ल",
+    "script": "എനിക്ക് തോന്നുന്നില്ല",
+    "english": "I don't think so",
+    "hindi": "मुझे नहीं लगता",
+    "pos": "phrase",
+    "frequencyRank": 161,
+    "tags": [
+      "opinion"
+    ],
+    "notes": "'thonnuka' = to feel/reckon; '-unnilla' negates it. Soft disagreement."
+  },
+  {
+    "id": "p-sheri-alla",
+    "roman": "sheri alla",
+    "deva": "शेरि अल्ल",
+    "script": "ശരിയല്ല",
+    "english": "(That's) not right",
+    "hindi": "सही नहीं है",
+    "pos": "phrase",
+    "frequencyRank": 162,
+    "tags": [
+      "opinion"
+    ],
+    "notes": "'alla' = is not. Disagree without being harsh."
+  },
+  {
+    "id": "p-ithu-nallathu",
+    "roman": "ithu nallathaanu",
+    "deva": "इतु नल्लताण्",
+    "script": "ഇത് നല്ലതാണ്",
+    "english": "This is good",
+    "hindi": "यह अच्छा है",
+    "pos": "phrase",
+    "frequencyRank": 163,
+    "tags": [
+      "opinion"
+    ],
+    "notes": "'nallathu' = a good one; 'ithu' = this."
+  },
+  {
+    "id": "p-athu-kooduthal-nallathu",
+    "roman": "athu kooduthal nallathu",
+    "deva": "अतु कूटुतल् नल्लतु",
+    "script": "അത് കൂടുതൽ നല്ലത്",
+    "english": "That is better",
+    "hindi": "वह ज़्यादा अच्छा है",
+    "pos": "phrase",
+    "frequencyRank": 164,
+    "tags": [
+      "opinion"
+    ],
+    "notes": "'kooduthal' = more, so 'more good' = better. No special word needed."
+  },
+  {
+    "id": "p-enikku-ishtam-koodi",
+    "roman": "enikku ithu kooduthal ishtam",
+    "deva": "एनिक्कु इतु कूटुतल् इष्टम्",
+    "script": "എനിക്ക് ഇത് കൂടുതൽ ഇഷ്ടം",
+    "english": "I like this more",
+    "hindi": "मुझे यह ज़्यादा पसंद है",
+    "pos": "phrase",
+    "frequencyRank": 165,
+    "tags": [
+      "opinion"
+    ],
+    "notes": "Compare likes with 'kooduthal ishtam'."
+  },
+  {
+    "id": "p-kuzhappam-illa",
+    "roman": "kuzhappam illa",
+    "deva": "कुऴप्पम् इल्ल",
+    "script": "കുഴപ്പമില്ല",
+    "english": "Not bad / No problem",
+    "hindi": "कोई बात नहीं / ठीक है",
+    "pos": "phrase",
+    "frequencyRank": 166,
+    "tags": [
+      "opinion"
+    ],
+    "notes": "Everyday gem. 'kuzhappam' = trouble; '-illa' = none."
+  },
+  {
+    "id": "p-mosham",
+    "roman": "mosham aanu",
+    "deva": "मोशम् आण्",
+    "script": "മോശമാണ്",
+    "english": "(It's) bad / poor",
+    "hindi": "ख़राब है",
+    "pos": "phrase",
+    "frequencyRank": 167,
+    "tags": [
+      "opinion"
+    ],
+    "notes": "'mosham' = bad / poor quality."
+  },
+  {
+    "id": "p-onnu-pole",
+    "roman": "onnu pole",
+    "deva": "ओन्नु पोले",
+    "script": "ഒന്നു പോലെ",
+    "english": "(They're) the same / alike",
+    "hindi": "एक जैसे",
+    "pos": "phrase",
+    "frequencyRank": 168,
+    "tags": [
+      "opinion"
+    ],
+    "notes": "'pole' = like / similar (Hindi 'jaisa')."
+  },
+  {
+    "id": "p-cinema-kandu",
+    "roman": "njaan cinema kandu",
+    "deva": "ञान् सिनिमा कण्टु",
+    "script": "ഞാൻ സിനിമ കണ്ടു",
+    "english": "I saw a movie",
+    "hindi": "मैंने फ़िल्म देखी",
+    "pos": "phrase",
+    "frequencyRank": 169,
+    "tags": [
+      "leisure"
+    ],
+    "notes": "'kandu' = saw (past of 'kaanuka'). 'cinema'/'padam' = film."
+  },
+  {
+    "id": "p-padam-nannaayi",
+    "roman": "padam nannaayirunnu",
+    "deva": "पटम् नन्नायिरुन्नु",
+    "script": "പടം നന്നായിരുന്നു",
+    "english": "The movie was good",
+    "hindi": "फ़िल्म अच्छी थी",
+    "pos": "phrase",
+    "frequencyRank": 170,
+    "tags": [
+      "leisure"
+    ],
+    "notes": "'padam' = film, 'nannaayirunnu' = was good (past)."
+  },
+  {
+    "id": "p-paatt-kelkkunnu",
+    "roman": "njaan paattu kelkkunnu",
+    "deva": "ञान् पाट्टु केल्क्कुन्नु",
+    "script": "ഞാൻ പാട്ടു കേൾക്കുന്നു",
+    "english": "I'm listening to songs",
+    "hindi": "मैं गाने सुन रहा हूँ",
+    "pos": "phrase",
+    "frequencyRank": 171,
+    "tags": [
+      "leisure"
+    ],
+    "notes": "'paattu' = song, 'kelkkuka' = to hear. '-unnu' = present."
+  },
+  {
+    "id": "p-namukku-kaanaam",
+    "roman": "namukku padam kaanaam",
+    "deva": "नमुक्कु पटम् काणाम्",
+    "script": "നമുക്ക് പടം കാണാം",
+    "english": "Let's watch a movie",
+    "hindi": "चलो फ़िल्म देखें",
+    "pos": "phrase",
+    "frequencyRank": 172,
+    "tags": [
+      "leisure"
+    ],
+    "notes": "'namukku ... kaanaam' = let's watch. Reuse the 'let's' pattern."
+  },
+  {
+    "id": "p-rasakaram",
+    "roman": "rasakaram aanu",
+    "deva": "रसकरम् आण्",
+    "script": "രസകരമാണ്",
+    "english": "(It's) fun / interesting",
+    "hindi": "मज़ेदार है",
+    "pos": "phrase",
+    "frequencyRank": 173,
+    "tags": [
+      "leisure"
+    ],
+    "notes": "From 'rasam' (taste/fun). 'rasakaram' = enjoyable."
+  },
+  {
+    "id": "p-bore-aanu",
+    "roman": "bore aanu",
+    "deva": "बोर् आण्",
+    "script": "ബോറാണ്",
+    "english": "(It's) boring",
+    "hindi": "बोरिंग है",
+    "pos": "phrase",
+    "frequencyRank": 174,
+    "tags": [
+      "leisure"
+    ],
+    "notes": "'bore' used as-is + 'aanu'. You'll hear this a lot."
+  },
+  {
+    "id": "p-ozhivu-samayam",
+    "roman": "ozhivu samayam",
+    "deva": "ओऴिवु समयम्",
+    "script": "ഒഴിവു സമയം",
+    "english": "Free time",
+    "hindi": "खाली समय",
+    "pos": "phrase",
+    "frequencyRank": 175,
+    "tags": [
+      "leisure"
+    ],
+    "notes": "'ozhivu' = free/vacant + 'samayam' (time)."
+  },
+  {
+    "id": "p-njaan-vaayikkunnu",
+    "roman": "njaan vaayikkunnu",
+    "deva": "ञान् वायिक्कुन्नु",
+    "script": "ഞാൻ വായിക്കുന്നു",
+    "english": "I'm reading",
+    "hindi": "मैं पढ़ रहा हूँ",
+    "pos": "phrase",
+    "frequencyRank": 176,
+    "tags": [
+      "leisure"
+    ],
+    "notes": "'vaayikkuka' = to read. '-unnu' = present/ongoing."
+  },
+  {
+    "id": "p-njaan-kalikkunnu",
+    "roman": "njaan kalikkunnu",
+    "deva": "ञान् कळिक्कुन्नु",
+    "script": "ഞാൻ കളിക്കുന്നു",
+    "english": "I'm playing",
+    "hindi": "मैं खेल रहा हूँ",
+    "pos": "phrase",
+    "frequencyRank": 177,
+    "tags": [
+      "leisure"
+    ],
+    "notes": "'kalikkuka' = to play."
+  },
+  {
+    "id": "p-nadakkaan-pokunnu",
+    "roman": "nadakkaan pokunnu",
+    "deva": "नटक्कान् पोकुन्नु",
+    "script": "നടക്കാൻ പോകുന്നു",
+    "english": "(I'm) going for a walk",
+    "hindi": "टहलने जा रहा हूँ",
+    "pos": "phrase",
+    "frequencyRank": 178,
+    "tags": [
+      "leisure"
+    ],
+    "notes": "'nadakkuka' = to walk. '-aan pokunnu' = going to (do)."
+  },
+  {
+    "id": "p-ishtam-sangeetham",
+    "roman": "enikku sangeetham ishtam",
+    "deva": "एनिक्कु सङ्गीतम् इष्टम्",
+    "script": "എനിക്ക് സംഗീതം ഇഷ്ടം",
+    "english": "I like music",
+    "hindi": "मुझे संगीत पसंद है",
+    "pos": "phrase",
+    "frequencyRank": 179,
+    "tags": [
+      "leisure"
+    ],
+    "notes": "'sangeetham' = music — a shared Sanskrit root."
+  },
+  {
+    "id": "p-namukku-kalikkaam",
+    "roman": "namukku kalikkaam",
+    "deva": "नमुक्कु कळिक्काम्",
+    "script": "നമുക്ക് കളിക്കാം",
+    "english": "Let's play",
+    "hindi": "चलो खेलें",
+    "pos": "phrase",
+    "frequencyRank": 180,
+    "tags": [
+      "leisure"
+    ],
+    "notes": "'namukku ... -aam' = let's. Reuse it with any verb."
+  },
+  {
+    "id": "p-innale-poyi",
+    "roman": "innale njaan poyi",
+    "deva": "इन्नले ञान् पोयि",
+    "script": "ഇന്നലെ ഞാൻ പോയി",
+    "english": "Yesterday I went",
+    "hindi": "कल मैं गया",
+    "pos": "phrase",
+    "frequencyRank": 181,
+    "tags": [
+      "tense",
+      "past"
+    ],
+    "notes": "Past verbs end in '-i' or '-u'. 'poyi' = went."
+  },
+  {
+    "id": "p-innale-kandu",
+    "roman": "innale njaan kandu",
+    "deva": "इन्नले ञान् कण्टु",
+    "script": "ഇന്നലെ ഞാൻ കണ്ടു",
+    "english": "Yesterday I saw (it)",
+    "hindi": "कल मैंने देखा",
+    "pos": "phrase",
+    "frequencyRank": 182,
+    "tags": [
+      "tense",
+      "past"
+    ],
+    "notes": "'kandu' = saw. Notice the '-u' ending marking the past."
+  },
+  {
+    "id": "p-innale-kazhichu",
+    "roman": "innale njaan kazhichu",
+    "deva": "इन्नले ञान् कऴिच्चु",
+    "script": "ഇന്നലെ ഞാൻ കഴിച്ചു",
+    "english": "Yesterday I ate",
+    "hindi": "कल मैंने खाया",
+    "pos": "phrase",
+    "frequencyRank": 183,
+    "tags": [
+      "tense",
+      "past"
+    ],
+    "notes": "'kazhichu' = ate. Same '-u' past ending."
+  },
+  {
+    "id": "p-innale-vannu",
+    "roman": "innale avan vannu",
+    "deva": "इन्नले अवन् वन्नु",
+    "script": "ഇന്നലെ അവൻ വന്നു",
+    "english": "Yesterday he came",
+    "hindi": "कल वह आया",
+    "pos": "phrase",
+    "frequencyRank": 184,
+    "tags": [
+      "tense",
+      "past"
+    ],
+    "notes": "'vannu' = came. Compare with future 'varum' (will come)."
+  },
+  {
+    "id": "p-innale-paranju",
+    "roman": "innale njaan paranju",
+    "deva": "इन्नले ञान् परञ्ञु",
+    "script": "ഇന്നലെ ഞാൻ പറഞ്ഞു",
+    "english": "Yesterday I said (it)",
+    "hindi": "कल मैंने कहा",
+    "pos": "phrase",
+    "frequencyRank": 185,
+    "tags": [
+      "tense",
+      "past"
+    ],
+    "notes": "'paranju' = said. Past of 'parayuka'."
+  },
+  {
+    "id": "p-innale-cheythu",
+    "roman": "innale enthu cheythu?",
+    "deva": "इन्नले एन्तु चेय्तु?",
+    "script": "ഇന്നലെ എന്ത് ചെയ്തു?",
+    "english": "What did (you) do yesterday?",
+    "hindi": "कल क्या किया?",
+    "pos": "question",
+    "frequencyRank": 186,
+    "tags": [
+      "tense",
+      "past"
+    ],
+    "notes": "'cheythu' = did. A natural way to drill the past."
+  },
+  {
+    "id": "p-naale-pokum",
+    "roman": "naale njaan pokum",
+    "deva": "नाळे ञान् पोकुम्",
+    "script": "നാളെ ഞാൻ പോകും",
+    "english": "Tomorrow I will go",
+    "hindi": "कल मैं जाऊँगा",
+    "pos": "phrase",
+    "frequencyRank": 187,
+    "tags": [
+      "tense",
+      "future"
+    ],
+    "notes": "Add '-um' for the future. 'pokum' = will go."
+  },
+  {
+    "id": "p-naale-kaanum",
+    "roman": "naale njaan kaanum",
+    "deva": "नाळे ञान् काणुम्",
+    "script": "നാളെ ഞാൻ കാണും",
+    "english": "Tomorrow I will see",
+    "hindi": "कल मैं देखूँगा",
+    "pos": "phrase",
+    "frequencyRank": 188,
+    "tags": [
+      "tense",
+      "future"
+    ],
+    "notes": "'kaanum' = will see. The same '-um' ending."
+  },
+  {
+    "id": "p-naale-kazhikkum",
+    "roman": "naale njaan kazhikkum",
+    "deva": "नाळे ञान् कऴिक्कुम्",
+    "script": "നാളെ ഞാൻ കഴിക്കും",
+    "english": "Tomorrow I will eat",
+    "hindi": "कल मैं खाऊँगा",
+    "pos": "phrase",
+    "frequencyRank": 189,
+    "tags": [
+      "tense",
+      "future"
+    ],
+    "notes": "'kazhikkum' = will eat. '-um' = future, for any subject."
+  },
+  {
+    "id": "p-naale-varum",
+    "roman": "naale avan varum",
+    "deva": "नाळे अवन् वरुम्",
+    "script": "നാളെ അവൻ വരും",
+    "english": "Tomorrow he will come",
+    "hindi": "कल वह आएगा",
+    "pos": "phrase",
+    "frequencyRank": 190,
+    "tags": [
+      "tense",
+      "future"
+    ],
+    "notes": "'varum' = will come. Contrast with past 'vannu'."
+  },
+  {
+    "id": "p-naale-cheyyum",
+    "roman": "naale njaan cheyyum",
+    "deva": "नाळे ञान् चेय्युम्",
+    "script": "നാളെ ഞാൻ ചെയ്യും",
+    "english": "Tomorrow I will do (it)",
+    "hindi": "कल मैं करूँगा",
+    "pos": "phrase",
+    "frequencyRank": 191,
+    "tags": [
+      "tense",
+      "future"
+    ],
+    "notes": "'cheyyum' = will do. The '-um' future ending."
+  },
+  {
+    "id": "p-naale-cheyyum-q",
+    "roman": "naale enthu cheyyum?",
+    "deva": "नाळे एन्तु चेय्युम्?",
+    "script": "നാളെ എന്ത് ചെയ്യും?",
+    "english": "What will (you) do tomorrow?",
+    "hindi": "कल क्या करोगे?",
+    "pos": "question",
+    "frequencyRank": 192,
+    "tags": [
+      "tense",
+      "future"
+    ],
+    "notes": "Future question. Watch: 'cheythu' (did) vs 'cheyyum' (will do)."
+  },
+  {
+    "id": "p-ippol-pokunnu",
+    "roman": "ippol njaan pokunnu",
+    "deva": "इप्पोळ् ञान् पोकुन्नु",
+    "script": "ഇപ്പോൾ ഞാൻ പോകുന്നു",
+    "english": "I'm going now",
+    "hindi": "मैं अभी जा रहा हूँ",
+    "pos": "phrase",
+    "frequencyRank": 193,
+    "tags": [
+      "tense",
+      "present"
+    ],
+    "notes": "Add '-unnu' for now/ongoing. 'pokunnu' = going."
+  },
+  {
+    "id": "p-ippol-kaanunnu",
+    "roman": "ippol njaan kaanunnu",
+    "deva": "इप्पोळ् ञान् काणुन्नु",
+    "script": "ഇപ്പോൾ ഞാൻ കാണുന്നു",
+    "english": "I'm watching now",
+    "hindi": "मैं अभी देख रहा हूँ",
+    "pos": "phrase",
+    "frequencyRank": 194,
+    "tags": [
+      "tense",
+      "present"
+    ],
+    "notes": "'kaanunnu' = seeing/watching. '-unnu' = present."
+  },
+  {
+    "id": "p-ippol-kazhikkunnu",
+    "roman": "ippol njaan kazhikkunnu",
+    "deva": "इप्पोळ् ञान् कऴिक्कुन्नु",
+    "script": "ഇപ്പോൾ ഞാൻ കഴിക്കുന്നു",
+    "english": "I'm eating now",
+    "hindi": "मैं अभी खा रहा हूँ",
+    "pos": "phrase",
+    "frequencyRank": 195,
+    "tags": [
+      "tense",
+      "present"
+    ],
+    "notes": "'kazhikkunnu' = eating. Same '-unnu' ending."
+  },
+  {
+    "id": "p-ippol-varunnu",
+    "roman": "ippol njaan varunnu",
+    "deva": "इप्पोळ् ञान् वरुन्नु",
+    "script": "ഇപ്പോൾ ഞാൻ വരുന്നു",
+    "english": "I'm coming now",
+    "hindi": "मैं अभी आ रहा हूँ",
+    "pos": "phrase",
+    "frequencyRank": 196,
+    "tags": [
+      "tense",
+      "present"
+    ],
+    "notes": "'varunnu' = coming. You'll hear this constantly."
+  },
+  {
+    "id": "p-ippol-cheyyunnu",
+    "roman": "ippol njaan cheyyunnu",
+    "deva": "इप्पोळ् ञान् चेय्युन्नु",
+    "script": "ഇപ്പോൾ ഞാൻ ചെയ്യുന്നു",
+    "english": "I'm doing (it) now",
+    "hindi": "मैं अभी कर रहा हूँ",
+    "pos": "phrase",
+    "frequencyRank": 197,
+    "tags": [
+      "tense",
+      "present"
+    ],
+    "notes": "'cheyyunnu' = doing. Present '-unnu'."
+  },
+  {
+    "id": "p-ippol-cheyyunnu-q",
+    "roman": "ippol enthu cheyyunnu?",
+    "deva": "इप्पोळ् एन्तु चेय्युन्नु?",
+    "script": "ഇപ്പോൾ എന്ത് ചെയ്യുന്നു?",
+    "english": "What are (you) doing now?",
+    "hindi": "अभी क्या कर रहे हो?",
+    "pos": "question",
+    "frequencyRank": 198,
+    "tags": [
+      "tense",
+      "present"
+    ],
+    "notes": "Present-tense question. One verb, three tenses: cheythu / cheyyum / cheyyunnu."
   }
 ]

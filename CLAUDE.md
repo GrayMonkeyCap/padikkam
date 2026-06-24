@@ -48,14 +48,18 @@ All content is typed JSON + TypeScript types. The app reads and generates from t
 
 **Files:**
 - `types.ts` — `Phrase`, `Lesson`, `Unit`, `Dialogue`, `Tip` (immutable types exported as `as const`)
-- `units.json` — 10 units (emoji, title, description, id)
-- `lessons.json` — 19 lessons; each lesson lists `phraseIds`, `dialogueIds`, `tipId`, belongs to a `unit`
-- `phrases.json` — 120+ phrases; each has `roman` (Latin), `deva` (Devanagari), `english`, `hindi`, `pos` (part of speech), `audio` (clip ID), `notes`, `frequencyRank`
-- `dialogues.json` — 10 scenarios; each lists lines with `speaker`, `roman`, `deva`, `english`, `hindi`, `audio`
-- `tips.json` — Grammar pattern guides; each teaches a productive pattern (e.g., "Saying 'I want': enikku…venam") with Hindi parallels and worked examples
+- `units.json` — 16 units (emoji, title, description, id, order)
+- `lessons.json` — 32 lessons; each lesson lists `phraseIds`, `dialogueIds`, belongs to a `unit`. A lesson's tip (if any) is keyed by the lesson's own ID in `tips.json`
+- `phrases.json` — ~200 phrases (`frequencyRank` 1–198); each has `roman` (Latin), `deva` (Devanagari), `script` (native Malayalam — see below), `english`, `hindi`, `pos` (part of speech), `tags`, `notes`, optional `audio` (clip ID, defaults to `id`), `frequencyRank`
+- `dialogues.json` — 22 scenarios; each lists lines with `speaker`, `roman`, `deva`, `english`, `hindi`, optional `audio`
+- `tips.json` — Grammar pattern guides keyed by lesson ID; each teaches a productive pattern (e.g., "Saying 'I want': enikku…venam") with Hindi parallels and worked examples
 - `index.ts` — Loader & getter functions: `getPhrase()`, `getLesson()`, `getTip()`, `phrasesForLesson()`, etc.
 
-**Key decision:** Phrases and dialogues are **keyed by ID** (e.g., `p-vellam`, `d-teashop-l0`), not name. This allows content to be reordered, renamed, or reused without breaking code references.
+**Key decision:** Phrases and dialogues are **keyed by ID** (e.g., `p-vellam`, `d-teashop`), not name. This allows content to be reordered, renamed, or reused without breaking code references.
+
+**The `script` field:** Every phrase carries native Malayalam script in `script`, but the UI never renders it — it's stored data reserved for a future reading track (v1 is strictly spoken/conversational). When authoring new phrases, still fill it in for completeness and future-proofing.
+
+**Adding content is data-only.** No counts are hardcoded against content size — badges, the lesson path, unlock progression, and the SRS queue all derive from `orderedLessons`/`phrases` at runtime. To add a unit: append to `units.json` (with the next `order`), add its lessons to `lessons.json`, their phrases to `phrases.json` (continue `frequencyRank`), optional dialogues to `dialogues.json`, and optional tips keyed by lesson ID. Every `phraseId`/`dialogueId` referenced by a lesson must resolve, and every lesson's `unit` must exist.
 
 ### 2. Storage & Persistence (`src/storage/`)
 
@@ -192,7 +196,8 @@ The app is a static SPA with no backend. Deploy `dist/` to any static host (Verc
 
 - **Latin romanization + Devanagari:** Every phrase shows both. Devanagari lets Hindi speakers sound out Malayalam natively.
 - **Grammar patterns as generative rules:** Tips teach productive patterns (e.g., "enikku [X] venam" for wanting) so learners can build new sentences, not just memorize.
-- **No Malayalam script:** The app is strictly for spoken, conversational Malayalam. Reading/writing is out of scope for v1.
+- **Tenses taught implicitly, never as tables.** The `u-tenses-lite` unit teaches past/present/future by pairing an anchor time-word with a verb-ending sound: `innale` (yesterday) + `-i/-u` past, `ippol` (now) + `-unnu` present, `naale` (tomorrow) + `-um` future. The same five verbs (poyi/pokum/pokunnu, etc.) recur across all three lessons so the pattern sinks in subliminally. Preserve this "anchor word + sound" approach for any future grammar content — no conjugation tables.
+- **No Malayalam script:** The app is strictly for spoken, conversational Malayalam. Reading/writing is out of scope for v1 (though `script` is stored in the data; see the Content Engine section).
 - **Frequency-ranked progression:** Phrases are ranked by usage frequency so learners can speak immediately (greetings, basics, food, directions) rather than learning academic or rare words first.
 - **Hindi as a bridge:** Hindi meanings and grammar parallels are included because the user base (people who know Hindi) can leverage existing knowledge to learn faster.
 

@@ -1,5 +1,7 @@
 /** XP amounts per action, and the badge catalogue. */
 
+import { orderedLessons } from '../content';
+
 export const XP = {
   reviewCard: 2,
   newCard: 4,
@@ -61,11 +63,18 @@ export const BADGES: BadgeDef[] = [
     earned: (c) => c.xp >= 100,
   },
   {
+    id: 'halfway',
+    emoji: '🚀',
+    title: 'Halfway There',
+    description: 'Complete half of all lessons',
+    earned: (c) => c.completedLessons >= Math.ceil(orderedLessons.length / 2),
+  },
+  {
     id: 'fluent-track',
     emoji: '🏆',
     title: 'Fluency Track',
     description: 'Complete all lessons',
-    earned: (c) => c.completedLessons >= 7,
+    earned: (c) => c.completedLessons >= orderedLessons.length,
   },
 ];
 
