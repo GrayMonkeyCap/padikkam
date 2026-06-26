@@ -19,8 +19,9 @@ export function DashboardPage() {
   const progress = useStore((s) => s.progress);
   const srs = useStore((s) => s.srs);
 
-  const due = dueCount(srs);
-  const newCount = newPhrases(srs).length;
+  const completedLessons = progress.completedLessons;
+  const due = dueCount(srs, completedLessons);
+  const newCount = newPhrases(srs, completedLessons).length;
   const mistakeCount = progress.mistakes.length;
   const goalFraction = progress.dailyGoal > 0 ? progress.todayXp / progress.dailyGoal : 0;
   const goalMet = progress.todayXp >= progress.dailyGoal;

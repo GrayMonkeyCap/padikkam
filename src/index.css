@@ -72,6 +72,10 @@
   --animate-wiggle: wiggle 0.4s ease-in-out;
   --animate-press: press 0.09s ease-out forwards;
   --animate-breathe: breathe 4s ease-in-out infinite;
+  --animate-swipe-right: swipeRight 0.4s ease-in forwards;
+  --animate-swipe-left: swipeLeft 0.4s ease-in forwards;
+  --animate-card-enter: cardEnter 0.3s ease-out;
+  --animate-answer-up: answerSlideUp 0.35s ease-out;
 }
 
 @keyframes pop {
@@ -98,6 +102,27 @@
 @keyframes fall {
   0% { transform: translateY(-10vh) rotate(0); opacity: 1; }
   100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+@keyframes swipeRight {
+  0% { opacity: 1; }
+  100% { transform: translateX(120%) rotate(18deg); opacity: 0; }
+}
+@keyframes swipeLeft {
+  0% { opacity: 1; }
+  100% { transform: translateX(-120%) rotate(-18deg); opacity: 0; }
+}
+@keyframes cardEnter {
+  0% { transform: scale(0.92); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes answerSlideUp {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes snapBack {
+  0% { transform: scale(0.98); }
+  50% { transform: scale(1.01); }
+  100% { transform: scale(1); }
 }
 
 html, body, #root {

@@ -40,7 +40,8 @@ function NavIcon({ shape, active }: { shape: string; active: boolean }) {
 
 export function AppLayout() {
   const srs = useStore((s) => s.srs);
-  const due = dueCount(srs);
+  const completedLessons = useStore((s) => s.progress.completedLessons);
+  const due = dueCount(srs, completedLessons);
 
   return (
     <div className="mx-auto flex min-h-full max-w-xl flex-col">

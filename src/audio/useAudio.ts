@@ -1,15 +1,12 @@
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useSyncExternalStore } from 'react';
 
 const AUDIO_BASE = '/audio';
 
 export interface PlayOptions {
-  /** Text spoken by the browser TTS fallback if the MP3 is missing. */
   fallbackText?: string;
-  /** BCP-47 lang for the fallback voice. */
   lang?: string;
 }
 
-/** Try the browser's speech synthesis as a fallback (Malayalam may be unavailable). */
 function speak(text: string, lang = 'ml-IN'): boolean {
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) return false;
   try {
@@ -24,34 +21,85 @@ function speak(text: string, lang = 'ml-IN'): boolean {
   }
 }
 
-/**
- * Plays a pre-generated clip `/audio/<clipId>.mp3`.
- * If the clip 404s (not generated yet), falls back to browser TTS so the app
- * is still usable before the audio pipeline has run.
- */
+// ── Singleton audio element shared across all hook instances ──
+
+let sharedAudio: HTMLAudioElement | null = null;
+let currentClipId: string | null = null;
+let listeners = new Set<() => void>();
+
+function getAudio(): HTMLAudioElement {
+  if (!sharedAudio) {
+    sharedAudio = new Audio();
+    sharedAudio.preload = 'auto';
+  }
+  return sharedAudio;
+}
+
+function notify() {
+  listeners.forEach((fn) => fn());
+}
+
+function getPlayingId() {
+  return currentClipId;
+}
+
+function subscribe(fn: () => void) {
+  listeners.add(fn);
+  return () => { listeners.delete(fn); };
+}
+
+// ── Prefetch cache ──
+
+const prefetched = new Set<string>();
+
+export function prefetchAudio(clipIds: string[]) {
+  for (const id of clipIds) {
+    if (prefetched.has(id)) continue;
+    prefetched.add(id);
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.as = 'fetch';
+    link.href = `${AUDIO_BASE}/${id}.mp3`;
+    document.head.appendChild(link);
+  }
+}
+
+// ── Hook ──
+
 export function useAudio() {
-  const [playingId, setPlayingId] = useState<string | null>(null);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const playingId = useSyncExternalStore(subscribe, getPlayingId, () => null);
 
   const play = useCallback((clipId: string, opts: PlayOptions = {}) => {
-    // Stop anything currently playing.
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current = null;
+    const audio = getAudio();
+
+    audio.pause();
+    audio.onended = null;
+    audio.onerror = null;
+
+    const url = `${AUDIO_BASE}/${clipId}.mp3`;
+    const needsSrcChange = audio.src !== new URL(url, location.href).href;
+
+    if (needsSrcChange) {
+      audio.src = url;
     }
 
-    const audio = new Audio(`${AUDIO_BASE}/${clipId}.mp3`);
-    audioRef.current = audio;
-    setPlayingId(clipId);
+    currentClipId = clipId;
+    notify();
 
-    const done = () => setPlayingId((cur) => (cur === clipId ? null : cur));
-    audio.addEventListener('ended', done);
-    audio.addEventListener('error', () => {
-      // No clip on disk yet — use the browser voice if we have text.
+    const done = () => {
+      if (currentClipId === clipId) {
+        currentClipId = null;
+        notify();
+      }
+    };
+
+    audio.onended = done;
+    audio.onerror = () => {
       if (opts.fallbackText) speak(opts.fallbackText, opts.lang);
       done();
-    });
+    };
 
+    audio.currentTime = 0;
     audio.play().catch(() => {
       if (opts.fallbackText) speak(opts.fallbackText, opts.lang);
       done();

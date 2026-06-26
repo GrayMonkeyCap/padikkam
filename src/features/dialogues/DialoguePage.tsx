@@ -1,7 +1,7 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { getDialogue, lineAudioId } from '../../content';
-import { useAudio } from '../../audio/useAudio';
+import { useAudio, prefetchAudio } from '../../audio/useAudio';
 import { useStore } from '../../storage/store';
 import { XP } from '../../lib/xp';
 import { Button } from '../../components/Button';
@@ -22,6 +22,12 @@ export function DialoguePage() {
     if (!dialogue) return '';
     const you = dialogue.lines.find((l) => /you/i.test(l.speaker));
     return you ? you.speaker : dialogue.lines[1]?.speaker ?? '';
+  }, [dialogue]);
+
+  useEffect(() => {
+    if (!dialogue) return;
+    const clipIds = dialogue.lines.map((line, i) => lineAudioId(dialogue.id, i, line));
+    prefetchAudio(clipIds);
   }, [dialogue]);
 
   if (!dialogue) {

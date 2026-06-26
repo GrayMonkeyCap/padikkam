@@ -7,9 +7,10 @@
  * - Writes MP3s to public/audio/<clipId>.mp3.
  * - No API key needed.
  */
-import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, unlinkSync, renameSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { execFileSync } from 'node:child_process';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -62,6 +63,38 @@ function sleep(ms: number) {
   return new Promise((r) => setTimeout(r, ms));
 }
 
+let hasFFmpeg: boolean | null = null;
+
+function checkFFmpeg(): boolean {
+  if (hasFFmpeg !== null) return hasFFmpeg;
+  try {
+    execFileSync('ffmpeg', ['-version'], { stdio: 'ignore' });
+    hasFFmpeg = true;
+  } catch {
+    hasFFmpeg = false;
+  }
+  return hasFFmpeg;
+}
+
+function trimSilence(filePath: string): boolean {
+  if (!checkFFmpeg()) return false;
+  const tmp = filePath + '.tmp.mp3';
+  try {
+    execFileSync('ffmpeg', [
+      '-y', '-i', filePath,
+      '-af', 'silenceremove=start_periods=1:start_threshold=-40dB:start_duration=0.01,areverse,silenceremove=start_periods=1:start_threshold=-40dB:start_duration=0.01,areverse',
+      '-b:a', '64k',
+      tmp,
+    ], { stdio: 'ignore' });
+    unlinkSync(filePath);
+    renameSync(tmp, filePath);
+    return true;
+  } catch {
+    try { unlinkSync(tmp); } catch {}
+    return false;
+  }
+}
+
 async function main() {
   mkdirSync(OUT_DIR, { recursive: true });
   const clips = collectClips();
@@ -73,6 +106,13 @@ async function main() {
 
   console.log(`Total clips: ${clips.length} · already on disk: ${existing.size} · to generate: ${todo.length}`);
 
+  const canTrim = checkFFmpeg();
+  if (canTrim) {
+    console.log('ffmpeg found — will trim silence from clips.');
+  } else {
+    console.log('ffmpeg not found — skipping silence trimming. Install ffmpeg for tighter playback.');
+  }
+
   if (todo.length === 0) {
     console.log('Nothing to do. ✅');
   } else {
@@ -82,7 +122,9 @@ async function main() {
       process.stdout.write(`  ↳ ${clip.id} … `);
       try {
         const audio = await synthesize(clip.text);
-        writeFileSync(join(OUT_DIR, `${clip.id}.mp3`), audio);
+        const outPath = join(OUT_DIR, `${clip.id}.mp3`);
+        writeFileSync(outPath, audio);
+        if (canTrim) trimSilence(outPath);
         console.log('done');
         success++;
         await sleep(500);

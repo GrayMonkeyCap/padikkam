@@ -1,11 +1,15 @@
-import { Link, useParams } from 'react-router-dom';
-import { getLesson, phrasesForLesson, dialoguesForLesson, getUnit, getTip, phraseAudioId } from '../../content';
+import { useEffect, useState } from 'react';
+import { Link, useParams, useNavigate } from 'react-router-dom';
+import { getLesson, phrasesForLesson, dialoguesForLesson, getUnit, getTip, phraseAudioId, orderedLessons } from '../../content';
+import { prefetchAudio } from '../../audio/useAudio';
 import { useStore } from '../../storage/store';
 import { Card } from '../../components/Card';
 import { Button } from '../../components/Button';
 import { PhraseDisplay } from '../../components/PhraseDisplay';
 import { LessonTip } from '../../components/LessonTip';
 import { PronouncePractice } from '../../components/PronouncePractice';
+import { Ammu } from '../../components/Ammu';
+import { Celebration } from '../../components/Celebration';
 
 function CrownIcons({ level }: { level: number }) {
   if (level <= 0) return null;
@@ -21,12 +25,25 @@ function CrownIcons({ level }: { level: number }) {
   );
 }
 
+function getNextLesson(currentId: string) {
+  const idx = orderedLessons.findIndex((l) => l.id === currentId);
+  return idx >= 0 && idx < orderedLessons.length - 1 ? orderedLessons[idx + 1] : null;
+}
+
 export function LessonDetailPage() {
   const { lessonId = '' } = useParams();
+  const navigate = useNavigate();
   const lesson = getLesson(lessonId);
   const completeLesson = useStore((s) => s.completeLesson);
   const completed = useStore((s) => s.progress.completedLessons.includes(lessonId));
   const level = useStore((s) => s.progress.lessonLevels[lessonId] ?? 0);
+  const [showCompletePopup, setShowCompletePopup] = useState(false);
+
+  useEffect(() => {
+    if (!lesson) return;
+    const clipIds = phrasesForLesson(lesson.id).map((p) => phraseAudioId(p));
+    prefetchAudio(clipIds);
+  }, [lesson]);
 
   if (!lesson) {
     return (
@@ -101,11 +118,63 @@ export function LessonDetailPage() {
           variant={completed ? 'secondary' : 'gold'}
           size="lg"
           className="w-full"
-          onClick={() => completeLesson(lesson.id)}
+          onClick={() => {
+            if (!completed) {
+              completeLesson(lesson.id);
+              setShowCompletePopup(true);
+            }
+          }}
           disabled={completed}
         >
           {completed ? 'Lesson complete' : 'Mark as complete (+20 XP)'}
         </Button>
+      </div>
+
+      {showCompletePopup && <CompletionPopup lessonId={lessonId} onClose={() => setShowCompletePopup(false)} />}
+    </div>
+  );
+}
+
+function CompletionPopup({ lessonId, onClose }: { lessonId: string; onClose: () => void }) {
+  const navigate = useNavigate();
+  const nextLesson = getNextLesson(lessonId);
+  const nextUnit = nextLesson ? getUnit(nextLesson.unit) : null;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 backdrop-blur-sm" onClick={onClose}>
+      <Celebration show />
+      <div
+        className="mx-4 w-full max-w-sm animate-pop rounded-[22px] border-2 border-border bg-surface-card p-6 shadow-xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex flex-col items-center gap-3 text-center">
+          <Ammu state="celebrating" size={80} />
+          <h2 className="font-display text-xl font-bold text-ink">Lesson complete!</h2>
+          <p className="text-sm text-ink-muted">+20 XP earned. Keep the momentum going!</p>
+
+          <div className="mt-2 flex w-full flex-col gap-2">
+            {nextLesson && (
+              <Button
+                size="lg"
+                className="w-full"
+                onClick={() => navigate(`/learn/${nextLesson.id}`)}
+              >
+                Next: {nextLesson.emoji} {nextLesson.title}
+              </Button>
+            )}
+            <Link to={`/quiz/${lessonId}`} className="block">
+              <Button variant="secondary" size="lg" className="w-full">
+                Practice quiz
+              </Button>
+            </Link>
+            <button
+              onClick={onClose}
+              className="text-sm font-medium text-ink-muted hover:text-ink"
+            >
+              Stay on this lesson
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
