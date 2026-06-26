@@ -14,6 +14,7 @@ import { useStore } from '../../storage/store';
 import { XP } from '../../lib/xp';
 import { Button } from '../../components/Button';
 import { Celebration } from '../../components/Celebration';
+import { Ammu } from '../../components/Ammu';
 
 type Mode = 'lesson' | 'all' | 'mistakes';
 
@@ -58,13 +59,13 @@ export function QuizPage({ mode = 'lesson' }: { mode?: Mode }) {
   if (items.length === 0) {
     return (
       <div className="flex flex-col items-center gap-4 pt-16 text-center">
-        <div className="text-5xl">🎯</div>
-        <h1 className="text-2xl font-bold text-teal-900">
+        <Ammu state={mode === 'mistakes' ? 'celebrating' : 'thinking'} size={96} />
+        <h1 className="font-display text-2xl font-bold text-ink">
           {mode === 'mistakes' ? 'No mistakes to practice!' : 'Nothing to quiz yet'}
         </h1>
-        <p className="max-w-xs text-ink/60">
+        <p className="max-w-xs text-ink-muted">
           {mode === 'mistakes'
-            ? 'Your mistakes deck is empty — that means you’re doing great. Keep learning!'
+            ? "Your mistakes deck is empty — that means you're doing great. Keep learning!"
             : 'Learn a lesson first, then come back to test yourself.'}
         </p>
         <Link to="/learn">
@@ -103,7 +104,6 @@ export function QuizPage({ mode = 'lesson' }: { mode?: Mode }) {
       setCombo(0);
     }
 
-    // Update the mistakes deck for phrase-bearing exercises.
     if (item.type === 'mcq' || item.type === 'build') {
       if (correct) clearMistake(item.phraseId);
       else addMistake(item.phraseId);
@@ -113,19 +113,18 @@ export function QuizPage({ mode = 'lesson' }: { mode?: Mode }) {
     else setIndex((i) => i + 1);
   };
 
-  // Per-item progress (count match as one step).
   const progressPct = (index / items.length) * 100;
 
   return (
     <div>
       <div className="mb-5 flex items-center gap-3">
-        <Link to={mode === 'lesson' && lesson ? `/learn/${lesson.id}` : '/'} className="text-sm text-ink/40">
-          ✕
+        <Link to={mode === 'lesson' && lesson ? `/learn/${lesson.id}` : '/'} className="text-sm text-ink-faint">
+          <svg width={20} height={20} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
         </Link>
-        <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-teal-100">
-          <div className="h-full rounded-full bg-teal-600 transition-all" style={{ width: `${progressPct}%` }} />
+        <div className="h-3 flex-1 overflow-hidden rounded-full bg-success-soft">
+          <div className="h-full rounded-full bg-success transition-all" style={{ width: `${progressPct}%` }} />
         </div>
-        <span className="text-sm font-medium text-ink/50">
+        <span className="text-sm font-display font-medium text-ink-muted">
           {index + 1}/{items.length}
         </span>
       </div>
@@ -157,20 +156,24 @@ function Results({
   onRetry: () => void;
 }) {
   const level = useStore((s) => (lessonId ? s.progress.lessonLevels[lessonId] ?? 0 : 0));
+  const ammuState = pct === 100 ? 'celebrating' : pct >= 70 ? 'greeting' : 'encouraging';
   const message =
-    pct === 100 ? 'Flawless! 🏆' : pct >= 70 ? 'Great work! 🌟' : 'Good effort — keep going! 💪';
+    pct === 100 ? 'Flawless!' : pct >= 70 ? 'Great work!' : 'Good effort — keep going!';
   return (
     <>
       <Celebration show={pct >= 70} />
       <div className="flex flex-col items-center gap-4 pt-12 text-center">
-        <div className="text-6xl">{pct >= 70 ? '🎉' : '🌱'}</div>
-        <h1 className="text-2xl font-bold text-teal-900">{message}</h1>
-        <p className="text-ink/60">
+        <Ammu state={ammuState} size={120} />
+        <h1 className="font-display text-2xl font-bold text-ink">{message}</h1>
+        <p className="text-ink-muted">
           You got <strong>{correct}</strong> of <strong>{total}</strong> right ({pct}%).
         </p>
         {lessonId && level > 0 && (
-          <div className="flex items-center gap-1 rounded-full bg-gold-300/30 px-4 py-2 text-sm font-bold text-gold-600">
-            {'👑'.repeat(level)} Crown level {level}
+          <div className="flex items-center gap-1 rounded-full bg-secondary-soft px-4 py-2 text-sm font-display font-bold text-secondary-deep">
+            {Array.from({ length: Math.min(level, 5) }, (_, i) => (
+              <svg key={i} width={16} height={16} viewBox="0 0 24 24" fill="var(--color-secondary)"><path d="M2 8l4 12h12l4-12-5 4-5-8-5 8-5-4z"/></svg>
+            ))}
+            Crown level {level}
           </div>
         )}
         <div className="mt-2 flex gap-2">

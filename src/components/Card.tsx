@@ -5,12 +5,10 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 }
 
 export function Card({ children, className = '', ...rest }: Props) {
-  // Only apply the default white background when the caller hasn't set one,
-  // otherwise Tailwind's `bg-white` and an override like `bg-teal-700` conflict.
   const hasBg = /(^|\s)bg-/.test(className);
   return (
     <div
-      className={`rounded-3xl border border-teal-100 p-5 shadow-sm ${hasBg ? '' : 'bg-white'} ${className}`}
+      className={`rounded-[22px] border border-border p-5 shadow-sm ${hasBg ? '' : 'bg-surface-card'} ${className}`}
       {...rest}
     >
       {children}

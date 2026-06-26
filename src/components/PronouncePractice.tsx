@@ -4,16 +4,11 @@ import { useAudio } from '../audio/useAudio';
 interface Props {
   clipId: string;
   fallbackText?: string;
-  /** The romanized phrase, shown as a target to read aloud. */
   roman: string;
 }
 
 type State = 'idle' | 'recording' | 'recorded' | 'denied' | 'unsupported';
 
-/**
- * Speaking practice via "shadowing": hear the native clip, record yourself,
- * then play both back to compare. Uses MediaRecorder — no server, no ASR.
- */
 export function PronouncePractice({ clipId, fallbackText, roman }: Props) {
   const { play } = useAudio();
   const [open, setOpen] = useState(false);
@@ -62,18 +57,22 @@ export function PronouncePractice({ clipId, fallbackText, roman }: Props) {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="inline-flex items-center gap-1.5 rounded-full bg-coral-400/15 px-3 py-1.5 text-sm font-medium text-coral-500 transition hover:bg-coral-400/25"
+        className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-3 py-1.5 text-sm font-medium text-accent transition hover:bg-accent-soft/80"
       >
-        🎤 Practice saying it
+        <svg width={14} height={14} viewBox="0 0 24 24" fill="currentColor"><path d="M12 1a4 4 0 014 4v7a4 4 0 01-8 0V5a4 4 0 014-4zM6 11a1 1 0 012 0 4 4 0 008 0 1 1 0 012 0 6 6 0 01-5 5.91V20h3a1 1 0 010 2H9a1 1 0 010-2h3v-3.09A6 6 0 016 11z"/></svg>
+        Practice saying it
       </button>
     );
   }
 
   return (
-    <div className="rounded-2xl border border-teal-100 bg-teal-50/40 p-3">
+    <div className="rounded-[18px] border border-border bg-surface-sunk p-3">
       <div className="mb-2 flex items-center justify-between">
-        <span className="text-sm font-semibold text-teal-900">🎤 Say: “{roman}”</span>
-        <button onClick={() => setOpen(false)} className="text-xs text-ink/40">
+        <span className="text-sm font-display font-semibold text-ink">
+          <svg className="mr-1 inline" width={14} height={14} viewBox="0 0 24 24" fill="var(--color-accent)"><path d="M12 1a4 4 0 014 4v7a4 4 0 01-8 0V5a4 4 0 014-4zM6 11a1 1 0 012 0 4 4 0 008 0 1 1 0 012 0 6 6 0 01-5 5.91V20h3a1 1 0 010 2H9a1 1 0 010-2h3v-3.09A6 6 0 016 11z"/></svg>
+          Say: "{roman}"
+        </span>
+        <button onClick={() => setOpen(false)} className="text-xs text-ink-faint hover:text-ink-muted">
           close
         </button>
       </div>
@@ -81,45 +80,45 @@ export function PronouncePractice({ clipId, fallbackText, roman }: Props) {
       <div className="flex flex-wrap items-center gap-2">
         <button
           onClick={() => play(clipId, { fallbackText, lang: 'ml-IN' })}
-          className="rounded-full bg-teal-700 px-3 py-1.5 text-sm font-medium text-white"
+          className="rounded-full bg-primary px-3 py-1.5 text-sm font-medium text-white shadow-[0_3px_0_var(--color-primary-deep)] active:translate-y-[2px] active:shadow-none"
         >
-          🔊 Native
+          Native
         </button>
 
         {state === 'recording' ? (
           <button
             onClick={stopRecording}
-            className="animate-pulse rounded-full bg-coral-500 px-3 py-1.5 text-sm font-medium text-white"
+            className="animate-pulse rounded-full bg-accent px-3 py-1.5 text-sm font-medium text-white shadow-[0_3px_0_var(--color-accent-deep)] active:translate-y-[2px] active:shadow-none"
           >
-            ⏹ Stop
+            Stop
           </button>
         ) : (
           <button
             onClick={startRecording}
-            className="rounded-full bg-coral-400 px-3 py-1.5 text-sm font-medium text-white"
+            className="rounded-full bg-accent px-3 py-1.5 text-sm font-medium text-white shadow-[0_3px_0_var(--color-accent-deep)] active:translate-y-[2px] active:shadow-none"
           >
-            ● Record
+            Record
           </button>
         )}
 
         {state === 'recorded' && myUrl && (
           <button
             onClick={playMine}
-            className="rounded-full bg-gold-400 px-3 py-1.5 text-sm font-medium text-ink"
+            className="rounded-full bg-secondary px-3 py-1.5 text-sm font-medium text-ink shadow-[0_3px_0_var(--color-secondary-deep)] active:translate-y-[2px] active:shadow-none"
           >
-            ▶ My voice
+            My voice
           </button>
         )}
       </div>
 
       {state === 'recorded' && (
-        <p className="mt-2 text-xs text-ink/50">Compare yours to the native clip. Close? Sounds great. 👏</p>
+        <p className="mt-2 text-xs text-ink-faint">Compare yours to the native clip. Close? Sounds great!</p>
       )}
       {state === 'denied' && (
-        <p className="mt-2 text-xs text-coral-500">Mic permission denied — allow it in your browser to practice.</p>
+        <p className="mt-2 text-xs text-accent">Mic permission denied — allow it in your browser to practice.</p>
       )}
       {state === 'unsupported' && (
-        <p className="mt-2 text-xs text-ink/50">Recording isn’t supported on this browser. Try Chrome.</p>
+        <p className="mt-2 text-xs text-ink-faint">Recording isn't supported on this browser. Try Chrome.</p>
       )}
     </div>
   );

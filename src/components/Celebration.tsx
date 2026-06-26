@@ -1,22 +1,33 @@
 import { useEffect, useState } from 'react';
 
-const EMOJIS = ['🎉', '✨', '🌟', '🥳', '💚', '🎊'];
+const COLORS = ['#0FBFA8', '#FFB627', '#FF5C72', '#34C759', '#6E5FD8', '#FF9F1C'];
+const SHAPES = ['square', 'circle'] as const;
 
-/** Lightweight CSS confetti burst — no dependency. Renders when `show` flips true. */
+interface Piece {
+  id: number;
+  left: number;
+  color: string;
+  shape: typeof SHAPES[number];
+  delay: number;
+  size: number;
+}
+
 export function Celebration({ show }: { show: boolean }) {
-  const [pieces, setPieces] = useState<{ id: number; left: number; emoji: string; delay: number }[]>([]);
+  const [pieces, setPieces] = useState<Piece[]>([]);
 
   useEffect(() => {
     if (!show) return;
     setPieces(
-      Array.from({ length: 18 }, (_, i) => ({
+      Array.from({ length: 24 }, (_, i) => ({
         id: i,
         left: Math.random() * 100,
-        emoji: EMOJIS[i % EMOJIS.length],
-        delay: Math.random() * 0.3,
+        color: COLORS[i % COLORS.length],
+        shape: SHAPES[i % SHAPES.length],
+        delay: Math.random() * 0.4,
+        size: 8 + Math.random() * 10,
       })),
     );
-    const t = setTimeout(() => setPieces([]), 1500);
+    const t = setTimeout(() => setPieces([]), 1800);
     return () => clearTimeout(t);
   }, [show]);
 
@@ -27,16 +38,18 @@ export function Celebration({ show }: { show: boolean }) {
       {pieces.map((p) => (
         <span
           key={p.id}
-          className="absolute top-0 text-2xl"
+          className="absolute top-0"
           style={{
             left: `${p.left}%`,
-            animation: `fall 1.2s ease-in ${p.delay}s forwards`,
+            width: p.size,
+            height: p.size,
+            background: p.color,
+            borderRadius: p.shape === 'circle' ? '50%' : '3px',
+            animation: `fall 1.4s ease-in ${p.delay}s forwards`,
+            boxShadow: `inset 0 -2px 3px rgba(0,0,0,.15)`,
           }}
-        >
-          {p.emoji}
-        </span>
+        />
       ))}
-      <style>{`@keyframes fall { 0% { transform: translateY(-10vh) rotate(0); opacity: 1; } 100% { transform: translateY(110vh) rotate(360deg); opacity: 0; } }`}</style>
     </div>
   );
 }

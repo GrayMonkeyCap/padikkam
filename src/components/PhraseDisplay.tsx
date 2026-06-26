@@ -4,12 +4,10 @@ import { AudioButton } from './AudioButton';
 
 interface Props {
   phrase: Phrase;
-  /** Show the meanings (English/Hindi). Hidden on flashcard fronts. */
   showMeaning?: boolean;
   compact?: boolean;
 }
 
-/** Canonical way to render a phrase: audio + Latin + Devanagari + meanings. */
 export function PhraseDisplay({ phrase, showMeaning = true, compact = false }: Props) {
   return (
     <div className="flex items-start gap-4">
@@ -19,8 +17,8 @@ export function PhraseDisplay({ phrase, showMeaning = true, compact = false }: P
         size={compact ? 'sm' : 'md'}
       />
       <div className="min-w-0 flex-1">
-        <div className={`font-bold text-teal-900 ${compact ? 'text-lg' : 'text-2xl'}`}>{phrase.roman}</div>
-        <div className={`text-teal-700/80 ${compact ? 'text-sm' : 'text-lg'}`} lang="hi">
+        <div className={`font-display font-bold text-ink ${compact ? 'text-lg' : 'text-2xl'}`}>{phrase.roman}</div>
+        <div className={`text-ink-muted ${compact ? 'text-sm' : 'text-lg'}`} lang="hi">
           {phrase.deva}
         </div>
         {showMeaning && (
@@ -30,11 +28,11 @@ export function PhraseDisplay({ phrase, showMeaning = true, compact = false }: P
               {phrase.hindi}
             </div>
             {phrase.literal && (
-              <div className="text-xs italic text-ink/40">lit. “{phrase.literal}”</div>
+              <div className="text-xs italic text-ink-faint">lit. "{phrase.literal}"</div>
             )}
             {phrase.notes && (
-              <div className="mt-2 rounded-xl bg-gold-300/20 px-3 py-2 text-sm text-ink/70">
-                💡 {phrase.notes}
+              <div className="mt-2 rounded-2xl bg-secondary-soft px-3 py-2 text-sm text-ink-muted">
+                {phrase.notes}
               </div>
             )}
           </div>

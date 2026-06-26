@@ -13,9 +13,7 @@ interface Props {
   onComplete: (correct: boolean) => void;
 }
 
-/** Tap word tiles in order to construct the Malayalam sentence (production practice). */
 export function BuildExercise({ item, combo, isLast, onComplete }: Props) {
-  // Track bank tiles by index so duplicate words stay distinct.
   const [built, setBuilt] = useState<number[]>([]);
   const [checked, setChecked] = useState(false);
   const phrase = getPhrase(item.phraseId);
@@ -26,21 +24,21 @@ export function BuildExercise({ item, combo, isLast, onComplete }: Props) {
 
   return (
     <div className="flex min-h-[70vh] flex-col">
-      <p className="mb-2 text-sm font-medium text-ink/40">Build the Malayalam sentence</p>
+      <p className="mb-2 text-sm font-display font-medium text-ink-faint">Build the Malayalam sentence</p>
 
       <Card className="mb-4 text-center">
-        <div className="text-xl font-bold text-teal-900">{item.promptEn}</div>
+        <div className="font-display text-xl font-bold text-ink">{item.promptEn}</div>
       </Card>
 
       {/* Answer area */}
-      <div className="mb-4 flex min-h-[3.5rem] flex-wrap content-start gap-2 rounded-2xl border-2 border-dashed border-teal-200 p-3">
-        {built.length === 0 && <span className="text-sm text-ink/30">Tap words below…</span>}
+      <div className="mb-4 flex min-h-[3.5rem] flex-wrap content-start gap-2 rounded-[18px] border-2 border-dashed border-primary/30 bg-primary-soft/30 p-3">
+        {built.length === 0 && <span className="text-sm text-ink-faint">Tap words below…</span>}
         {built.map((bankIdx) => (
           <button
             key={bankIdx}
             onClick={() => !checked && setBuilt((b) => b.filter((x) => x !== bankIdx))}
             disabled={checked}
-            className="rounded-xl bg-teal-700 px-3 py-2 font-medium text-white"
+            className="rounded-full bg-primary px-4 py-2 font-display font-medium text-white shadow-[0_3px_0_var(--color-primary-deep)] active:translate-y-[2px] active:shadow-none"
           >
             {item.bank[bankIdx]}
           </button>
@@ -51,7 +49,7 @@ export function BuildExercise({ item, combo, isLast, onComplete }: Props) {
       <div className="flex flex-wrap gap-2">
         {item.bank.map((word, i) =>
           used.has(i) ? (
-            <span key={i} className="rounded-xl border-2 border-teal-100 px-3 py-2 font-medium text-transparent">
+            <span key={i} className="rounded-full border-2 border-border px-4 py-2 font-display font-medium text-transparent">
               {word}
             </span>
           ) : (
@@ -59,7 +57,7 @@ export function BuildExercise({ item, combo, isLast, onComplete }: Props) {
               key={i}
               onClick={() => !checked && setBuilt((b) => [...b, i])}
               disabled={checked}
-              className="rounded-xl border-2 border-teal-200 bg-white px-3 py-2 font-medium text-teal-900 transition active:scale-95 hover:border-teal-300"
+              className="rounded-full border-2 border-border bg-surface-card px-4 py-2 font-display font-medium text-ink shadow-[0_3px_0_var(--color-border)] transition active:translate-y-[2px] active:shadow-none hover:border-primary/30"
             >
               {word}
             </button>
@@ -73,12 +71,7 @@ export function BuildExercise({ item, combo, isLast, onComplete }: Props) {
             size="lg"
             className="w-full"
             disabled={built.length === 0}
-            onClick={() => {
-              setChecked(true);
-              if (!correct && phrase) {
-                /* mistake recorded by parent via onComplete */
-              }
-            }}
+            onClick={() => setChecked(true)}
           >
             Check
           </Button>
@@ -94,9 +87,9 @@ export function BuildExercise({ item, combo, isLast, onComplete }: Props) {
       )}
 
       {checked && phrase && (
-        <div className="mt-3 flex items-center justify-center gap-2 text-teal-700">
+        <div className="mt-3 flex items-center justify-center gap-2 text-primary-deep">
           <AudioButton clipId={phraseAudioId(phrase)} fallbackText={phrase.script ?? phrase.roman} size="sm" />
-          <span className="text-sm">Hear it: {phrase.roman}</span>
+          <span className="text-sm font-display">Hear it: {phrase.roman}</span>
         </div>
       )}
     </div>

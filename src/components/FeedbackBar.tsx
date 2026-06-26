@@ -1,44 +1,48 @@
 import { Button } from './Button';
+import { Ammu } from './Ammu';
 
-const PRAISE = ['Nice! 🎉', 'Perfect! 🌟', 'Correct! 💚', 'You got it! ✨', 'Spot on! 🙌'];
+const PRAISE = ['Kollaam!', 'Adipoli!', 'Correct!', 'You got it!', 'Spot on!'];
 
 interface Props {
   correct: boolean;
-  /** Shown when wrong, e.g. "namaskaaram = Hello". */
   answerText?: string;
-  /** Consecutive-correct count, for the combo flair. */
   combo?: number;
   isLast?: boolean;
   onContinue: () => void;
 }
 
-/** The encouraging result bar shown after answering any exercise. */
 export function FeedbackBar({ correct, answerText, combo = 0, isLast, onContinue }: Props) {
   const praise = PRAISE[Math.floor(Math.random() * PRAISE.length)];
   return (
-    <div className="sticky bottom-24 mt-5 animate-[pop_0.25s_ease-out]">
+    <div className="sticky bottom-24 mt-5 animate-pop">
       <div
-        className={`rounded-3xl border-2 p-4 ${
-          correct ? 'border-teal-300 bg-teal-50' : 'border-gold-400 bg-gold-300/20'
+        className={`rounded-[22px] border-2 p-4 ${
+          correct ? 'border-success bg-success-soft' : 'border-warning bg-warning-soft'
         }`}
       >
         {correct ? (
           <div className="flex items-center justify-between">
-            <p className="font-semibold text-teal-800">{praise}</p>
+            <div className="flex items-center gap-3">
+              <Ammu state="celebrating" size={48} />
+              <p className="font-display font-bold text-success-deep">{praise}</p>
+            </div>
             {combo >= 3 && (
-              <span className="rounded-full bg-coral-400/20 px-2.5 py-1 text-sm font-bold text-coral-500">
-                🔥 {combo} in a row
+              <span className="rounded-full bg-accent-soft px-2.5 py-1 text-sm font-bold text-accent">
+                {combo} in a row
               </span>
             )}
           </div>
         ) : (
-          <div>
-            <p className="font-semibold text-gold-600">Almost! Here's the answer:</p>
-            {answerText && <p className="mt-1 text-ink">{answerText}</p>}
+          <div className="flex items-start gap-3">
+            <Ammu state="encouraging" size={48} />
+            <div>
+              <p className="font-display font-bold text-warning-deep">Almost! Here's the answer:</p>
+              {answerText && <p className="mt-1 text-ink">{answerText}</p>}
+            </div>
           </div>
         )}
-        <Button className="mt-3 w-full" onClick={onContinue}>
-          {isLast ? 'See results' : 'Continue'} →
+        <Button className="mt-3 w-full" variant={correct ? 'primary' : 'gold'} onClick={onContinue}>
+          {isLast ? 'See results' : 'Continue'}
         </Button>
       </div>
     </div>

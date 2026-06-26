@@ -1,21 +1,22 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
-type Variant = 'primary' | 'secondary' | 'ghost' | 'gold';
+type Variant = 'primary' | 'secondary' | 'ghost' | 'gold' | 'accent';
 
 const base =
-  'inline-flex items-center justify-center gap-2 rounded-2xl font-semibold transition active:scale-[0.97] disabled:opacity-40 disabled:active:scale-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2';
+  'inline-flex items-center justify-center gap-2 rounded-full font-display font-semibold transition active:translate-y-[2px] active:shadow-none disabled:opacity-40 disabled:active:translate-y-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2';
 
 const sizes = {
-  md: 'px-5 py-3 text-base',
-  lg: 'px-6 py-4 text-lg',
+  md: 'px-6 py-3 text-base',
+  lg: 'px-7 py-4 text-lg',
   sm: 'px-4 py-2 text-sm',
 } as const;
 
 const variants: Record<Variant, string> = {
-  primary: 'bg-teal-700 text-white shadow-sm hover:bg-teal-800',
-  secondary: 'bg-teal-100 text-teal-900 hover:bg-teal-200',
-  ghost: 'bg-transparent text-teal-800 hover:bg-teal-50',
-  gold: 'bg-gold-400 text-ink shadow-sm hover:bg-gold-500',
+  primary: 'bg-primary text-white shadow-[0_5px_0_var(--color-primary-deep)] hover:brightness-105',
+  secondary: 'bg-primary-soft text-primary-deep shadow-[0_4px_0_var(--color-border)] hover:brightness-95',
+  ghost: 'bg-transparent text-primary-deep hover:bg-primary-soft',
+  gold: 'bg-secondary text-ink shadow-[0_5px_0_var(--color-secondary-deep)] hover:brightness-105',
+  accent: 'bg-accent text-white shadow-[0_5px_0_var(--color-accent-deep)] hover:brightness-105',
 };
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {

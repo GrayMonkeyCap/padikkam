@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import { units, lessonsForUnit, orderedLessons } from '../../content';
 import { useStore } from '../../storage/store';
 import { Card } from '../../components/Card';
+import { Ammu } from '../../components/Ammu';
 
-/** A lesson unlocks once the previous lesson in the path is complete. */
 function useUnlock() {
   const completed = useStore((s) => s.progress.completedLessons);
   return (lessonId: string): boolean => {
@@ -13,57 +13,100 @@ function useUnlock() {
   };
 }
 
+function CrownIcons({ level }: { level: number }) {
+  if (level <= 0) return null;
+  return (
+    <div className="flex items-center gap-0.5">
+      {Array.from({ length: Math.min(level, 5) }, (_, i) => (
+        <svg key={i} width={14} height={14} viewBox="0 0 24 24" fill="var(--color-secondary)">
+          <path d="M2 8l4 12h12l4-12-5 4-5-8-5 8-5-4z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
+function CheckIcon() {
+  return (
+    <svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M5 13l4 4L19 7" />
+    </svg>
+  );
+}
+
+function LockIcon() {
+  return (
+    <svg width={18} height={18} viewBox="0 0 24 24" fill="var(--color-ink-faint)">
+      <rect x="5" y="11" width="14" height="10" rx="2" />
+      <path d="M8 11V7a4 4 0 018 0v4" fill="none" stroke="var(--color-ink-faint)" strokeWidth={2} />
+    </svg>
+  );
+}
+
 export function LessonsPage() {
   const completed = useStore((s) => s.progress.completedLessons);
   const levels = useStore((s) => s.progress.lessonLevels);
   const isUnlocked = useUnlock();
 
+  const currentLessonId = orderedLessons.find((l) => !completed.includes(l.id))?.id;
+
   return (
     <div className="space-y-7">
       <header>
-        <h1 className="text-2xl font-bold text-teal-900">Learn</h1>
-        <p className="text-sm text-ink/60">Follow the path — each lesson unlocks the next.</p>
+        <h1 className="font-display text-2xl font-bold text-ink">Learn</h1>
+        <p className="text-sm text-ink-muted">Follow the path — each lesson unlocks the next.</p>
       </header>
 
       {units.map((unit) => (
         <section key={unit.id} className="space-y-3">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2.5 rounded-2xl bg-gradient-to-r from-primary-soft to-transparent px-3 py-2">
             <span className="text-2xl">{unit.emoji}</span>
             <div>
-              <h2 className="font-bold text-teal-900">{unit.title}</h2>
-              <p className="text-xs text-ink/50">{unit.description}</p>
+              <h2 className="font-display font-bold text-ink">{unit.title}</h2>
+              <p className="text-xs text-ink-muted">{unit.description}</p>
             </div>
           </div>
 
-          <div className="space-y-2.5">
+          <div className="relative space-y-2.5 pl-6">
+            {/* Zigzag path line */}
+            <div className="absolute left-[13px] top-0 bottom-0 w-0.5 bg-border" />
+
             {lessonsForUnit(unit.id).map((lesson) => {
               const done = completed.includes(lesson.id);
               const unlocked = isUnlocked(lesson.id);
+              const isCurrent = lesson.id === currentLessonId;
               const level = levels[lesson.id] ?? 0;
 
+              const nodeColor = done
+                ? 'bg-success'
+                : isCurrent
+                  ? 'bg-primary ring-4 ring-primary-soft'
+                  : 'bg-surface-sunk border-2 border-border';
+
               const inner = (
-                <Card
-                  className={`flex items-center gap-3 ${
-                    unlocked ? 'hover:border-teal-300' : 'opacity-55'
-                  } ${done ? 'border-teal-300 bg-teal-50/40' : ''}`}
-                >
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-teal-100 text-xl">
-                    {unlocked ? lesson.emoji : '🔒'}
+                <div className="flex items-center gap-3">
+                  {/* Node dot */}
+                  <div className={`relative z-10 -ml-6 flex h-7 w-7 shrink-0 items-center justify-center rounded-full ${nodeColor}`}>
+                    {done ? <CheckIcon /> : !unlocked ? <LockIcon /> : null}
                   </div>
-                  <div className="min-w-0 flex-1">
-                    <div className="flex items-center gap-2 font-semibold text-teal-900">
-                      {lesson.title}
-                      {done && <span className="text-teal-600">✓</span>}
+
+                  <Card
+                    className={`flex flex-1 items-center gap-3 ${
+                      unlocked ? 'hover:border-primary/30' : 'opacity-50'
+                    } ${done ? 'border-success/20 bg-success-soft' : ''}`}
+                  >
+                    <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl text-xl ${done ? 'bg-success-soft' : isCurrent ? 'bg-primary-soft' : 'bg-surface-sunk'}`}>
+                      {unlocked ? lesson.emoji : null}
                     </div>
-                    <div className="truncate text-xs text-ink/55">{lesson.goal}</div>
-                  </div>
-                  {level > 0 && (
-                    <span className="shrink-0 text-sm" title={`Crown level ${level}`}>
-                      {'👑'.repeat(Math.min(level, 3))}
-                      {level > 3 && <span className="text-xs font-bold text-gold-600"> {level}</span>}
-                    </span>
-                  )}
-                </Card>
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-center gap-2 font-display font-semibold text-ink">
+                        {lesson.title}
+                      </div>
+                      <div className="truncate text-xs text-ink-muted">{lesson.goal}</div>
+                    </div>
+                    <CrownIcons level={level} />
+                  </Card>
+                </div>
               );
 
               return unlocked ? (
@@ -77,6 +120,10 @@ export function LessonsPage() {
           </div>
         </section>
       ))}
+
+      <div className="flex justify-center pb-4">
+        <Ammu state="encouraging" size={72} />
+      </div>
     </div>
   );
 }

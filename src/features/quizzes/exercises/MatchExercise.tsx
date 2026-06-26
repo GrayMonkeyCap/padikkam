@@ -18,7 +18,6 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-/** Tap a Malayalam tile then its English meaning. Fast recognition drill. */
 export function MatchExercise({ item, combo, isLast, onComplete }: Props) {
   const left = useMemo(() => shuffle(item.pairs), [item]);
   const right = useMemo(() => shuffle(item.pairs), [item]);
@@ -44,19 +43,19 @@ export function MatchExercise({ item, combo, isLast, onComplete }: Props) {
   };
 
   const tile = (active: boolean, matchedState: boolean, wrong: boolean) =>
-    `rounded-2xl border-2 px-3 py-4 text-center font-medium transition ${
+    `rounded-[18px] border-2 px-3 py-4 text-center font-display font-medium transition ${
       matchedState
-        ? 'border-teal-200 bg-teal-50 text-teal-400 opacity-50'
+        ? 'border-success/30 bg-success-soft text-success opacity-60'
         : wrong
-          ? 'border-coral-400 bg-coral-400/10 animate-[wiggle_0.4s_ease-in-out]'
+          ? 'border-warning bg-warning-soft animate-wiggle'
           : active
-            ? 'border-teal-600 bg-teal-100 text-teal-900'
-            : 'border-teal-100 bg-white text-teal-900 hover:border-teal-300'
+            ? 'border-primary bg-primary-soft text-primary-deep shadow-none translate-y-[2px]'
+            : 'border-border bg-surface-card text-ink shadow-[0_3px_0_var(--color-border)] hover:border-primary/30'
     }`;
 
   return (
     <div className="flex min-h-[70vh] flex-col">
-      <p className="mb-4 text-sm font-medium text-ink/40">Match the pairs</p>
+      <p className="mb-4 text-sm font-display font-medium text-ink-faint">Match the pairs</p>
 
       <div className="grid grid-cols-2 gap-3">
         <div className="space-y-3">

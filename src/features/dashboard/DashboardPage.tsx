@@ -5,6 +5,7 @@ import { orderedLessons, getUnit } from '../../content';
 import { Card } from '../../components/Card';
 import { Button } from '../../components/Button';
 import { ProgressRing } from '../../components/ProgressRing';
+import { Ammu } from '../../components/Ammu';
 import { levelFromXp } from '../../lib/xp';
 
 function greeting(): string {
@@ -32,13 +33,17 @@ export function DashboardPage() {
   return (
     <div className="space-y-5">
       <header className="flex items-center justify-between">
-        <div>
-          <p className="text-sm text-ink/50">{greeting()} 👋</p>
-          <h1 className="text-2xl font-bold text-teal-900">Padikkam</h1>
+        <div className="flex items-center gap-3">
+          <Ammu state={goalMet ? 'celebrating' : 'greeting'} size={56} />
+          <div>
+            <p className="text-sm text-ink-muted">{greeting()}</p>
+            <h1 className="font-display text-2xl font-bold text-ink">Padikkam</h1>
+          </div>
         </div>
-        <div className="flex items-center gap-1 rounded-full bg-gold-300/30 px-3 py-1.5 text-sm font-bold text-gold-600">
-          🔥 {progress.streak}
-          <span className="font-medium text-ink/50">day{progress.streak === 1 ? '' : 's'}</span>
+        <div className="flex items-center gap-1.5 rounded-full bg-secondary-soft px-3 py-1.5 text-sm font-display font-bold text-secondary-deep">
+          <svg width={16} height={16} viewBox="0 0 24 24" fill="var(--color-secondary)"><path d="M12 2c-1 4-4 6-6 10a7 7 0 1014 0C18 8 15 6 12 2z"/></svg>
+          {progress.streak}
+          <span className="font-medium text-ink-faint">day{progress.streak === 1 ? '' : 's'}</span>
         </div>
       </header>
 
@@ -50,81 +55,85 @@ export function DashboardPage() {
           sublabel={`/ ${progress.dailyGoal} XP`}
         />
         <div className="flex-1">
-          <h2 className="text-lg font-bold text-teal-900">
-            {goalMet ? 'Goal smashed! 🎉' : "Today's goal"}
+          <h2 className="font-display text-lg font-bold text-ink">
+            {goalMet ? 'Goal smashed!' : "Today's goal"}
           </h2>
-          <p className="mt-1 text-sm text-ink/60">
+          <p className="mt-1 text-sm text-ink-muted">
             {goalMet
               ? 'Every bit extra makes it stick. Keep going!'
               : `You're ${Math.max(0, progress.dailyGoal - progress.todayXp)} XP away. You've got this.`}
           </p>
-          <p className="mt-2 text-xs font-medium text-teal-700">Level {level} · {progress.xp} XP total</p>
+          <p className="mt-2 text-xs font-medium text-grape">Level {level} · {progress.xp} XP total</p>
         </div>
       </Card>
 
       {/* Continue learning */}
       {nextLesson && (
-        <Card className="bg-gradient-to-br from-teal-700 to-teal-600 text-white">
-          <p className="text-xs font-medium uppercase tracking-wide text-teal-100">
+        <Card className="bg-gradient-to-br from-primary to-primary-deep text-white">
+          <p className="text-xs font-medium uppercase tracking-wide text-white/70">
             {nextUnit?.emoji} {nextUnit?.title}
           </p>
-          <h2 className="mt-1 text-xl font-bold">
+          <h2 className="mt-1 font-display text-xl font-bold">
             {nextLesson.emoji} {nextLesson.title}
           </h2>
-          <p className="mt-1 text-sm text-teal-50/90">{nextLesson.goal}</p>
+          <p className="mt-1 text-sm text-white/80">{nextLesson.goal}</p>
           <Link to={`/learn/${nextLesson.id}`} className="mt-4 block">
             <Button variant="gold" size="lg" className="w-full">
-              {progress.completedLessons.includes(nextLesson.id) ? 'Review lesson' : 'Start lesson'} →
+              {progress.completedLessons.includes(nextLesson.id) ? 'Review lesson' : 'Start lesson'}
             </Button>
           </Link>
         </Card>
       )}
 
       {/* Review queue */}
-      <Card className="flex items-center justify-between">
-        <div>
-          <h2 className="text-lg font-bold text-teal-900">Daily review</h2>
-          <p className="text-sm text-ink/60">
-            {due > 0
-              ? `${due} card${due === 1 ? '' : 's'} ready to revise`
-              : newCount > 0
-                ? `${newCount} new phrases to learn`
-                : 'All caught up — beautifully done!'}
-          </p>
-        </div>
-        <Link to="/review">
-          <Button variant={due > 0 ? 'primary' : 'secondary'}>
-            {due > 0 ? 'Revise' : 'Practice'}
-          </Button>
-        </Link>
-      </Card>
+      {(due > 0 || newCount > 0) && (
+        <Card className="flex items-center justify-between border-accent/20 bg-accent-soft">
+          <div>
+            <h2 className="font-display text-lg font-bold text-ink">Daily review</h2>
+            <p className="text-sm text-ink-muted">
+              {due > 0
+                ? `${due} card${due === 1 ? '' : 's'} ready to revise`
+                : `${newCount} new phrases to learn`}
+            </p>
+          </div>
+          <Link to="/review">
+            <Button variant={due > 0 ? 'accent' : 'secondary'} size="sm">
+              {due > 0 ? 'Revise' : 'Practice'}
+            </Button>
+          </Link>
+        </Card>
+      )}
 
       {/* Practice mistakes */}
       {mistakeCount > 0 && (
-        <Card className="flex items-center justify-between border-coral-400/40 bg-coral-400/5">
+        <Card className="flex items-center justify-between border-warning/20 bg-warning-soft">
           <div>
-            <h2 className="text-lg font-bold text-teal-900">Practice mistakes</h2>
-            <p className="text-sm text-ink/60">
+            <h2 className="font-display text-lg font-bold text-ink">Practice mistakes</h2>
+            <p className="text-sm text-ink-muted">
               {mistakeCount} phrase{mistakeCount === 1 ? '' : 's'} to nail down
             </p>
           </div>
           <Link to="/practice/mistakes">
-            <Button variant="gold">Fix them</Button>
+            <Button variant="gold" size="sm">Fix them</Button>
           </Link>
         </Card>
       )}
 
       <div className="grid grid-cols-2 gap-3">
         <Link to="/practice">
-          <Card className="h-full text-center transition hover:border-teal-300">
-            <div className="text-3xl">🎯</div>
-            <div className="mt-1 font-semibold text-teal-900">Quick quiz</div>
+          <Card className="h-full text-center transition hover:border-primary/30">
+            <div className="mx-auto mb-1 flex h-12 w-12 items-center justify-center rounded-full bg-grape-soft">
+              <svg width={24} height={24} viewBox="0 0 24 24" fill="var(--color-grape)"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 14.5v-2h2v2h-2zm0-4v-7h2v7h-2z"/></svg>
+            </div>
+            <div className="font-display font-semibold text-ink">Quick quiz</div>
           </Card>
         </Link>
         <Link to="/progress">
-          <Card className="h-full text-center transition hover:border-teal-300">
-            <div className="text-3xl">🏅</div>
-            <div className="mt-1 font-semibold text-teal-900">Badges</div>
+          <Card className="h-full text-center transition hover:border-primary/30">
+            <div className="mx-auto mb-1 flex h-12 w-12 items-center justify-center rounded-full bg-secondary-soft">
+              <svg width={24} height={24} viewBox="0 0 24 24" fill="var(--color-secondary)"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2z"/></svg>
+            </div>
+            <div className="font-display font-semibold text-ink">Badges</div>
           </Card>
         </Link>
       </div>

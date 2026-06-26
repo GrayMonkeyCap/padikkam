@@ -27,16 +27,16 @@ export function McqExercise({ item, combo, isLast, onComplete }: Props) {
 
   return (
     <div className="flex min-h-[70vh] flex-col">
-      <p className="mb-2 text-sm font-medium text-ink/40">{heading}</p>
+      <p className="mb-2 text-sm font-display font-medium text-ink-faint">{heading}</p>
 
       <Card className="mb-5 flex min-h-[7rem] items-center justify-center text-center">
         {item.kind === 'listen' ? (
           <AudioButton clipId={item.audioClip!} fallbackText={item.fallbackText} size="lg" />
         ) : (
           <div>
-            <div className="text-2xl font-bold text-teal-900">{item.promptRoman ?? item.promptEn}</div>
+            <div className="font-display text-2xl font-bold text-ink">{item.promptRoman ?? item.promptEn}</div>
             {item.promptDeva && (
-              <div className="mt-1 text-base text-teal-700/70" lang="hi">
+              <div className="mt-1 text-base text-ink-muted" lang="hi">
                 {item.promptDeva}
               </div>
             )}
@@ -54,21 +54,25 @@ export function McqExercise({ item, combo, isLast, onComplete }: Props) {
                 ? 'wrong'
                 : 'dim';
           const styles = {
-            idle: 'border-teal-100 bg-white hover:border-teal-300',
-            correct: 'border-teal-500 bg-teal-50 text-teal-900',
-            wrong: 'border-coral-400 bg-coral-400/10 text-ink animate-[wiggle_0.4s_ease-in-out]',
-            dim: 'border-teal-100 bg-white opacity-50',
+            idle: 'border-border bg-surface-card shadow-[0_4px_0_var(--color-border)] hover:border-primary/30',
+            correct: 'border-success bg-success-soft text-success-deep shadow-none translate-y-[2px]',
+            wrong: 'border-warning bg-warning-soft text-warning-deep shadow-none translate-y-[2px] animate-wiggle',
+            dim: 'border-border bg-surface-card opacity-40 shadow-none',
           }[state];
           return (
             <button
               key={opt}
               onClick={() => !answered && setPicked(opt)}
               disabled={answered}
-              className={`flex w-full items-center justify-between rounded-2xl border-2 px-4 py-3.5 text-left font-medium transition ${styles}`}
+              className={`flex w-full items-center justify-between rounded-full border-2 px-5 py-3.5 text-left font-display font-medium transition ${styles}`}
             >
               <span>{opt}</span>
-              {answered && opt === item.answer && <span>✓</span>}
-              {answered && opt === picked && opt !== item.answer && <span>✕</span>}
+              {answered && opt === item.answer && (
+                <svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+              )}
+              {answered && opt === picked && opt !== item.answer && (
+                <svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="var(--color-warning-deep)" strokeWidth={3} strokeLinecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+              )}
             </button>
           );
         })}

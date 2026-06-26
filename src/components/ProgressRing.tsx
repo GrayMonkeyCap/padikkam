@@ -1,5 +1,4 @@
 interface Props {
-  /** 0–1 fraction filled. */
   value: number;
   size?: number;
   stroke?: number;
@@ -16,13 +15,13 @@ export function ProgressRing({ value, size = 120, stroke = 10, label, sublabel }
   return (
     <div className="relative inline-flex items-center justify-center" style={{ width: size, height: size }}>
       <svg width={size} height={size} className="-rotate-90">
-        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="var(--color-teal-100)" strokeWidth={stroke} />
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="var(--color-primary-soft)" strokeWidth={stroke} />
         <circle
           cx={size / 2}
           cy={size / 2}
           r={r}
           fill="none"
-          stroke="var(--color-teal-600)"
+          stroke="var(--color-primary)"
           strokeWidth={stroke}
           strokeLinecap="round"
           strokeDasharray={c}
@@ -31,8 +30,8 @@ export function ProgressRing({ value, size = 120, stroke = 10, label, sublabel }
         />
       </svg>
       <div className="absolute flex flex-col items-center">
-        {label && <span className="text-2xl font-bold text-teal-900">{label}</span>}
-        {sublabel && <span className="text-xs font-medium text-teal-700/70">{sublabel}</span>}
+        {label && <span className="font-display text-2xl font-bold text-ink">{label}</span>}
+        {sublabel && <span className="text-xs font-medium text-ink-muted">{sublabel}</span>}
       </div>
     </div>
   );

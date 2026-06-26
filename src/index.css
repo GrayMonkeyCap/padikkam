@@ -1,34 +1,77 @@
 @import 'tailwindcss';
 
-/* ── Padikkam design tokens (Kerala-inspired: backwater teal + temple gold) ── */
+/* ── Padikkam "Backwater Bloom" design tokens ── */
 @theme {
-  --color-cream: #fffdf7;
-  --color-ink: #1c2826;
+  /* Primary — Teal */
+  --color-primary: #0FBFA8;
+  --color-primary-deep: #0A8C7B;
+  --color-primary-soft: #E9FBF6;
 
-  --color-teal-50: #f0fdfa;
-  --color-teal-100: #ccfbf1;
-  --color-teal-200: #99f6e4;
-  --color-teal-300: #5eead4;
-  --color-teal-400: #2dd4bf;
-  --color-teal-500: #14b8a6;
-  --color-teal-600: #0d9488;
-  --color-teal-700: #0f766e;
-  --color-teal-800: #115e59;
-  --color-teal-900: #134e4a;
+  /* Secondary — Marigold */
+  --color-secondary: #FFB627;
+  --color-secondary-deep: #E5870A;
+  --color-secondary-soft: #FFF3D6;
 
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
+  /* Accent — Coral */
+  --color-accent: #FF5C72;
+  --color-accent-deep: #D62F49;
+  --color-accent-soft: #FFE7EB;
 
-  --color-coral-400: #fb7185;
-  --color-coral-500: #f43f5e;
+  /* Success — Leaf */
+  --color-success: #34C759;
+  --color-success-deep: #1E9E45;
+  --color-success-soft: #E3F8E9;
 
-  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  /* Warning — Amber */
+  --color-warning: #FF9F1C;
+  --color-warning-deep: #D97A00;
+  --color-warning-soft: #FFF0D9;
+
+  /* Grape — Level / mascot */
+  --color-grape: #6E5FD8;
+  --color-grape-deep: #494FC4;
+  --color-grape-soft: #EEEAFF;
+
+  /* Surfaces */
+  --color-surface: #FFFCF6;
+  --color-surface-card: #FFFFFF;
+  --color-surface-sunk: #F6F1E6;
+
+  /* Ink */
+  --color-ink: #16302E;
+  --color-ink-muted: #5A736F;
+  --color-ink-faint: #9AA8A4;
+
+  /* Border */
+  --color-border: #ECE4D5;
+
+  /* Legacy aliases (keep Tailwind classes working during migration) */
+  --color-cream: #FFFCF6;
+  --color-teal-50: #E9FBF6;
+  --color-teal-100: #D0F5EC;
+  --color-teal-200: #7BE6CF;
+  --color-teal-300: #2BE0C7;
+  --color-teal-400: #18D2BC;
+  --color-teal-500: #0FBFA8;
+  --color-teal-600: #0FBFA8;
+  --color-teal-700: #0A8C7B;
+  --color-teal-800: #076457;
+  --color-teal-900: #16302E;
+  --color-gold-300: #FFD36B;
+  --color-gold-400: #FFB627;
+  --color-gold-500: #E5870A;
+  --color-gold-600: #E5870A;
+  --color-coral-400: #FF5C72;
+  --color-coral-500: #D62F49;
+
+  --font-display: 'Baloo 2', system-ui, sans-serif;
+  --font-sans: 'Mukta', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 
   --animate-pop: pop 0.25s ease-out;
   --animate-float-up: floatUp 0.9s ease-out forwards;
   --animate-wiggle: wiggle 0.4s ease-in-out;
+  --animate-press: press 0.09s ease-out forwards;
+  --animate-breathe: breathe 4s ease-in-out infinite;
 }
 
 @keyframes pop {
@@ -45,13 +88,24 @@
   25% { transform: translateX(-6px); }
   75% { transform: translateX(6px); }
 }
+@keyframes press {
+  to { transform: translateY(4px); }
+}
+@keyframes breathe {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+@keyframes fall {
+  0% { transform: translateY(-10vh) rotate(0); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
 
 html, body, #root {
   height: 100%;
 }
 body {
   margin: 0;
-  background-color: var(--color-cream);
+  background-color: var(--color-surface);
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -61,3 +115,6 @@ body {
 /* Hide scrollbars on horizontal lesson rails but keep scrolling */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Display font utility */
+.font-display { font-family: var(--font-display); }
