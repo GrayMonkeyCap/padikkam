@@ -7,6 +7,7 @@ import { FlashcardsPage } from './features/flashcards/FlashcardsPage';
 import { DialoguePage } from './features/dialogues/DialoguePage';
 import { QuizPage } from './features/quizzes/QuizPage';
 import { ProgressPage } from './features/progress/ProgressPage';
+import { AdminPage } from './features/admin/AdminPage';
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ export const router = createBrowserRouter([
       { path: 'practice/mistakes', element: <QuizPage mode="mistakes" /> },
       { path: 'dialogue/:dialogueId', element: <DialoguePage /> },
       { path: 'progress', element: <ProgressPage /> },
+      { path: 'admin', element: <AdminPage /> },
     ],
   },
 ]);

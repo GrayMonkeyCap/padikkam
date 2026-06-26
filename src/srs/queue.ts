@@ -15,8 +15,6 @@ function completedPhraseIds(completedLessons: string[]): Set<string> {
 }
 
 export interface QueueOptions {
-  /** Max new phrases to introduce in this session. */
-  newLimit?: number;
   /** Max total cards in the session. */
   sessionLimit?: number;
   /** Only include phrases from these completed lessons. */
@@ -44,17 +42,27 @@ export function newPhrases(srs: SrsState, completedLessons?: string[]): Phrase[]
 }
 
 /**
- * The session queue: due reviews first, then a capped number of new phrases.
- * Only includes phrases from completed lessons when completedLessons is provided.
+ * All phrases from completed lessons, ordered by SRS priority:
+ * due cards first, then unseen, then reviewed-but-not-yet-due.
  */
 export function buildSession(srs: SrsState, opts: QueueOptions = {}, now = Date.now()): Phrase[] {
-  const { newLimit = 8, sessionLimit = 30, completedLessons } = opts;
+  const { sessionLimit = 30, completedLessons } = opts;
+  const allowed = completedLessons ? completedPhraseIds(completedLessons) : null;
+  const pool = phraseLearnOrder.filter((p) => !allowed || allowed.has(p.id));
 
-  const due = duePhraseIds(srs, completedLessons, now)
-    .map((id) => phrases.find((p) => p.id === id))
-    .filter((p): p is Phrase => Boolean(p));
+  const due: Phrase[] = [];
+  const fresh: Phrase[] = [];
+  const notDue: Phrase[] = [];
 
-  const fresh = newPhrases(srs, completedLessons).slice(0, newLimit);
+  for (const p of pool) {
+    const card = srs[p.id];
+    if (!card) fresh.push(p);
+    else if (card.due <= now) due.push(p);
+    else notDue.push(p);
+  }
 
-  return [...due, ...fresh].slice(0, sessionLimit);
+  due.sort((a, b) => (srs[a.id]?.due ?? 0) - (srs[b.id]?.due ?? 0));
+  notDue.sort((a, b) => (srs[a.id]?.due ?? 0) - (srs[b.id]?.due ?? 0));
+
+  return [...due, ...fresh, ...notDue].slice(0, sessionLimit);
 }

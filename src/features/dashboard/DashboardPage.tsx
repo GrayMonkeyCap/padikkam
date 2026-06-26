@@ -6,6 +6,7 @@ import { Card } from '../../components/Card';
 import { Button } from '../../components/Button';
 import { ProgressRing } from '../../components/ProgressRing';
 import { Ammu } from '../../components/Ammu';
+import { TopicIcon } from '../../components/TopicIcon';
 import { levelFromXp } from '../../lib/xp';
 
 function greeting(): string {
@@ -57,12 +58,12 @@ export function DashboardPage() {
         />
         <div className="flex-1">
           <h2 className="font-display text-lg font-bold text-ink">
-            {goalMet ? 'Goal smashed!' : "Today's goal"}
+            {goalMet ? 'Goal reached!' : "Today's goal"}
           </h2>
           <p className="mt-1 text-sm text-ink-muted">
             {goalMet
-              ? 'Every bit extra makes it stick. Keep going!'
-              : `You're ${Math.max(0, progress.dailyGoal - progress.todayXp)} XP away. You've got this.`}
+              ? 'Bonus practice counts toward tomorrow.'
+              : `${Math.max(0, progress.dailyGoal - progress.todayXp)} XP to go.`}
           </p>
           <p className="mt-2 text-xs font-medium text-grape">Level {level} · {progress.xp} XP total</p>
         </div>
@@ -71,11 +72,13 @@ export function DashboardPage() {
       {/* Continue learning */}
       {nextLesson && (
         <Card className="bg-gradient-to-br from-primary to-primary-deep text-white">
-          <p className="text-xs font-medium uppercase tracking-wide text-white/70">
-            {nextUnit?.emoji} {nextUnit?.title}
+          <p className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-white/70">
+            <TopicIcon emoji={nextUnit?.emoji ?? ''} size={16} color="rgba(255,255,255,0.7)" />
+            {nextUnit?.title}
           </p>
-          <h2 className="mt-1 font-display text-xl font-bold">
-            {nextLesson.emoji} {nextLesson.title}
+          <h2 className="mt-1 flex items-center gap-2 font-display text-xl font-bold">
+            <TopicIcon emoji={nextLesson.emoji} size={22} color="white" />
+            {nextLesson.title}
           </h2>
           <p className="mt-1 text-sm text-white/80">{nextLesson.goal}</p>
           <Link to={`/learn/${nextLesson.id}`} className="mt-4 block">
@@ -111,7 +114,7 @@ export function DashboardPage() {
           <div>
             <h2 className="font-display text-lg font-bold text-ink">Practice mistakes</h2>
             <p className="text-sm text-ink-muted">
-              {mistakeCount} phrase{mistakeCount === 1 ? '' : 's'} to nail down
+              {mistakeCount} phrase{mistakeCount === 1 ? '' : 's'} to practice
             </p>
           </div>
           <Link to="/practice/mistakes">

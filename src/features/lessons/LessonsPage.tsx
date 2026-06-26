@@ -3,6 +3,7 @@ import { units, lessonsForUnit, orderedLessons } from '../../content';
 import { useStore } from '../../storage/store';
 import { Card } from '../../components/Card';
 import { Ammu } from '../../components/Ammu';
+import { TopicIcon } from '../../components/TopicIcon';
 
 function useUnlock() {
   const completed = useStore((s) => s.progress.completedLessons);
@@ -60,7 +61,7 @@ export function LessonsPage() {
       {units.map((unit) => (
         <section key={unit.id} className="space-y-3">
           <div className="flex items-center gap-2.5 rounded-2xl bg-gradient-to-r from-primary-soft to-transparent px-3 py-2">
-            <span className="text-2xl">{unit.emoji}</span>
+            <TopicIcon emoji={unit.emoji} size={28} />
             <div>
               <h2 className="font-display font-bold text-ink">{unit.title}</h2>
               <p className="text-xs text-ink-muted">{unit.description}</p>
@@ -95,16 +96,16 @@ export function LessonsPage() {
                       unlocked ? 'hover:border-primary/30' : 'opacity-50'
                     } ${done ? 'border-success/20 bg-success-soft' : ''}`}
                   >
-                    <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl text-xl ${done ? 'bg-success-soft' : isCurrent ? 'bg-primary-soft' : 'bg-surface-sunk'}`}>
-                      {unlocked ? lesson.emoji : null}
+                    <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl ${done ? 'bg-success-soft' : isCurrent ? 'bg-primary-soft' : 'bg-surface-sunk'}`}>
+                      {unlocked ? <TopicIcon emoji={lesson.emoji} size={22} color={done ? 'var(--color-success)' : isCurrent ? 'var(--color-primary)' : 'var(--color-ink-faint)'} /> : null}
                     </div>
                     <div className="min-w-0 flex-1">
-                      <div className="flex items-center gap-2 font-display font-semibold text-ink">
-                        {lesson.title}
+                      <div className="flex items-center gap-1.5 font-display font-semibold text-ink">
+                        <span className="truncate">{lesson.title}</span>
+                        <CrownIcons level={level} />
                       </div>
                       <div className="truncate text-xs text-ink-muted">{lesson.goal}</div>
                     </div>
-                    <CrownIcons level={level} />
                   </Card>
                 </div>
               );

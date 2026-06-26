@@ -9,6 +9,7 @@ import { Button } from '../../components/Button';
 import { AudioButton } from '../../components/AudioButton';
 import { Celebration } from '../../components/Celebration';
 import { Ammu } from '../../components/Ammu';
+import { playSwipeRight, playSwipeLeft, playCelebration } from '../../audio/sounds';
 
 /* ── Swipe constants ── */
 const SWIPE_THRESHOLD = 0.35; // 35% of container width to commit
@@ -288,7 +289,7 @@ export function FlashcardsPage() {
   const completedLessons = useStore((s) => s.progress.completedLessons);
 
   const session = useMemo<Phrase[]>(
-    () => buildSession(srs, { newLimit: 8, sessionLimit: 20, completedLessons }),
+    () => buildSession(srs, { sessionLimit: 20, completedLessons }),
     [completedLessons],
   );
 
@@ -298,20 +299,19 @@ export function FlashcardsPage() {
   const [currentPhrase, setCurrentPhrase] = useState<Phrase | null>(null);
   const [cardKey, setCardKey] = useState(0);
 
-  if (completedLessons.length === 0) {
-    return (
-      <EmptyState
-        title="No lessons completed yet"
-        body="Complete your first lesson to unlock flashcard reviews. Phrases from completed lessons will appear here."
-      />
-    );
-  }
+  const restart = () => {
+    setIndex(0);
+    setReviewed(0);
+    setShowAnswer(false);
+    setCurrentPhrase(null);
+    setCardKey((k) => k + 1);
+  };
 
   if (session.length === 0) {
     return (
       <EmptyState
-        title="Nothing to review right now"
-        body="You're all caught up. Learn a new lesson to add more phrases to your deck."
+        title="No phrases to review"
+        body="Finish a lesson first — its phrases will appear here for review."
       />
     );
   }
@@ -323,8 +323,9 @@ export function FlashcardsPage() {
         <Celebration show />
         <EmptyState
           title="Session complete!"
-          body={`You revised ${reviewed} phrase${reviewed === 1 ? '' : 's'}. Small reps, big fluency.`}
+          body={`You revised ${reviewed} phrase${reviewed === 1 ? '' : 's'} this round.`}
           cta
+          onReviewAgain={restart}
         />
       </>
     );
@@ -338,18 +339,22 @@ export function FlashcardsPage() {
     setReviewed((n) => n + 1);
     setShowAnswer(false);
     setCurrentPhrase(null);
-    setIndex((i) => i + 1);
+    const next = index + 1;
+    setIndex(next);
     setCardKey((k) => k + 1);
+    if (next >= session.length) playCelebration();
   };
 
   const handleSwipeRight = () => {
     if (!phrase) return;
+    playSwipeRight();
     reviewPhrase(phrase.id, 'good');
     advance();
   };
 
   const handleSwipeLeft = () => {
     if (!phrase) return;
+    playSwipeLeft();
     setCurrentPhrase(phrase);
     setShowAnswer(true);
   };
@@ -444,7 +449,7 @@ export function FlashcardsPage() {
    EmptyState — reused for "nothing to review" and "session complete"
    ════════════════════════════════════════════════════════════ */
 
-function EmptyState({ title, body, cta }: { title: string; body: string; cta?: boolean }) {
+function EmptyState({ title, body, cta, onReviewAgain }: { title: string; body: string; cta?: boolean; onReviewAgain?: () => void }) {
   return (
     <div className="flex flex-col items-center gap-4 pt-16 text-center">
       <Ammu state={cta ? 'celebrating' : 'sleepy'} size={96} />
@@ -460,6 +465,14 @@ function EmptyState({ title, body, cta }: { title: string; body: string; cta?: b
           </Link>
         )}
       </div>
+      {onReviewAgain && (
+        <button
+          onClick={onReviewAgain}
+          className="mt-2 text-sm font-medium text-primary-deep hover:text-primary"
+        >
+          Review again
+        </button>
+      )}
     </div>
   );
 }

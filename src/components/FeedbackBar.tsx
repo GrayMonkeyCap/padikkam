@@ -1,7 +1,9 @@
+import { useEffect, useRef } from 'react';
 import { Button } from './Button';
 import { Ammu } from './Ammu';
+import { playCorrect, playWrong } from '../audio/sounds';
 
-const PRAISE = ['Kollaam!', 'Adipoli!', 'Correct!', 'You got it!', 'Spot on!'];
+const PRAISE = ['Kollaam!', 'Adipoli!', 'Sheri!', 'Correct!'];
 
 interface Props {
   correct: boolean;
@@ -12,6 +14,13 @@ interface Props {
 }
 
 export function FeedbackBar({ correct, answerText, combo = 0, isLast, onContinue }: Props) {
+  const played = useRef(false);
+  useEffect(() => {
+    if (played.current) return;
+    played.current = true;
+    if (correct) playCorrect(); else playWrong();
+  }, [correct]);
+
   const praise = PRAISE[Math.floor(Math.random() * PRAISE.length)];
   return (
     <div className="sticky bottom-24 mt-5 animate-pop">

@@ -5,6 +5,7 @@ import { Card } from '../../components/Card';
 import { Button } from '../../components/Button';
 import { ProgressRing } from '../../components/ProgressRing';
 import { Ammu } from '../../components/Ammu';
+import { BadgeIcon } from '../../components/TopicIcon';
 
 const GOAL_OPTIONS = [10, 20, 30, 50];
 
@@ -22,7 +23,7 @@ export function ProgressPage() {
     <div className="space-y-6">
       <header>
         <h1 className="font-display text-2xl font-bold text-ink">Your progress</h1>
-        <p className="text-sm text-ink-muted">Every phrase is a step closer to your first conversation.</p>
+        <p className="text-sm text-ink-muted">Track your streaks, badges, and milestones.</p>
       </header>
 
       {/* Level card */}
@@ -67,7 +68,7 @@ export function ProgressPage() {
               >
                 <div className={`flex h-12 w-12 items-center justify-center rounded-full ${earned ? 'bg-secondary/20' : 'bg-surface-sunk'}`}>
                   {earned ? (
-                    <svg width={24} height={24} viewBox="0 0 24 24" fill="var(--color-secondary)"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2z"/></svg>
+                    <BadgeIcon emoji={b.emoji} size={26} color="var(--color-secondary)" />
                   ) : (
                     <svg width={20} height={20} viewBox="0 0 24 24" fill="var(--color-ink-faint)"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4" fill="none" stroke="var(--color-ink-faint)" strokeWidth={2}/></svg>
                   )}

@@ -28,6 +28,7 @@ interface StoreState {
   clearMistake: (phraseId: string) => void;
   setDailyGoal: (goal: number) => void;
   resetAll: () => void;
+  loadProfile: (progress: Progress, srs: SrsState) => void;
 }
 
 function badgeContext(progress: Progress, srs: SrsState): BadgeContext {
@@ -161,5 +162,11 @@ export const useStore = create<StoreState>((set, get) => ({
   resetAll: () => {
     repo.reset();
     set({ progress: repo.getProgress(), srs: repo.getSrs() });
+  },
+
+  loadProfile: (progress, srs) => {
+    repo.saveProgress(progress);
+    repo.saveSrs(srs);
+    set({ progress, srs });
   },
 }));
