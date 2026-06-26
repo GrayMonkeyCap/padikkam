@@ -34,7 +34,6 @@ function getNextLesson(currentId: string) {
 
 export function LessonDetailPage() {
   const { lessonId = '' } = useParams();
-  const navigate = useNavigate();
   const lesson = getLesson(lessonId);
   const completeLesson = useStore((s) => s.completeLesson);
   const completed = useStore((s) => s.progress.completedLessons.includes(lessonId));
@@ -66,7 +65,7 @@ export function LessonDetailPage() {
   return (
     <div className="space-y-5">
       <Link to="/learn" className="inline-flex items-center gap-1 text-sm font-medium text-primary-deep hover:text-primary">
-        <svg width={16} height={16} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        <svg width={16} height={16} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6" /></svg>
         {unit?.title}
       </Link>
 
@@ -98,13 +97,13 @@ export function LessonDetailPage() {
             <Link key={d.id} to={`/dialogue/${d.id}`} className="block">
               <Card className="flex items-center gap-3 hover:border-primary/30">
                 <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-secondary-soft text-xl">
-                  <svg width={22} height={22} viewBox="0 0 24 24" fill="var(--color-secondary)"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+                  <svg width={22} height={22} viewBox="0 0 24 24" fill="var(--color-secondary)"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" /></svg>
                 </div>
                 <div className="flex-1">
                   <div className="font-display font-semibold text-ink">{d.scenario}</div>
                   <div className="text-xs text-ink-muted">{d.setup}</div>
                 </div>
-                <svg width={16} height={16} viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                <svg width={16} height={16} viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
               </Card>
             </Link>
           ))}
@@ -142,7 +141,6 @@ export function LessonDetailPage() {
 function CompletionPopup({ lessonId, onClose }: { lessonId: string; onClose: () => void }) {
   const navigate = useNavigate();
   const nextLesson = getNextLesson(lessonId);
-  const nextUnit = nextLesson ? getUnit(nextLesson.unit) : null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 backdrop-blur-sm" onClick={onClose}>
